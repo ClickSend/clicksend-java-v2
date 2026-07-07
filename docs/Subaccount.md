@@ -2,23 +2,32 @@
 
 # Subaccount
 
-Accounts that are maintained under a main account
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**apiUsername** | **String** | Your new api username. |  |
-|**password** | **String** | Your new password |  |
-|**email** | **String** | Your new email. |  |
-|**phoneNumber** | **String** | Your phone number in E.164 format. |  |
-|**firstName** | **String** | Your firstname |  |
-|**lastName** | **String** | Your lastname |  |
-|**accessUsers** | **Integer** | Your access users flag value, must be 1 or 0. |  [optional] |
-|**accessBilling** | **Integer** | Your access billing flag value, must be 1 or 0. |  [optional] |
-|**accessReporting** | **Integer** | Your access reporting flag value, must be 1 or 0. |  [optional] |
-|**accessContacts** | **Integer** | Your access contacts flag value, must be 1 or 0. |  [optional] |
-|**accessSettings** | **Integer** | Your access settings flag value, must be 1 or 0. |  [optional] |
+|**subaccountId** | **Integer** | The unique identifier for the subaccount. |  [optional] |
+|**apiUsername** | **String** | The API username of the subaccount. |  [optional] |
+|**email** | **String** | The email address of the subaccount. |  [optional] |
+|**phoneNumber** | **String** | The phone number of the subaccount. |  [optional] |
+|**firstName** | **String** | The first name of the subaccount. |  [optional] |
+|**lastName** | **String** | The last name of the subaccount. |  [optional] |
+|**apiKey** | **String** | The API key of the subaccount. |  [optional] |
+|**accessUsers** | **Integer** | Flag indicating if the subaccount has access to users. |  [optional] |
+|**accessBilling** | **Integer** | Flag indicating if the subaccount has access to billing. |  [optional] |
+|**accessReporting** | **Integer** | Flag indicating if the subaccount has access to reporting. |  [optional] |
+|**accessContacts** | **Integer** | Flag indicating if the subaccount has access to contacts. |  [optional] |
+|**accessSettings** | **Integer** | Flag indicating if the subaccount has access to settings. |  [optional] |
+|**accessSms** | **Integer** | Flag indicating if the subaccount has access to SMS. |  [optional] |
+|**accessEmail** | **Integer** | Flag indicating if the subaccount has access to email. |  [optional] |
+|**accessVoice** | **Integer** | Flag indicating if the subaccount has access to voice services. |  [optional] |
+|**accessFax** | **Integer** | Flag indicating if the subaccount has access to fax services. |  [optional] |
+|**accessPost** | **Integer** | Flag indicating if the subaccount has access to post services. |  [optional] |
+|**accessReseller** | **Integer** | Flag indicating if the subaccount has access to reseller services. |  [optional] |
+|**accessMms** | **Integer** | Flag indicating if the subaccount has access to MMS services. |  [optional] |
+|**shareCampaigns** | **Integer** | Flag indicating if the subaccount can share campaigns. |  [optional] |
+|**notes** | **String** | Additional notes for the subaccount. |  [optional] |
 
 
 

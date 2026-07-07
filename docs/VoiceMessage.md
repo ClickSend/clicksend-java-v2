@@ -2,23 +2,29 @@
 
 # VoiceMessage
 
-VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**to** | **String** | Your phone number in E.164 format. |  [optional] |
-|**body** | **String** | Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. |  |
-|**voice** | **String** | Either &#39;female&#39; or &#39;male&#39;. |  |
-|**customString** | **String** | Your reference. Will be passed back with all replies and delivery reports. |  |
-|**country** | **String** | The country of the recipient. |  |
-|**source** | **String** | Your method of sending e.g. &#39;wordpress&#39;, &#39;php&#39;, &#39;c#&#39;. |  [optional] |
-|**listId** | **Integer** | Your list ID if sending to a whole list. Can be used instead of &#39;to&#39;. |  [optional] |
-|**lang** | **String** | au (string, required) - See section on available languages. |  [optional] |
-|**schedule** | **Integer** | Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp |  [optional] |
-|**requireInput** | **Integer** | Whether you want to receive a keypress from the call recipient |  [optional] |
-|**machineDetection** | **Integer** | Whether to attempt to detect an answering machine or voicemail service and leave a message |  [optional] |
+|**date** | **BigDecimal** | The date. |  [optional] |
+|**to** | **String** | The recipient&#39;s phone number. |  [optional] |
+|**toType** | **String** | The type of recipient. |  [optional] |
+|**body** | **String** | The body of the message. |  [optional] |
+|**from** | **String** | The sender&#39;s phone number. |  [optional] |
+|**lang** | **String** | The language of the message. |  [optional] |
+|**voice** | **String** | The voice of the message. |  [optional] |
+|**schedule** | **BigDecimal** | The timestamp when the message should be sent. |  [optional] |
+|**messageId** | **String** | The ID of the message. |  [optional] |
+|**messageParts** | **BigDecimal** | The number of parts in the message. |  [optional] |
+|**messagePrice** | **BigDecimal** | The price of the message. |  [optional] |
+|**customString** | **String** | The custom string of the message. |  [optional] |
+|**userId** | **BigDecimal** | The ID of the user. |  [optional] |
+|**subaccountId** | **BigDecimal** | The ID of the subaccount. |  [optional] |
+|**country** | **String** | The country code of the message. |  [optional] |
+|**requireInput** | **BigDecimal** | The require input of the message. |  [optional] |
+|**machineDetection** | **BigDecimal** | The machine detection of the message. |  [optional] |
+|**status** | **String** | The status of the message. |  [optional] |
 
 
 

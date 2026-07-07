@@ -2,17 +2,16 @@
 
 # Attachment
 
-Email attachment
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**content** | **String** | The base64-encoded contents of the file. |  |
-|**type** | **String** | The type of file being attached. |  |
-|**filename** | **String** | The name of the file being attached. |  |
-|**disposition** | **String** | Inline for content that can be displayed within the email, or attachment for any other files. |  |
-|**contentId** | **String** | An ID for the content. |  |
+|**fileName** | **String** | The name of the attached file. |  [optional] |
+|**contentType** | **String** | The MIME type of the attached file. |  [optional] |
+|**contentDisposition** | **String** | The content disposition of the attached file. |  [optional] |
+|**contentId** | **String** | The content ID of the attached file. |  [optional] |
+|**attachmentFileUrl** | **URI** | The URL to download the attached file. |  [optional] |
 
 
 
