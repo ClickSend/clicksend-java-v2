@@ -11,6 +11,65 @@ info:
   title: SMS
 servers:
 - url: https://rest.clicksend.com
+tags:
+- name: sms
+  x-displayName: sms
+- name: sms-campaigns
+  x-displayName: sms-campaigns
+- name: url-shortening
+  x-displayName: url-shortening
+- name: email-to-sms
+  x-displayName: email-to-sms
+- name: mms
+  x-displayName: mms
+- name: mms-campaigns
+  x-displayName: mms-campaigns
+- name: voice-messaging
+  x-displayName: voice-messaging
+- name: fax
+  x-displayName: fax
+- name: email
+  x-displayName: email
+- name: statistics
+  x-displayName: statistics
+- name: message-delivery
+  x-displayName: message-delivery
+- name: numbers
+  x-displayName: numbers
+- name: own-numbers
+  x-displayName: own-numbers
+- name: alpha-tags
+  x-displayName: alpha-tags
+- name: default-senders
+  x-displayName: default-senders
+- name: management
+  x-displayName: management
+- name: verification
+  x-displayName: verification
+- name: international-messaging
+  x-displayName: international-messaging
+- name: transactions
+  x-displayName: transactions
+- name: subaccounts
+  x-displayName: subaccounts
+- name: referrals
+  x-displayName: referrals
+- name: reseller
+  x-displayName: reseller
+- name: lists
+  x-displayName: lists
+- name: contacts
+  x-displayName: contacts
+- name: addresses
+  x-displayName: addresses
+- name: postcards
+  x-displayName: postcards
+- name: letters
+  x-displayName: letters
+- name: voice
+  x-displayName: voice
+- name: uploads
+  x-displayName: uploads
 paths:
   /v3/sms/send:
     post:
@@ -78,6 +137,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send SMS
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -390,6 +451,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate SMS Price
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -674,6 +737,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Receipts
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -878,6 +943,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Test SMS Receipt
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -1102,6 +1169,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific SMS Receipt
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -1306,6 +1375,8 @@ paths:
       security:
       - basicAuth: []
       summary: Mark SMS Receipt As Read
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -1531,6 +1602,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Inbound SMS
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -1742,6 +1815,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Test Inbound SMS
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -1979,6 +2054,8 @@ paths:
       security:
       - basicAuth: []
       summary: View a specific inbound SMS message
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |
@@ -2161,6 +2238,8 @@ paths:
       security:
       - basicAuth: []
       summary: Mark Inbound SMS as Read
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -2364,6 +2443,8 @@ paths:
       security:
       - basicAuth: []
       summary: Mark Specific Inbound SMS Message As Read
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -2562,6 +2643,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel SMS
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -2750,6 +2833,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel All SMS
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -3005,6 +3090,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Templates
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -3209,6 +3296,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create SMS Template
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -3434,6 +3523,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete SMS Template
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -3640,6 +3731,8 @@ paths:
       security:
       - basicAuth: []
       summary: View a Specific SMS Template
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -3821,6 +3914,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update SMS Template
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -4135,6 +4230,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS History
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -4440,6 +4537,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export SMS History
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -4639,6 +4738,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send SMS Campaign
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -4895,6 +4996,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate SMS Campaign Price
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -5143,6 +5246,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific SMS Campaign
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -5357,6 +5462,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update SMS Campaign
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -5615,6 +5722,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel SMS Campaign
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -5897,6 +6006,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Campaigns
+      tags:
+      - sms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6116,6 +6227,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Statistics
+      tags:
+      - url-shortening
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6160,6 +6273,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Tracking
+      tags:
+      - url-shortening
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6199,6 +6314,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Allowed Emails
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6413,6 +6530,8 @@ paths:
       security:
       - basicAuth: []
       summary: Add Allowed Email
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6647,6 +6766,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Stripped String Rules
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -6859,6 +6980,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Stripped String Rule
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -7065,6 +7188,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Stripped String Rule
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -7272,6 +7397,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Stripped String Rule
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -7484,6 +7611,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Stripped String Rule
+      tags:
+      - email-to-sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -7706,6 +7835,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send MMS
+      tags:
+      - mms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -8035,6 +8166,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate MMS Price
+      tags:
+      - mms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -8352,6 +8485,8 @@ paths:
       security:
       - basicAuth: []
       summary: View MMS History
+      tags:
+      - mms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -8611,6 +8746,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export MMS History
+      tags:
+      - mms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -8810,6 +8947,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send MMS Campaign
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -9115,6 +9254,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate MMS Campaign Price
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -9396,6 +9537,8 @@ paths:
       security:
       - basicAuth: []
       summary: View MMS Campaign
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -9613,6 +9756,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update MMS Campaign
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -9915,6 +10060,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel MMS Campaign
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -10138,6 +10285,8 @@ paths:
       security:
       - basicAuth: []
       summary: View All MMS Campaigns
+      tags:
+      - mms-campaigns
       x-codeSamples:
       - lang: curl
         source: |-
@@ -10398,6 +10547,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Voice Message
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -10729,6 +10880,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Voice Price
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -11036,6 +11189,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Voice Languages
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -11250,6 +11405,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Voice Receipts
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -11465,6 +11622,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel Voice Message
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -11655,6 +11814,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel All Voice Messages
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -11887,6 +12048,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Voice History
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -12150,6 +12313,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export Voice History
+      tags:
+      - voice-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -12378,6 +12543,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Fax
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -12690,6 +12857,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Fax Price
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -13014,6 +13183,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Fax Receipts
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -13219,6 +13390,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific Fax Receipt
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -13415,6 +13588,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Fax History
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -13673,6 +13848,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Email
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -14122,6 +14299,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Email Price
+      tags:
+      - email
       x-codeSamples:
       - lang: PHP
         source: |-
@@ -14497,6 +14676,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email History
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -14724,6 +14905,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export Email History
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -14940,6 +15123,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Allowed Email Addresses
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -15151,6 +15336,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Allowed Email Address
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -15339,6 +15526,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Email Verification Token
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -15561,6 +15750,8 @@ paths:
       security:
       - basicAuth: []
       summary: Verify Allowed Email Address
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -15765,6 +15956,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Allowed Email Address
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -15970,6 +16163,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Allowed Email Address
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -16179,6 +16374,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Email Campaign
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -16461,6 +16658,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Email Campaign Price
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -16707,6 +16906,8 @@ paths:
       security:
       - basicAuth: []
       summary: View All Email Campaigns
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -16916,6 +17117,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Campaign
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -17124,6 +17327,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Email Campaign
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -17404,6 +17609,8 @@ paths:
       security:
       - basicAuth: []
       summary: Cancel Email Campaign
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -17600,6 +17807,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Campaign History
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -17817,6 +18026,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export Email Campaign History
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -18033,6 +18244,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Master Email Templates
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -18245,6 +18458,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Master Email Template
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -18443,6 +18658,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Template Categories
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -18658,6 +18875,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Template Category
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -18867,6 +19086,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Templates in Category
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -19080,6 +19301,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Templates
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -19290,6 +19513,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Email Template
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -19517,6 +19742,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Email Template
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -19722,6 +19949,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Template
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -19921,6 +20150,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Email Template
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -20123,6 +20354,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Voice Statistics
+      tags:
+      - statistics
       x-codeSamples:
       - lang: curl
         source: |-
@@ -20308,6 +20541,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Statistics
+      tags:
+      - statistics
       x-codeSamples:
       - lang: curl
         source: |-
@@ -20499,6 +20734,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get All Delivery Issues
+      tags:
+      - message-delivery
       x-codeSamples:
       - lang: curl
         source: |-
@@ -20713,6 +20950,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Delivery Issues
+      tags:
+      - message-delivery
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21028,6 +21267,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Your Numbers
+      tags:
+      - numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21273,6 +21514,8 @@ paths:
       security:
       - basicAuth: []
       summary: Purchase Dedicated Number
+      tags:
+      - numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21585,6 +21828,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Available Numbers
+      tags:
+      - numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21852,6 +22097,8 @@ paths:
       security:
       - basicAuth: []
       summary: Register Numbers
+      tags:
+      - numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21909,6 +22156,8 @@ paths:
       security:
       - basicAuth: []
       summary: List Own Numbers
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -21960,6 +22209,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Own Number
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22010,6 +22261,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Own Number Detail
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22057,6 +22310,8 @@ paths:
                 $ref: "#/components/schemas/own_number"
           description: Successful response
       summary: Update Own Number
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22111,6 +22366,8 @@ paths:
       security:
       - basicAuth: []
       summary: Request Own Number Verification OTP
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22181,6 +22438,8 @@ paths:
       security:
       - basicAuth: []
       summary: Verify Own Number OTP
+      tags:
+      - own-numbers
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22238,6 +22497,8 @@ paths:
       security:
       - basicAuth: []
       summary: List Alpha Tags
+      tags:
+      - alpha-tags
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22359,6 +22620,8 @@ paths:
       security:
       - basicAuth: []
       summary: Request Alpha Tag
+      tags:
+      - alpha-tags
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22413,6 +22676,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Alpha Tag
+      tags:
+      - alpha-tags
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22462,6 +22727,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Alpha Tag
+      tags:
+      - alpha-tags
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22556,6 +22823,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get List of Default Senders
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22622,6 +22891,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Default Sender
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22674,6 +22945,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Default Sender
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22733,6 +23006,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Default Sender Details
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22806,6 +23081,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Default Sender
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |-
@@ -22900,6 +23177,8 @@ paths:
       security:
       - basicAuth: []
       summary: List Compliant Sender Types
+      tags:
+      - default-senders
       x-codeSamples:
       - lang: curl
         source: |
@@ -22937,6 +23216,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Account Details
+      tags:
+      - management
       x-codeSamples:
       - lang: PHP
         source: "<?php\nrequire_once(__DIR__ . '/vendor/autoload.php');\n\n// Configure\
@@ -23067,6 +23348,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Account Usage
+      tags:
+      - management
       x-accepts:
       - application/json
   /v3/forgot-username:
@@ -23105,6 +23388,8 @@ paths:
       security:
       - basicAuth: []
       summary: Forgot Username
+      tags:
+      - verification
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23287,6 +23572,8 @@ paths:
       security:
       - basicAuth: []
       summary: Forgot Password
+      tags:
+      - verification
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23473,6 +23760,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Countries for Global Sending
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23507,6 +23796,8 @@ paths:
       security:
       - basicAuth: []
       summary: Select Countries for Global Sending
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23542,6 +23833,8 @@ paths:
       security:
       - basicAuth: []
       summary: Agree to rules and regulation
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23569,6 +23862,8 @@ paths:
       security:
       - basicAuth: []
       summary: International Messaging
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23592,6 +23887,8 @@ paths:
                 $ref: "#/components/schemas/view-countries"
           description: Successful response
       summary: View Countries
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23763,6 +24060,8 @@ paths:
       security:
       - basicAuth: []
       summary: Timezones
+      tags:
+      - international-messaging
       x-codeSamples:
       - lang: curl
         source: |-
@@ -23968,6 +24267,8 @@ paths:
       security:
       - basicAuth: []
       summary: Current Payment Info
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -24165,6 +24466,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Payment Info
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -24400,6 +24703,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Recharge Packages
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -24603,6 +24908,8 @@ paths:
       security:
       - basicAuth: []
       summary: Purchase Recharge Package
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -24803,6 +25110,8 @@ paths:
       security:
       - basicAuth: []
       summary: View All Transactions
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -25015,6 +25324,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific Transaction
+      tags:
+      - transactions
       x-codeSamples:
       - lang: curl
         source: |-
@@ -25202,6 +25513,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Subaccounts
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -25421,6 +25734,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Subaccount
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -25702,6 +26017,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Subaccount
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -25907,6 +26224,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific Subaccount
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -26130,6 +26449,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Subaccount
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -26438,6 +26759,8 @@ paths:
       security:
       - basicAuth: []
       summary: Generate New API Key
+      tags:
+      - subaccounts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -26628,6 +26951,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Referral Accounts
+      tags:
+      - referrals
       x-codeSamples:
       - lang: curl
         source: |-
@@ -26836,6 +27161,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Client Accounts
+      tags:
+      - reseller
       x-codeSamples:
       - lang: curl
         source: |-
@@ -27053,6 +27380,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Reseller Account
+      tags:
+      - reseller
       x-codeSamples:
       - lang: curl
         source: |-
@@ -27323,6 +27652,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific Client Account
+      tags:
+      - reseller
       x-codeSamples:
       - lang: curl
         source: |-
@@ -27540,6 +27871,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Client Account
+      tags:
+      - reseller
       x-codeSamples:
       - lang: curl
         source: |-
@@ -27819,6 +28152,8 @@ paths:
       security:
       - basicAuth: []
       summary: Reseller Transfer Credit
+      tags:
+      - reseller
       x-codeSamples:
       - lang: curl
         source: |-
@@ -28077,6 +28412,8 @@ paths:
       security:
       - basicAuth: []
       summary: View List Contacts
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -28319,6 +28656,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create New Contact
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -28711,6 +29050,8 @@ paths:
       security:
       - basicAuth: []
       summary: Copy Contact to List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -28972,6 +29313,8 @@ paths:
       security:
       - basicAuth: []
       summary: Transfer Contact to List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -29204,6 +29547,8 @@ paths:
       security:
       - basicAuth: []
       summary: Remove Opted Out Contacts
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -29416,6 +29761,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Lists
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -29627,6 +29974,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -29852,6 +30201,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -30062,6 +30413,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -30274,6 +30627,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update List
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -30511,6 +30866,8 @@ paths:
       security:
       - basicAuth: []
       summary: Remove Duplicate Contacts
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -30802,6 +31159,8 @@ paths:
       security:
       - basicAuth: []
       summary: Import Contacts
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -31065,6 +31424,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Contact Lists
+      tags:
+      - lists
       x-codeSamples:
       - lang: curl
         source: |-
@@ -31291,6 +31652,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Contact
+      tags:
+      - contacts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -31516,6 +31879,8 @@ paths:
       security:
       - basicAuth: []
       summary: Get Specific Contact
+      tags:
+      - contacts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -31759,6 +32124,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Contact
+      tags:
+      - contacts
       x-codeSamples:
       - lang: curl
         source: |-
@@ -32129,6 +32496,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Your Return Addresses
+      tags:
+      - addresses
       x-codeSamples:
       - lang: curl
         source: |-
@@ -32344,6 +32713,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Return Address
+      tags:
+      - addresses
       x-codeSamples:
       - lang: curl
         source: |-
@@ -32633,6 +33004,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Return Address
+      tags:
+      - addresses
       x-codeSamples:
       - lang: curl
         source: |-
@@ -32840,6 +33213,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Specific Return Address
+      tags:
+      - addresses
       x-codeSamples:
       - lang: curl
         source: |-
@@ -33057,6 +33432,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Return Address
+      tags:
+      - addresses
       x-codeSamples:
       - lang: curl
         source: |-
@@ -33379,6 +33756,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Postcard
+      tags:
+      - postcards
       x-codeSamples:
       - lang: curl
         source: |-
@@ -33712,6 +34091,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Postcard Price
+      tags:
+      - postcards
       x-codeSamples:
       - lang: curl
         source: |-
@@ -34034,6 +34415,8 @@ paths:
                 $ref: "#/components/schemas/cancel-scheduled-postcard"
           description: Successful response
       summary: Cancel Scheduled Postcard
+      tags:
+      - postcards
       x-codeSamples:
       - lang: curl
         source: |2-
@@ -34075,6 +34458,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Postcard History
+      tags:
+      - postcards
       x-codeSamples:
       - lang: curl
         source: |-
@@ -34281,6 +34666,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export Postcard History
+      tags:
+      - postcards
       x-codeSamples:
       - lang: curl
         source: |-
@@ -34513,6 +34900,8 @@ paths:
       security:
       - basicAuth: []
       summary: Send Letter
+      tags:
+      - letters
       x-codeSamples:
       - lang: curl
         source: |-
@@ -34873,6 +35262,8 @@ paths:
       security:
       - basicAuth: []
       summary: Calculate Letter Price
+      tags:
+      - letters
       x-codeSamples:
       - lang: curl
         source: |-
@@ -35230,6 +35621,8 @@ paths:
       security:
       - basicAuth: []
       summary: Detect Address
+      tags:
+      - letters
       x-codeSamples:
       - lang: curl
         source: |-
@@ -35437,6 +35830,8 @@ paths:
                 $ref: "#/components/schemas/cancel-scheduled-letter"
           description: Successful response
       summary: Cancel Scheduled Letter
+      tags:
+      - letters
       x-accepts:
       - application/json
   /v3/post/letters/history:
@@ -35470,6 +35865,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Letter History
+      tags:
+      - letters
       x-codeSamples:
       - lang: curl
         source: |-
@@ -35722,6 +36119,8 @@ paths:
       security:
       - basicAuth: []
       summary: Export Letter History
+      tags:
+      - letters
       x-codeSamples:
       - lang: curl
         source: |-
@@ -35921,6 +36320,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Inbound Automations
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -36145,6 +36546,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create SMS Inbound Automation
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -36396,6 +36799,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete SMS Inbound Automation
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -36601,6 +37006,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Inbound Automation
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -36823,6 +37230,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update SMS Inbound Automation
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -37074,6 +37483,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Delivery Receipt Rules
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -37293,6 +37704,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create SMS Delivery Receipt Rule
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -37521,6 +37934,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete SMS Delivery Receipt Rule
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -37727,6 +38142,8 @@ paths:
       security:
       - basicAuth: []
       summary: View SMS Delivery Receipt Rule
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -37945,6 +38362,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update SMS Delivery Receipt Rule
+      tags:
+      - sms
       x-codeSamples:
       - lang: curl
         source: |-
@@ -38196,6 +38615,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Voice Delivery Receipt Rules
+      tags:
+      - voice
       x-codeSamples:
       - lang: curl
         source: |-
@@ -38414,6 +38835,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Voice Delivery Receipt Rule
+      tags:
+      - voice
       x-codeSamples:
       - lang: curl
         source: |-
@@ -38665,6 +39088,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Voice Delivery Receipt Rule
+      tags:
+      - voice
       x-codeSamples:
       - lang: curl
         source: |-
@@ -38870,6 +39295,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Voice Delivery Receipt Rule
+      tags:
+      - voice
       x-codeSamples:
       - lang: curl
         source: |-
@@ -39087,6 +39514,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Voice Delivery Receipt Rule
+      tags:
+      - voice
       x-codeSamples:
       - lang: curl
         source: |-
@@ -39337,6 +39766,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Delivery Receipt Rules
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -39556,6 +39987,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Email Delivery Receipt Rule
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -39793,6 +40226,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Email Delivery Receipt Rule
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -39996,6 +40431,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Email Delivery Receipt Rule
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -40214,6 +40651,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Email Delivery Receipt Rule
+      tags:
+      - email
       x-codeSamples:
       - lang: curl
         source: |-
@@ -40438,6 +40877,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Fax Inbound Rules
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -40658,6 +41099,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create Fax Inbound Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -40916,6 +41359,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete Fax Inbound Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -41121,6 +41566,8 @@ paths:
       security:
       - basicAuth: []
       summary: View Fax Inbound Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -41339,6 +41786,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update Fax Inbound Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -41599,6 +42048,8 @@ paths:
       security:
       - basicAuth: []
       summary: View FAX Delivery Receipt Rules
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -41816,6 +42267,8 @@ paths:
       security:
       - basicAuth: []
       summary: Create FAX Delivery Receipt Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -42065,6 +42518,8 @@ paths:
       security:
       - basicAuth: []
       summary: Delete FAX Delivery Receipt Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -42272,6 +42727,8 @@ paths:
       security:
       - basicAuth: []
       summary: View FAX Delivery Receipt Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -42485,6 +42942,8 @@ paths:
       security:
       - basicAuth: []
       summary: Update FAX Delivery Receipt Rule
+      tags:
+      - fax
       x-codeSamples:
       - lang: curl
         source: |-
@@ -42747,6 +43206,8 @@ paths:
       security:
       - basicAuth: []
       summary: Upload Media File
+      tags:
+      - uploads
       x-codeSamples:
       - lang: curl
         source: |-
