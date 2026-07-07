@@ -19,12 +19,12 @@ _Get sms statistics_   Refer to [Status Codes](/#status-codes) for definitions o
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.StatisticsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.StatisticsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -87,12 +87,12 @@ _Get voice statistics_  Refer to [Status Codes](/#status-codes) for definitions 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.StatisticsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.StatisticsOtherApi;
 
 public class Example {
   public static void main(String[] args) {

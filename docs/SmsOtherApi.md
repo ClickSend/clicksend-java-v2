@@ -47,12 +47,12 @@ Use this endpoint to calculate the price of sending messages. The cost of sendin
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -117,12 +117,12 @@ Use this endpoint to cancel all scheduled SMS. To cancel only one scheduled SMS,
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -187,12 +187,12 @@ Use this endpoint to cancel a specific scheduled SMS. Unlike the **Cancel All SM
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -257,12 +257,12 @@ _Create sms delivery receipt automations_  Create sms delivery receipt automatio
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -327,12 +327,12 @@ _Create new inbound sms automation_  Create new inbound sms automation  | Name |
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -397,12 +397,12 @@ Use this endpoint to create a SMS template that you can use for sending SMS.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -467,12 +467,12 @@ Use this endpoint to generate and send a test &lt;a href&#x3D;\&quot;https://hel
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -537,12 +537,12 @@ Use this endpoint to generate and send a test &lt;a href&#x3D;\&quot;https://hel
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -607,12 +607,12 @@ _Delete sms delivery receipt automation_  Delete sms delivery receipt automation
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -677,12 +677,12 @@ _Delete inbound sms automation_  Delete inbound sms automation  ### Parameters  
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -747,12 +747,12 @@ Use this endpoint to delete a &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -817,12 +817,12 @@ Use this endpoint to create a download link of your SMS history. You can filter 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -899,12 +899,12 @@ Use this endpoint to mark all &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -969,12 +969,12 @@ Use this endpoint to mark all &lt;a target&#x3D;\&quot;_blank\&quot; href&#x3D;\
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1039,12 +1039,12 @@ Use this endpoint to mark a specific &lt;a href&#x3D;\&quot;https://help.clickse
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1109,12 +1109,12 @@ Use this endpoint to send messages to your recipients, either as phone numbers o
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1179,12 +1179,12 @@ _Update sms delivery receipt automation_  Update sms delivery receipt automation
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1251,12 +1251,12 @@ _Update inbound sms automation_  Update inbound sms automation  ### Parameters  
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1323,12 +1323,12 @@ Use this endpoint to update a &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1395,12 +1395,12 @@ Use this endpoint to retrieve a specific inbound SMS, including those that have 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1465,12 +1465,12 @@ Use this endpoint to retrieve a &lt;a href&#x3D;\&quot;https://help.clicksend.co
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1535,12 +1535,12 @@ Use this endpoint to retrieve &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1607,12 +1607,12 @@ _Get specific sms delivery receipt automation_  Get specific sms delivery receip
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1677,12 +1677,12 @@ _Get all sms delivery receipt automations_  Get all sms delivery receipt automat
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1745,12 +1745,12 @@ Use this endpoint to view previously sent SMS. You can filter the SMS history re
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1825,12 +1825,12 @@ _Get specific inbound sms automation_  Get specific inbound sms automation  ### 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1895,12 +1895,12 @@ _Get all inbound sms automations_  Get all inbound sms automations  ### Paramete
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1963,12 +1963,12 @@ Use this endpoint to retrieve &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2035,12 +2035,12 @@ Use this endpoint to retrieve &lt;a href&#x3D;\&quot;https://help.clicksend.com/
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2111,12 +2111,12 @@ Use this endpoint to retrieve a specific &lt;a href&#x3D;\&quot;https://help.cli
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SmsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.SmsOtherApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -22,12 +22,12 @@ _Calculate price for sending one or more postcards_  For &#x60;file_urls&#x60; f
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PostcardsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.PostcardsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -92,11 +92,11 @@ _Cancel scheduled postcard_  ### Parameters  | Parameter | In | Type | Required 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PostcardsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.models.*;
+import ClickSend.Api.PostcardsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -154,12 +154,12 @@ _Export postcard history to a CSV file_  ### Parameters  | Parameter | In | Type
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PostcardsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.PostcardsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -222,12 +222,12 @@ _Send one or more postcards_  ### **Supported File Types**  We support PDF, docx
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PostcardsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.PostcardsOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -292,12 +292,12 @@ _Retrieve the history of postcards sent or scheduled_  ### Parameters  | Paramet
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PostcardsOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.PostcardsOtherApi;
 
 public class Example {
   public static void main(String[] args) {

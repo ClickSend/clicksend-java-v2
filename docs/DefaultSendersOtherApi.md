@@ -23,12 +23,12 @@ Creates a new default sender configuration to automate the selection of complian
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -94,12 +94,12 @@ Removes a specified default sender setting.  If you don&#39;t configure a defaul
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -163,12 +163,12 @@ Retrieve detailed information about a specific default sender configuration
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -233,12 +233,12 @@ Retrieve a list of default senders for the current user
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -309,12 +309,12 @@ Retrieves the list of compliant sender types for specific countries
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -379,12 +379,12 @@ Updates the details of an existing default sender configuration.  For more infor
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultSendersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.DefaultSendersOtherApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -32,12 +32,12 @@ _Calculate Total Price for Fax Messages sent_  ### Properties  | Name | Type | R
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -102,12 +102,12 @@ _Create fax delivery receipt automations_  Create fax delivery receipt automatio
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -172,12 +172,12 @@ _Create new inbound fax automation_  Create new inbound fax automation  ### Prop
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -242,12 +242,12 @@ _Delete fax delivery receipt automation_  Delete fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -312,12 +312,12 @@ _Delete inbound fax automation_  Delete inbound fax automation  ### Parameters  
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -382,12 +382,12 @@ Send Fax
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -452,12 +452,12 @@ _Update fax delivery receipt automation_  Update fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -524,12 +524,12 @@ _Update inbound fax automation_  Update inbound fax automation  ### Parameters  
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -596,12 +596,12 @@ _Get specific fax delivery receipt automation_  Get specific fax delivery receip
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -666,12 +666,12 @@ _Get all fax delivery receipt automations_  Get all fax delivery receipt automat
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -734,12 +734,12 @@ _Get a list of Fax History._  ### Parameters  | Parameter | In | Type | Required
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -802,12 +802,12 @@ _Get specific inbound fax automation_  Get specific inbound fax automation  ### 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -872,12 +872,12 @@ _Get all inbound fax automations_  Get all inbound fax automations  ### Paramete
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -940,12 +940,12 @@ _Get List of Fax Receipts_  **Push Delivery Receipts**  If you prefer, we can pu
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1008,12 +1008,12 @@ _Get a single fax receipt based on message id._  ### Parameters  | Parameter | I
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FaxOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.FaxOtherApi;
 
 public class Example {
   public static void main(String[] args) {

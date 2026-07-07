@@ -25,12 +25,12 @@ _Calculate voice price_  ### Properties  | Name | Type | Required | Restrictions
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -95,12 +95,12 @@ _Update all voice messages as cancelled_  Refer to [Status Codes](/#status-codes
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -165,12 +165,12 @@ _Update voice message status as cancelled_  ### Parameters  | Parameter | In | T
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -237,12 +237,12 @@ _Export voice history_  ### Parameters  | Parameter | In | Type | Required | Des
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -317,12 +317,12 @@ _Get all voice history_  ### Parameters  | Parameter | In | Type | Required | De
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -395,12 +395,12 @@ _Send voice message(s)_  Send TTS (Text-to-speech) voice calls  ### How many mes
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -465,12 +465,12 @@ _Get all voice languages_   Refer to [Status Codes](/#status-codes) for definiti
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -533,12 +533,12 @@ _Get all voice receipts_  **Push Delivery Receipts**  If you prefer, we can push
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.VoiceMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.VoiceMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {

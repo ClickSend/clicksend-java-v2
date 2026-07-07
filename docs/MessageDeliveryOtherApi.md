@@ -19,12 +19,12 @@ _Create delivery Issue_  Create delivery Issue  ### Properties  | Name | Type | 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MessageDeliveryOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.MessageDeliveryOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -89,12 +89,12 @@ _Get all delivery issues_  Get all delivery issues  ### Parameters  | Parameter 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MessageDeliveryOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.MessageDeliveryOtherApi;
 
 public class Example {
   public static void main(String[] args) {

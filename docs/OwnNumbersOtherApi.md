@@ -23,12 +23,12 @@ _Delete a specific own numbers._  ### Parameters  | Parameter | In | Type | Requ
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -93,12 +93,12 @@ _Get a specific own numbers._  ### Parameters  | Parameter | In | Type | Require
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -163,12 +163,12 @@ _List own numbers._  ### Parameters  | Parameter | In | Type | Required | Descri
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -231,12 +231,12 @@ _Request to generate own number verification OTP_  ### Properties  | Name | Type
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -301,11 +301,11 @@ _Update details of a specific own numbers._  ### Parameters  | Parameter | In | 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -363,12 +363,12 @@ _Request to verify an OTP for Own Number verification_  ### Parameters  | Parame
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.OwnNumbersOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.OwnNumbersOtherApi;
 
 public class Example {
   public static void main(String[] args) {

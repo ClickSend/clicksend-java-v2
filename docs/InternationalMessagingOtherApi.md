@@ -23,12 +23,12 @@ _Update Country Rule_  To agree on rules and regulations of selected countries a
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -87,12 +87,12 @@ _Get Countries for global sending_  Get the list of selected countries.  Refer t
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -151,12 +151,12 @@ _List of countries_  List of countries with IDs that can be used in selecting co
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -215,12 +215,12 @@ _Select Countries_  Use this endpoint to select countries that you intend to sen
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -283,12 +283,12 @@ _Get supported list of timezones._  Get supported list of timezones.  ### Parame
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.auth.*;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -351,11 +351,11 @@ _Get all country codes_  Get all countries   Refer to [Status Codes](/#status-co
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.InternationalMessagingOtherApi;
+import ClickSend.ApiClient;
+import ClickSend.ApiException;
+import ClickSend.Configuration;
+import ClickSend.models.*;
+import ClickSend.Api.InternationalMessagingOtherApi;
 
 public class Example {
   public static void main(String[] args) {
