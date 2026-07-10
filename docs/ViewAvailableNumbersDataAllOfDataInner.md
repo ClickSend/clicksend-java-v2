@@ -1,6 +1,6 @@
 
 
-# ViewAvailableNumbersDataInner
+# ViewAvailableNumbersDataAllOfDataInner
 
 
 ## Properties

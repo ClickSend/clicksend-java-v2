@@ -15,16 +15,14 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import ClickSend.Model.Currency;
-import ClickSend.Model.ViewAvailableNumbersDataInner;
+import ClickSend.Model.ViewAvailableNumbersData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -72,7 +70,7 @@ public class ViewAvailableNumbers {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private List<ViewAvailableNumbersDataInner> data = new ArrayList<>();
+  private ViewAvailableNumbersData data;
 
   public static final String SERIALIZED_NAME_CURRENCY = "_currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
@@ -139,16 +137,8 @@ public class ViewAvailableNumbers {
   }
 
 
-  public ViewAvailableNumbers data(@javax.annotation.Nullable List<ViewAvailableNumbersDataInner> data) {
+  public ViewAvailableNumbers data(@javax.annotation.Nullable ViewAvailableNumbersData data) {
     this.data = data;
-    return this;
-  }
-
-  public ViewAvailableNumbers addDataItem(ViewAvailableNumbersDataInner dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<>();
-    }
-    this.data.add(dataItem);
     return this;
   }
 
@@ -157,11 +147,11 @@ public class ViewAvailableNumbers {
    * @return data
    */
   @javax.annotation.Nullable
-  public List<ViewAvailableNumbersDataInner> getData() {
+  public ViewAvailableNumbersData getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable List<ViewAvailableNumbersDataInner> data) {
+  public void setData(@javax.annotation.Nullable ViewAvailableNumbersData data) {
     this.data = data;
   }
 
@@ -267,19 +257,9 @@ public class ViewAvailableNumbers {
       if ((jsonObj.get("response_msg") != null && !jsonObj.get("response_msg").isJsonNull()) && !jsonObj.get("response_msg").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `response_msg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_msg").toString()));
       }
+      // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
-
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            ViewAvailableNumbersDataInner.validateJsonElement(jsonArraydata.get(i));
-          };
-        }
+        ViewAvailableNumbersData.validateJsonElement(jsonObj.get("data"));
       }
       // validate the optional field `_currency`
       if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {

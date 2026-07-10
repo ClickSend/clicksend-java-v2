@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -47,10 +46,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewAccountUsageDataSmsInner
+ * ViewAccountUsageDataVoiceInner
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewAccountUsageDataSmsInner {
+public class ViewAccountUsageDataVoiceInner {
   public static final String SERIALIZED_NAME_SUBACCOUNT_ID = "subaccount_id";
   @SerializedName(SERIALIZED_NAME_SUBACCOUNT_ID)
   @javax.annotation.Nullable
@@ -69,12 +68,12 @@ public class ViewAccountUsageDataSmsInner {
   public static final String SERIALIZED_NAME_TOTAL_PRICE = "total_price";
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal totalPrice;
+  private String totalPrice;
 
-  public ViewAccountUsageDataSmsInner() {
+  public ViewAccountUsageDataVoiceInner() {
   }
 
-  public ViewAccountUsageDataSmsInner subaccountId(@javax.annotation.Nullable Integer subaccountId) {
+  public ViewAccountUsageDataVoiceInner subaccountId(@javax.annotation.Nullable Integer subaccountId) {
     this.subaccountId = subaccountId;
     return this;
   }
@@ -93,7 +92,7 @@ public class ViewAccountUsageDataSmsInner {
   }
 
 
-  public ViewAccountUsageDataSmsInner username(@javax.annotation.Nullable String username) {
+  public ViewAccountUsageDataVoiceInner username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
@@ -112,13 +111,13 @@ public class ViewAccountUsageDataSmsInner {
   }
 
 
-  public ViewAccountUsageDataSmsInner totalCount(@javax.annotation.Nullable String totalCount) {
+  public ViewAccountUsageDataVoiceInner totalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
   /**
-   * The total count of SMS.
+   * The total count of voice calls.
    * @return totalCount
    */
   @javax.annotation.Nullable
@@ -131,21 +130,21 @@ public class ViewAccountUsageDataSmsInner {
   }
 
 
-  public ViewAccountUsageDataSmsInner totalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
+  public ViewAccountUsageDataVoiceInner totalPrice(@javax.annotation.Nullable String totalPrice) {
     this.totalPrice = totalPrice;
     return this;
   }
 
   /**
-   * The total price of SMS.
+   * The total price of voice calls.
    * @return totalPrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getTotalPrice() {
+  public String getTotalPrice() {
     return totalPrice;
   }
 
-  public void setTotalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
+  public void setTotalPrice(@javax.annotation.Nullable String totalPrice) {
     this.totalPrice = totalPrice;
   }
 
@@ -159,11 +158,11 @@ public class ViewAccountUsageDataSmsInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewAccountUsageDataSmsInner viewAccountUsageDataSmsInner = (ViewAccountUsageDataSmsInner) o;
-    return Objects.equals(this.subaccountId, viewAccountUsageDataSmsInner.subaccountId) &&
-        Objects.equals(this.username, viewAccountUsageDataSmsInner.username) &&
-        Objects.equals(this.totalCount, viewAccountUsageDataSmsInner.totalCount) &&
-        Objects.equals(this.totalPrice, viewAccountUsageDataSmsInner.totalPrice);
+    ViewAccountUsageDataVoiceInner viewAccountUsageDataVoiceInner = (ViewAccountUsageDataVoiceInner) o;
+    return Objects.equals(this.subaccountId, viewAccountUsageDataVoiceInner.subaccountId) &&
+        Objects.equals(this.username, viewAccountUsageDataVoiceInner.username) &&
+        Objects.equals(this.totalCount, viewAccountUsageDataVoiceInner.totalCount) &&
+        Objects.equals(this.totalPrice, viewAccountUsageDataVoiceInner.totalPrice);
   }
 
   @Override
@@ -174,7 +173,7 @@ public class ViewAccountUsageDataSmsInner {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewAccountUsageDataSmsInner {\n");
+    sb.append("class ViewAccountUsageDataVoiceInner {\n");
     sb.append("    subaccountId: ").append(toIndentedString(subaccountId)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
@@ -207,20 +206,20 @@ public class ViewAccountUsageDataSmsInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewAccountUsageDataSmsInner
+   * @throws IOException if the JSON Element is invalid with respect to ViewAccountUsageDataVoiceInner
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewAccountUsageDataSmsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAccountUsageDataSmsInner is not found in the empty JSON string", ViewAccountUsageDataSmsInner.openapiRequiredFields.toString()));
+        if (!ViewAccountUsageDataVoiceInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAccountUsageDataVoiceInner is not found in the empty JSON string", ViewAccountUsageDataVoiceInner.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewAccountUsageDataSmsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAccountUsageDataSmsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewAccountUsageDataVoiceInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAccountUsageDataVoiceInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -230,28 +229,31 @@ public class ViewAccountUsageDataSmsInner {
       if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
       }
+      if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewAccountUsageDataSmsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewAccountUsageDataSmsInner' and its subtypes
+       if (!ViewAccountUsageDataVoiceInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewAccountUsageDataVoiceInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewAccountUsageDataSmsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAccountUsageDataSmsInner.class));
+       final TypeAdapter<ViewAccountUsageDataVoiceInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAccountUsageDataVoiceInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewAccountUsageDataSmsInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewAccountUsageDataVoiceInner>() {
            @Override
-           public void write(JsonWriter out, ViewAccountUsageDataSmsInner value) throws IOException {
+           public void write(JsonWriter out, ViewAccountUsageDataVoiceInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewAccountUsageDataSmsInner read(JsonReader in) throws IOException {
+           public ViewAccountUsageDataVoiceInner read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -262,18 +264,18 @@ public class ViewAccountUsageDataSmsInner {
   }
 
   /**
-   * Create an instance of ViewAccountUsageDataSmsInner given an JSON string
+   * Create an instance of ViewAccountUsageDataVoiceInner given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewAccountUsageDataSmsInner
-   * @throws IOException if the JSON string is invalid with respect to ViewAccountUsageDataSmsInner
+   * @return An instance of ViewAccountUsageDataVoiceInner
+   * @throws IOException if the JSON string is invalid with respect to ViewAccountUsageDataVoiceInner
    */
-  public static ViewAccountUsageDataSmsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewAccountUsageDataSmsInner.class);
+  public static ViewAccountUsageDataVoiceInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewAccountUsageDataVoiceInner.class);
   }
 
   /**
-   * Convert an instance of ViewAccountUsageDataSmsInner to an JSON string
+   * Convert an instance of ViewAccountUsageDataVoiceInner to an JSON string
    *
    * @return JSON string
    */

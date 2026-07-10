@@ -406,8 +406,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsage.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataEmailInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataEmailTotal.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataSmsInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataSmsTotal.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataVoiceInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllEmailCampaigns.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllEmailCampaignsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllMmsCampaigns.CustomTypeAdapterFactory());
@@ -421,7 +423,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllowedEmails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllowedEmailsDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAvailableNumbers.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAvailableNumbersDataInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAvailableNumbersData.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAvailableNumbersDataAllOfDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewClientAccounts.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewClientAccountsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewCountries.CustomTypeAdapterFactory());
@@ -451,6 +454,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewLetterHistory.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewLetterHistoryData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListContacts.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListContactsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewLists.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewMasterEmailTemplate.CustomTypeAdapterFactory());
@@ -500,6 +504,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewStrippedStringRulesData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewStrippedStringRulesDataDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSubaccounts.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSubaccountsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewTemplateCategories.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewTemplateCategoriesDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewTemplateCategory.CustomTypeAdapterFactory());
@@ -515,7 +520,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatistics.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatisticsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatisticsDataStatsInner.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatisticsDataStatsInnerOutbound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatisticsDataTotal.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewYourNumbers.CustomTypeAdapterFactory());

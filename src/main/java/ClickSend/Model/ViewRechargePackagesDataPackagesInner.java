@@ -59,7 +59,7 @@ public class ViewRechargePackagesDataPackagesInner {
   public static final String SERIALIZED_NAME_PACKAGE_PRICE = "package_price";
   @SerializedName(SERIALIZED_NAME_PACKAGE_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal packagePrice;
+  private String packagePrice;
 
   public static final String SERIALIZED_NAME_PRICE_RATE = "price_rate";
   @SerializedName(SERIALIZED_NAME_PRICE_RATE)
@@ -198,7 +198,7 @@ public class ViewRechargePackagesDataPackagesInner {
   }
 
 
-  public ViewRechargePackagesDataPackagesInner packagePrice(@javax.annotation.Nullable BigDecimal packagePrice) {
+  public ViewRechargePackagesDataPackagesInner packagePrice(@javax.annotation.Nullable String packagePrice) {
     this.packagePrice = packagePrice;
     return this;
   }
@@ -208,11 +208,11 @@ public class ViewRechargePackagesDataPackagesInner {
    * @return packagePrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getPackagePrice() {
+  public String getPackagePrice() {
     return packagePrice;
   }
 
-  public void setPackagePrice(@javax.annotation.Nullable BigDecimal packagePrice) {
+  public void setPackagePrice(@javax.annotation.Nullable String packagePrice) {
     this.packagePrice = packagePrice;
   }
 
@@ -770,6 +770,9 @@ public class ViewRechargePackagesDataPackagesInner {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("package_price") != null && !jsonObj.get("package_price").isJsonNull()) && !jsonObj.get("package_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `package_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("package_price").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -47,10 +46,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewVoiceStatisticsDataStatsInnerOutbound
+ * ViewAccountUsageDataEmailTotal
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewVoiceStatisticsDataStatsInnerOutbound {
+public class ViewAccountUsageDataEmailTotal {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
   @javax.annotation.Nullable
@@ -59,18 +58,18 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
   public static final String SERIALIZED_NAME_PRICE = "price";
   @SerializedName(SERIALIZED_NAME_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal price;
+  private String price;
 
-  public ViewVoiceStatisticsDataStatsInnerOutbound() {
+  public ViewAccountUsageDataEmailTotal() {
   }
 
-  public ViewVoiceStatisticsDataStatsInnerOutbound count(@javax.annotation.Nullable Integer count) {
+  public ViewAccountUsageDataEmailTotal count(@javax.annotation.Nullable Integer count) {
     this.count = count;
     return this;
   }
 
   /**
-   * The count of outbound calls.
+   * The total count of emails.
    * @return count
    */
   @javax.annotation.Nullable
@@ -83,21 +82,21 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
   }
 
 
-  public ViewVoiceStatisticsDataStatsInnerOutbound price(@javax.annotation.Nullable BigDecimal price) {
+  public ViewAccountUsageDataEmailTotal price(@javax.annotation.Nullable String price) {
     this.price = price;
     return this;
   }
 
   /**
-   * The price of outbound calls.
+   * The total price of emails.
    * @return price
    */
   @javax.annotation.Nullable
-  public BigDecimal getPrice() {
+  public String getPrice() {
     return price;
   }
 
-  public void setPrice(@javax.annotation.Nullable BigDecimal price) {
+  public void setPrice(@javax.annotation.Nullable String price) {
     this.price = price;
   }
 
@@ -111,9 +110,9 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewVoiceStatisticsDataStatsInnerOutbound viewVoiceStatisticsDataStatsInnerOutbound = (ViewVoiceStatisticsDataStatsInnerOutbound) o;
-    return Objects.equals(this.count, viewVoiceStatisticsDataStatsInnerOutbound.count) &&
-        Objects.equals(this.price, viewVoiceStatisticsDataStatsInnerOutbound.price);
+    ViewAccountUsageDataEmailTotal viewAccountUsageDataEmailTotal = (ViewAccountUsageDataEmailTotal) o;
+    return Objects.equals(this.count, viewAccountUsageDataEmailTotal.count) &&
+        Objects.equals(this.price, viewAccountUsageDataEmailTotal.price);
   }
 
   @Override
@@ -124,7 +123,7 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewVoiceStatisticsDataStatsInnerOutbound {\n");
+    sb.append("class ViewAccountUsageDataEmailTotal {\n");
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("}");
@@ -155,45 +154,48 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewVoiceStatisticsDataStatsInnerOutbound
+   * @throws IOException if the JSON Element is invalid with respect to ViewAccountUsageDataEmailTotal
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewVoiceStatisticsDataStatsInnerOutbound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewVoiceStatisticsDataStatsInnerOutbound is not found in the empty JSON string", ViewVoiceStatisticsDataStatsInnerOutbound.openapiRequiredFields.toString()));
+        if (!ViewAccountUsageDataEmailTotal.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAccountUsageDataEmailTotal is not found in the empty JSON string", ViewAccountUsageDataEmailTotal.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewVoiceStatisticsDataStatsInnerOutbound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewVoiceStatisticsDataStatsInnerOutbound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewAccountUsageDataEmailTotal.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAccountUsageDataEmailTotal` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("price") != null && !jsonObj.get("price").isJsonNull()) && !jsonObj.get("price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("price").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewVoiceStatisticsDataStatsInnerOutbound.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewVoiceStatisticsDataStatsInnerOutbound' and its subtypes
+       if (!ViewAccountUsageDataEmailTotal.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewAccountUsageDataEmailTotal' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewVoiceStatisticsDataStatsInnerOutbound> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewVoiceStatisticsDataStatsInnerOutbound.class));
+       final TypeAdapter<ViewAccountUsageDataEmailTotal> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAccountUsageDataEmailTotal.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewVoiceStatisticsDataStatsInnerOutbound>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewAccountUsageDataEmailTotal>() {
            @Override
-           public void write(JsonWriter out, ViewVoiceStatisticsDataStatsInnerOutbound value) throws IOException {
+           public void write(JsonWriter out, ViewAccountUsageDataEmailTotal value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewVoiceStatisticsDataStatsInnerOutbound read(JsonReader in) throws IOException {
+           public ViewAccountUsageDataEmailTotal read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -204,18 +206,18 @@ public class ViewVoiceStatisticsDataStatsInnerOutbound {
   }
 
   /**
-   * Create an instance of ViewVoiceStatisticsDataStatsInnerOutbound given an JSON string
+   * Create an instance of ViewAccountUsageDataEmailTotal given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewVoiceStatisticsDataStatsInnerOutbound
-   * @throws IOException if the JSON string is invalid with respect to ViewVoiceStatisticsDataStatsInnerOutbound
+   * @return An instance of ViewAccountUsageDataEmailTotal
+   * @throws IOException if the JSON string is invalid with respect to ViewAccountUsageDataEmailTotal
    */
-  public static ViewVoiceStatisticsDataStatsInnerOutbound fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewVoiceStatisticsDataStatsInnerOutbound.class);
+  public static ViewAccountUsageDataEmailTotal fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewAccountUsageDataEmailTotal.class);
   }
 
   /**
-   * Convert an instance of ViewVoiceStatisticsDataStatsInnerOutbound to an JSON string
+   * Convert an instance of ViewAccountUsageDataEmailTotal to an JSON string
    *
    * @return JSON string
    */

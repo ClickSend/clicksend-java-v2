@@ -20,9 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -65,7 +63,7 @@ public class ViewVoiceLanguagesDataInner {
   public static final String SERIALIZED_NAME_GENDER = "gender";
   @SerializedName(SERIALIZED_NAME_GENDER)
   @javax.annotation.Nullable
-  private List<String> gender = new ArrayList<>();
+  private String gender;
 
   public ViewVoiceLanguagesDataInner() {
   }
@@ -108,29 +106,21 @@ public class ViewVoiceLanguagesDataInner {
   }
 
 
-  public ViewVoiceLanguagesDataInner gender(@javax.annotation.Nullable List<String> gender) {
+  public ViewVoiceLanguagesDataInner gender(@javax.annotation.Nullable String gender) {
     this.gender = gender;
     return this;
   }
 
-  public ViewVoiceLanguagesDataInner addGenderItem(String genderItem) {
-    if (this.gender == null) {
-      this.gender = new ArrayList<>();
-    }
-    this.gender.add(genderItem);
-    return this;
-  }
-
   /**
-   * Get gender
+   * The gender of the language.
    * @return gender
    */
   @javax.annotation.Nullable
-  public List<String> getGender() {
+  public String getGender() {
     return gender;
   }
 
-  public void setGender(@javax.annotation.Nullable List<String> gender) {
+  public void setGender(@javax.annotation.Nullable String gender) {
     this.gender = gender;
   }
 
@@ -213,9 +203,8 @@ public class ViewVoiceLanguagesDataInner {
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("gender") != null && !jsonObj.get("gender").isJsonNull() && !jsonObj.get("gender").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `gender` to be an array in the JSON string but got `%s`", jsonObj.get("gender").toString()));
+      if ((jsonObj.get("gender") != null && !jsonObj.get("gender").isJsonNull()) && !jsonObj.get("gender").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `gender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gender").toString()));
       }
   }
 

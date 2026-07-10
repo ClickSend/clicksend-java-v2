@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**packageId** | **BigDecimal** | The ID of the package. |  [optional] |
-|**packagePrice** | **BigDecimal** | The price of the package. |  [optional] |
+|**packagePrice** | **String** | The price of the package. |  [optional] |
 |**priceRate** | **Integer** | The pricing tier used to determine the cost per message. |  [optional] |
 |**smsPrice** | **BigDecimal** | The price of the SMS. |  [optional] |
 |**smsQuantity** | **BigDecimal** | The quantity of the SMS. |  [optional] |

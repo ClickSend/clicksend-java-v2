@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -85,12 +84,12 @@ public class ViewSmsHistoryDataAllOfDataInner {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private Integer schedule;
+  private String schedule;
 
   public static final String SERIALIZED_NAME_STATUS_CODE = "status_code";
   @SerializedName(SERIALIZED_NAME_STATUS_CODE)
   @javax.annotation.Nullable
-  private Integer statusCode;
+  private String statusCode;
 
   public static final String SERIALIZED_NAME_STATUS_TEXT = "status_text";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
@@ -100,7 +99,7 @@ public class ViewSmsHistoryDataAllOfDataInner {
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)
   @javax.annotation.Nullable
-  private Integer errorCode;
+  private String errorCode;
 
   public static final String SERIALIZED_NAME_ERROR_TEXT = "error_text";
   @SerializedName(SERIALIZED_NAME_ERROR_TEXT)
@@ -110,17 +109,17 @@ public class ViewSmsHistoryDataAllOfDataInner {
   public static final String SERIALIZED_NAME_MESSAGE_ID = "message_id";
   @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
   @javax.annotation.Nullable
-  private Integer messageId;
+  private String messageId;
 
   public static final String SERIALIZED_NAME_MESSAGE_PARTS = "message_parts";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PARTS)
   @javax.annotation.Nullable
-  private Integer messageParts;
+  private String messageParts;
 
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal messagePrice;
+  private String messagePrice;
 
   public static final String SERIALIZED_NAME_FROM_EMAIL = "from_email";
   @SerializedName(SERIALIZED_NAME_FROM_EMAIL)
@@ -294,7 +293,7 @@ public class ViewSmsHistoryDataAllOfDataInner {
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner schedule(@javax.annotation.Nullable Integer schedule) {
+  public ViewSmsHistoryDataAllOfDataInner schedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
     return this;
   }
@@ -304,16 +303,16 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return schedule
    */
   @javax.annotation.Nullable
-  public Integer getSchedule() {
+  public String getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
+  public void setSchedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner statusCode(@javax.annotation.Nullable Integer statusCode) {
+  public ViewSmsHistoryDataAllOfDataInner statusCode(@javax.annotation.Nullable String statusCode) {
     this.statusCode = statusCode;
     return this;
   }
@@ -323,11 +322,11 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return statusCode
    */
   @javax.annotation.Nullable
-  public Integer getStatusCode() {
+  public String getStatusCode() {
     return statusCode;
   }
 
-  public void setStatusCode(@javax.annotation.Nullable Integer statusCode) {
+  public void setStatusCode(@javax.annotation.Nullable String statusCode) {
     this.statusCode = statusCode;
   }
 
@@ -351,7 +350,7 @@ public class ViewSmsHistoryDataAllOfDataInner {
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner errorCode(@javax.annotation.Nullable Integer errorCode) {
+  public ViewSmsHistoryDataAllOfDataInner errorCode(@javax.annotation.Nullable String errorCode) {
     this.errorCode = errorCode;
     return this;
   }
@@ -361,11 +360,11 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return errorCode
    */
   @javax.annotation.Nullable
-  public Integer getErrorCode() {
+  public String getErrorCode() {
     return errorCode;
   }
 
-  public void setErrorCode(@javax.annotation.Nullable Integer errorCode) {
+  public void setErrorCode(@javax.annotation.Nullable String errorCode) {
     this.errorCode = errorCode;
   }
 
@@ -389,7 +388,7 @@ public class ViewSmsHistoryDataAllOfDataInner {
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner messageId(@javax.annotation.Nullable Integer messageId) {
+  public ViewSmsHistoryDataAllOfDataInner messageId(@javax.annotation.Nullable String messageId) {
     this.messageId = messageId;
     return this;
   }
@@ -399,16 +398,16 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return messageId
    */
   @javax.annotation.Nullable
-  public Integer getMessageId() {
+  public String getMessageId() {
     return messageId;
   }
 
-  public void setMessageId(@javax.annotation.Nullable Integer messageId) {
+  public void setMessageId(@javax.annotation.Nullable String messageId) {
     this.messageId = messageId;
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner messageParts(@javax.annotation.Nullable Integer messageParts) {
+  public ViewSmsHistoryDataAllOfDataInner messageParts(@javax.annotation.Nullable String messageParts) {
     this.messageParts = messageParts;
     return this;
   }
@@ -418,16 +417,16 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return messageParts
    */
   @javax.annotation.Nullable
-  public Integer getMessageParts() {
+  public String getMessageParts() {
     return messageParts;
   }
 
-  public void setMessageParts(@javax.annotation.Nullable Integer messageParts) {
+  public void setMessageParts(@javax.annotation.Nullable String messageParts) {
     this.messageParts = messageParts;
   }
 
 
-  public ViewSmsHistoryDataAllOfDataInner messagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public ViewSmsHistoryDataAllOfDataInner messagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
     return this;
   }
@@ -437,11 +436,11 @@ public class ViewSmsHistoryDataAllOfDataInner {
    * @return messagePrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getMessagePrice() {
+  public String getMessagePrice() {
     return messagePrice;
   }
 
-  public void setMessagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public void setMessagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
   }
 
@@ -797,11 +796,29 @@ public class ViewSmsHistoryDataAllOfDataInner {
       if ((jsonObj.get("from") != null && !jsonObj.get("from").isJsonNull()) && !jsonObj.get("from").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
       }
+      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
+      }
+      if ((jsonObj.get("status_code") != null && !jsonObj.get("status_code").isJsonNull()) && !jsonObj.get("status_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_code").toString()));
+      }
       if ((jsonObj.get("status_text") != null && !jsonObj.get("status_text").isJsonNull()) && !jsonObj.get("status_text").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
       }
+      if ((jsonObj.get("error_code") != null && !jsonObj.get("error_code").isJsonNull()) && !jsonObj.get("error_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `error_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_code").toString()));
+      }
       if ((jsonObj.get("error_text") != null && !jsonObj.get("error_text").isJsonNull()) && !jsonObj.get("error_text").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `error_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_text").toString()));
+      }
+      if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
+      }
+      if ((jsonObj.get("message_parts") != null && !jsonObj.get("message_parts").isJsonNull()) && !jsonObj.get("message_parts").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_parts` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_parts").toString()));
+      }
+      if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));
       }
       if ((jsonObj.get("from_email") != null && !jsonObj.get("from_email").isJsonNull()) && !jsonObj.get("from_email").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `from_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from_email").toString()));

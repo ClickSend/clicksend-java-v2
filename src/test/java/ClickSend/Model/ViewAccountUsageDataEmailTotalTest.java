@@ -19,23 +19,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewVoiceStatisticsDataStatsInnerOutbound
+ * Model tests for ViewAccountUsageDataEmailTotal
  */
-public class ViewVoiceStatisticsDataStatsInnerOutboundTest {
-    private final ViewVoiceStatisticsDataStatsInnerOutbound model = new ViewVoiceStatisticsDataStatsInnerOutbound();
+public class ViewAccountUsageDataEmailTotalTest {
+    private final ViewAccountUsageDataEmailTotal model = new ViewAccountUsageDataEmailTotal();
 
     /**
-     * Model tests for ViewVoiceStatisticsDataStatsInnerOutbound
+     * Model tests for ViewAccountUsageDataEmailTotal
      */
     @Test
-    public void testViewVoiceStatisticsDataStatsInnerOutbound() {
-        // TODO: test ViewVoiceStatisticsDataStatsInnerOutbound
+    public void testViewAccountUsageDataEmailTotal() {
+        // TODO: test ViewAccountUsageDataEmailTotal
     }
 
     /**

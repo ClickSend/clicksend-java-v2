@@ -47,10 +47,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewAvailableNumbersDataInner
+ * ViewAvailableNumbersDataAllOfDataInner
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewAvailableNumbersDataInner {
+public class ViewAvailableNumbersDataAllOfDataInner {
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
   @javax.annotation.Nullable
@@ -86,10 +86,10 @@ public class ViewAvailableNumbersDataInner {
   @javax.annotation.Nullable
   private String addressRequirement;
 
-  public ViewAvailableNumbersDataInner() {
+  public ViewAvailableNumbersDataAllOfDataInner() {
   }
 
-  public ViewAvailableNumbersDataInner country(@javax.annotation.Nullable String country) {
+  public ViewAvailableNumbersDataAllOfDataInner country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
   }
@@ -108,7 +108,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner countryName(@javax.annotation.Nullable String countryName) {
+  public ViewAvailableNumbersDataAllOfDataInner countryName(@javax.annotation.Nullable String countryName) {
     this.countryName = countryName;
     return this;
   }
@@ -127,7 +127,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner dedicatedNumber(@javax.annotation.Nullable String dedicatedNumber) {
+  public ViewAvailableNumbersDataAllOfDataInner dedicatedNumber(@javax.annotation.Nullable String dedicatedNumber) {
     this.dedicatedNumber = dedicatedNumber;
     return this;
   }
@@ -146,7 +146,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner priceSetup(@javax.annotation.Nullable String priceSetup) {
+  public ViewAvailableNumbersDataAllOfDataInner priceSetup(@javax.annotation.Nullable String priceSetup) {
     this.priceSetup = priceSetup;
     return this;
   }
@@ -165,7 +165,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner priceMonthly(@javax.annotation.Nullable String priceMonthly) {
+  public ViewAvailableNumbersDataAllOfDataInner priceMonthly(@javax.annotation.Nullable String priceMonthly) {
     this.priceMonthly = priceMonthly;
     return this;
   }
@@ -184,7 +184,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner priceTotal(@javax.annotation.Nullable String priceTotal) {
+  public ViewAvailableNumbersDataAllOfDataInner priceTotal(@javax.annotation.Nullable String priceTotal) {
     this.priceTotal = priceTotal;
     return this;
   }
@@ -203,7 +203,7 @@ public class ViewAvailableNumbersDataInner {
   }
 
 
-  public ViewAvailableNumbersDataInner addressRequirement(@javax.annotation.Nullable String addressRequirement) {
+  public ViewAvailableNumbersDataAllOfDataInner addressRequirement(@javax.annotation.Nullable String addressRequirement) {
     this.addressRequirement = addressRequirement;
     return this;
   }
@@ -231,14 +231,14 @@ public class ViewAvailableNumbersDataInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewAvailableNumbersDataInner viewAvailableNumbersDataInner = (ViewAvailableNumbersDataInner) o;
-    return Objects.equals(this.country, viewAvailableNumbersDataInner.country) &&
-        Objects.equals(this.countryName, viewAvailableNumbersDataInner.countryName) &&
-        Objects.equals(this.dedicatedNumber, viewAvailableNumbersDataInner.dedicatedNumber) &&
-        Objects.equals(this.priceSetup, viewAvailableNumbersDataInner.priceSetup) &&
-        Objects.equals(this.priceMonthly, viewAvailableNumbersDataInner.priceMonthly) &&
-        Objects.equals(this.priceTotal, viewAvailableNumbersDataInner.priceTotal) &&
-        Objects.equals(this.addressRequirement, viewAvailableNumbersDataInner.addressRequirement);
+    ViewAvailableNumbersDataAllOfDataInner viewAvailableNumbersDataAllOfDataInner = (ViewAvailableNumbersDataAllOfDataInner) o;
+    return Objects.equals(this.country, viewAvailableNumbersDataAllOfDataInner.country) &&
+        Objects.equals(this.countryName, viewAvailableNumbersDataAllOfDataInner.countryName) &&
+        Objects.equals(this.dedicatedNumber, viewAvailableNumbersDataAllOfDataInner.dedicatedNumber) &&
+        Objects.equals(this.priceSetup, viewAvailableNumbersDataAllOfDataInner.priceSetup) &&
+        Objects.equals(this.priceMonthly, viewAvailableNumbersDataAllOfDataInner.priceMonthly) &&
+        Objects.equals(this.priceTotal, viewAvailableNumbersDataAllOfDataInner.priceTotal) &&
+        Objects.equals(this.addressRequirement, viewAvailableNumbersDataAllOfDataInner.addressRequirement);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -260,7 +260,7 @@ public class ViewAvailableNumbersDataInner {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewAvailableNumbersDataInner {\n");
+    sb.append("class ViewAvailableNumbersDataAllOfDataInner {\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    countryName: ").append(toIndentedString(countryName)).append("\n");
     sb.append("    dedicatedNumber: ").append(toIndentedString(dedicatedNumber)).append("\n");
@@ -296,20 +296,20 @@ public class ViewAvailableNumbersDataInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewAvailableNumbersDataInner
+   * @throws IOException if the JSON Element is invalid with respect to ViewAvailableNumbersDataAllOfDataInner
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewAvailableNumbersDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAvailableNumbersDataInner is not found in the empty JSON string", ViewAvailableNumbersDataInner.openapiRequiredFields.toString()));
+        if (!ViewAvailableNumbersDataAllOfDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAvailableNumbersDataAllOfDataInner is not found in the empty JSON string", ViewAvailableNumbersDataAllOfDataInner.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewAvailableNumbersDataInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAvailableNumbersDataInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewAvailableNumbersDataAllOfDataInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAvailableNumbersDataAllOfDataInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -340,22 +340,22 @@ public class ViewAvailableNumbersDataInner {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewAvailableNumbersDataInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewAvailableNumbersDataInner' and its subtypes
+       if (!ViewAvailableNumbersDataAllOfDataInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewAvailableNumbersDataAllOfDataInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewAvailableNumbersDataInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAvailableNumbersDataInner.class));
+       final TypeAdapter<ViewAvailableNumbersDataAllOfDataInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAvailableNumbersDataAllOfDataInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewAvailableNumbersDataInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewAvailableNumbersDataAllOfDataInner>() {
            @Override
-           public void write(JsonWriter out, ViewAvailableNumbersDataInner value) throws IOException {
+           public void write(JsonWriter out, ViewAvailableNumbersDataAllOfDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewAvailableNumbersDataInner read(JsonReader in) throws IOException {
+           public ViewAvailableNumbersDataAllOfDataInner read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -366,18 +366,18 @@ public class ViewAvailableNumbersDataInner {
   }
 
   /**
-   * Create an instance of ViewAvailableNumbersDataInner given an JSON string
+   * Create an instance of ViewAvailableNumbersDataAllOfDataInner given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewAvailableNumbersDataInner
-   * @throws IOException if the JSON string is invalid with respect to ViewAvailableNumbersDataInner
+   * @return An instance of ViewAvailableNumbersDataAllOfDataInner
+   * @throws IOException if the JSON string is invalid with respect to ViewAvailableNumbersDataAllOfDataInner
    */
-  public static ViewAvailableNumbersDataInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewAvailableNumbersDataInner.class);
+  public static ViewAvailableNumbersDataAllOfDataInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewAvailableNumbersDataAllOfDataInner.class);
   }
 
   /**
-   * Convert an instance of ViewAvailableNumbersDataInner to an JSON string
+   * Convert an instance of ViewAvailableNumbersDataAllOfDataInner to an JSON string
    *
    * @return JSON string
    */

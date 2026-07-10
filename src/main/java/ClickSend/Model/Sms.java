@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -74,7 +73,7 @@ public class Sms {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private Integer schedule;
+  private String schedule;
 
   public static final String SERIALIZED_NAME_MESSAGE_ID = "message_id";
   @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
@@ -89,7 +88,7 @@ public class Sms {
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal messagePrice;
+  private String messagePrice;
 
   public static final String SERIALIZED_NAME_CUSTOM_STRING = "custom_string";
   @SerializedName(SERIALIZED_NAME_CUSTOM_STRING)
@@ -195,7 +194,7 @@ public class Sms {
   }
 
 
-  public Sms schedule(@javax.annotation.Nullable Integer schedule) {
+  public Sms schedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
     return this;
   }
@@ -205,11 +204,11 @@ public class Sms {
    * @return schedule
    */
   @javax.annotation.Nullable
-  public Integer getSchedule() {
+  public String getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
+  public void setSchedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
   }
 
@@ -252,7 +251,7 @@ public class Sms {
   }
 
 
-  public Sms messagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public Sms messagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
     return this;
   }
@@ -262,11 +261,11 @@ public class Sms {
    * @return messagePrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getMessagePrice() {
+  public String getMessagePrice() {
     return messagePrice;
   }
 
-  public void setMessagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public void setMessagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
   }
 
@@ -467,8 +466,14 @@ public class Sms {
       if ((jsonObj.get("from") != null && !jsonObj.get("from").isJsonNull()) && !jsonObj.get("from").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
       }
+      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
+      }
       if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
+      }
+      if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));
       }
       if ((jsonObj.get("custom_string") != null && !jsonObj.get("custom_string").isJsonNull()) && !jsonObj.get("custom_string").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `custom_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custom_string").toString()));

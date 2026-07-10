@@ -15,7 +15,7 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import ClickSend.Model.CancelAllSmsData;
-import ClickSend.Model.ViewVoiceStatisticsDataStatsInnerOutbound;
+import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -61,7 +61,7 @@ public class ViewVoiceStatisticsDataStatsInner {
   public static final String SERIALIZED_NAME_OUTBOUND = "outbound";
   @SerializedName(SERIALIZED_NAME_OUTBOUND)
   @javax.annotation.Nullable
-  private ViewVoiceStatisticsDataStatsInnerOutbound outbound;
+  private ViewVoiceStatisticsDataTotalOutbound outbound;
 
   public static final String SERIALIZED_NAME_BOUNCED = "bounced";
   @SerializedName(SERIALIZED_NAME_BOUNCED)
@@ -90,7 +90,7 @@ public class ViewVoiceStatisticsDataStatsInner {
   }
 
 
-  public ViewVoiceStatisticsDataStatsInner outbound(@javax.annotation.Nullable ViewVoiceStatisticsDataStatsInnerOutbound outbound) {
+  public ViewVoiceStatisticsDataStatsInner outbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound outbound) {
     this.outbound = outbound;
     return this;
   }
@@ -100,11 +100,11 @@ public class ViewVoiceStatisticsDataStatsInner {
    * @return outbound
    */
   @javax.annotation.Nullable
-  public ViewVoiceStatisticsDataStatsInnerOutbound getOutbound() {
+  public ViewVoiceStatisticsDataTotalOutbound getOutbound() {
     return outbound;
   }
 
-  public void setOutbound(@javax.annotation.Nullable ViewVoiceStatisticsDataStatsInnerOutbound outbound) {
+  public void setOutbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound outbound) {
     this.outbound = outbound;
   }
 
@@ -202,7 +202,7 @@ public class ViewVoiceStatisticsDataStatsInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `outbound`
       if (jsonObj.get("outbound") != null && !jsonObj.get("outbound").isJsonNull()) {
-        ViewVoiceStatisticsDataStatsInnerOutbound.validateJsonElement(jsonObj.get("outbound"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("outbound"));
       }
       // validate the optional field `bounced`
       if (jsonObj.get("bounced") != null && !jsonObj.get("bounced").isJsonNull()) {

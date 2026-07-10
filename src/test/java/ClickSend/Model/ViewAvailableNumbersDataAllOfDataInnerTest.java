@@ -13,7 +13,6 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.ViewListContactsData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -21,53 +20,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewListContacts
+ * Model tests for ViewAvailableNumbersDataAllOfDataInner
  */
-public class ViewListContactsTest {
-    private final ViewListContacts model = new ViewListContacts();
+public class ViewAvailableNumbersDataAllOfDataInnerTest {
+    private final ViewAvailableNumbersDataAllOfDataInner model = new ViewAvailableNumbersDataAllOfDataInner();
 
     /**
-     * Model tests for ViewListContacts
+     * Model tests for ViewAvailableNumbersDataAllOfDataInner
      */
     @Test
-    public void testViewListContacts() {
-        // TODO: test ViewListContacts
+    public void testViewAvailableNumbersDataAllOfDataInner() {
+        // TODO: test ViewAvailableNumbersDataAllOfDataInner
     }
 
     /**
-     * Test the property 'httpCode'
+     * Test the property 'country'
      */
     @Test
-    public void httpCodeTest() {
-        // TODO: test httpCode
+    public void countryTest() {
+        // TODO: test country
     }
 
     /**
-     * Test the property 'responseCode'
+     * Test the property 'countryName'
      */
     @Test
-    public void responseCodeTest() {
-        // TODO: test responseCode
+    public void countryNameTest() {
+        // TODO: test countryName
     }
 
     /**
-     * Test the property 'responseMsg'
+     * Test the property 'dedicatedNumber'
      */
     @Test
-    public void responseMsgTest() {
-        // TODO: test responseMsg
+    public void dedicatedNumberTest() {
+        // TODO: test dedicatedNumber
     }
 
     /**
-     * Test the property 'data'
+     * Test the property 'priceSetup'
      */
     @Test
-    public void dataTest() {
-        // TODO: test data
+    public void priceSetupTest() {
+        // TODO: test priceSetup
+    }
+
+    /**
+     * Test the property 'priceMonthly'
+     */
+    @Test
+    public void priceMonthlyTest() {
+        // TODO: test priceMonthly
+    }
+
+    /**
+     * Test the property 'priceTotal'
+     */
+    @Test
+    public void priceTotalTest() {
+        // TODO: test priceTotal
+    }
+
+    /**
+     * Test the property 'addressRequirement'
+     */
+    @Test
+    public void addressRequirementTest() {
+        // TODO: test addressRequirement
     }
 
 }

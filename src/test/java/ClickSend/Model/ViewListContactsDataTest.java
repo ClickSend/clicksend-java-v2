@@ -13,53 +13,96 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.ViewListContactsData;
+import ClickSend.Model.Contact;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewListContacts
+ * Model tests for ViewListContactsData
  */
-public class ViewListContactsTest {
-    private final ViewListContacts model = new ViewListContacts();
+public class ViewListContactsDataTest {
+    private final ViewListContactsData model = new ViewListContactsData();
 
     /**
-     * Model tests for ViewListContacts
+     * Model tests for ViewListContactsData
      */
     @Test
-    public void testViewListContacts() {
-        // TODO: test ViewListContacts
+    public void testViewListContactsData() {
+        // TODO: test ViewListContactsData
     }
 
     /**
-     * Test the property 'httpCode'
+     * Test the property 'total'
      */
     @Test
-    public void httpCodeTest() {
-        // TODO: test httpCode
+    public void totalTest() {
+        // TODO: test total
     }
 
     /**
-     * Test the property 'responseCode'
+     * Test the property 'perPage'
      */
     @Test
-    public void responseCodeTest() {
-        // TODO: test responseCode
+    public void perPageTest() {
+        // TODO: test perPage
     }
 
     /**
-     * Test the property 'responseMsg'
+     * Test the property 'currentPage'
      */
     @Test
-    public void responseMsgTest() {
-        // TODO: test responseMsg
+    public void currentPageTest() {
+        // TODO: test currentPage
+    }
+
+    /**
+     * Test the property 'lastPage'
+     */
+    @Test
+    public void lastPageTest() {
+        // TODO: test lastPage
+    }
+
+    /**
+     * Test the property 'nextPageUrl'
+     */
+    @Test
+    public void nextPageUrlTest() {
+        // TODO: test nextPageUrl
+    }
+
+    /**
+     * Test the property 'prevPageUrl'
+     */
+    @Test
+    public void prevPageUrlTest() {
+        // TODO: test prevPageUrl
+    }
+
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+        // TODO: test from
+    }
+
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+        // TODO: test to
     }
 
     /**

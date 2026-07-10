@@ -14,9 +14,10 @@
 package ClickSend.Model;
 
 import ClickSend.Model.ViewAccountUsageDataEmailInner;
+import ClickSend.Model.ViewAccountUsageDataEmailTotal;
 import ClickSend.Model.ViewAccountUsageDataSmsInner;
 import ClickSend.Model.ViewAccountUsageDataSmsTotal;
-import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
+import ClickSend.Model.ViewAccountUsageDataVoiceInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

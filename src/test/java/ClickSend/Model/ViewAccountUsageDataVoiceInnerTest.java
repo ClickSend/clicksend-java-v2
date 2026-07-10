@@ -20,78 +20,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewAvailableNumbersDataInner
+ * Model tests for ViewAccountUsageDataVoiceInner
  */
-public class ViewAvailableNumbersDataInnerTest {
-    private final ViewAvailableNumbersDataInner model = new ViewAvailableNumbersDataInner();
+public class ViewAccountUsageDataVoiceInnerTest {
+    private final ViewAccountUsageDataVoiceInner model = new ViewAccountUsageDataVoiceInner();
 
     /**
-     * Model tests for ViewAvailableNumbersDataInner
+     * Model tests for ViewAccountUsageDataVoiceInner
      */
     @Test
-    public void testViewAvailableNumbersDataInner() {
-        // TODO: test ViewAvailableNumbersDataInner
+    public void testViewAccountUsageDataVoiceInner() {
+        // TODO: test ViewAccountUsageDataVoiceInner
     }
 
     /**
-     * Test the property 'country'
+     * Test the property 'subaccountId'
      */
     @Test
-    public void countryTest() {
-        // TODO: test country
+    public void subaccountIdTest() {
+        // TODO: test subaccountId
     }
 
     /**
-     * Test the property 'countryName'
+     * Test the property 'username'
      */
     @Test
-    public void countryNameTest() {
-        // TODO: test countryName
+    public void usernameTest() {
+        // TODO: test username
     }
 
     /**
-     * Test the property 'dedicatedNumber'
+     * Test the property 'totalCount'
      */
     @Test
-    public void dedicatedNumberTest() {
-        // TODO: test dedicatedNumber
+    public void totalCountTest() {
+        // TODO: test totalCount
     }
 
     /**
-     * Test the property 'priceSetup'
+     * Test the property 'totalPrice'
      */
     @Test
-    public void priceSetupTest() {
-        // TODO: test priceSetup
-    }
-
-    /**
-     * Test the property 'priceMonthly'
-     */
-    @Test
-    public void priceMonthlyTest() {
-        // TODO: test priceMonthly
-    }
-
-    /**
-     * Test the property 'priceTotal'
-     */
-    @Test
-    public void priceTotalTest() {
-        // TODO: test priceTotal
-    }
-
-    /**
-     * Test the property 'addressRequirement'
-     */
-    @Test
-    public void addressRequirementTest() {
-        // TODO: test addressRequirement
+    public void totalPriceTest() {
+        // TODO: test totalPrice
     }
 
 }

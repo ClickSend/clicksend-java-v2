@@ -14,10 +14,10 @@
 |**from** | **String** | The sender&#39;s phone number. |  [optional] |
 |**lang** | **String** | The language of the message. |  [optional] |
 |**voice** | **String** | The voice of the message. |  [optional] |
-|**schedule** | **BigDecimal** | The timestamp when the message should be sent. |  [optional] |
+|**schedule** | **String** | The timestamp when the message should be sent. |  [optional] |
 |**messageId** | **String** | The ID of the message. |  [optional] |
-|**messageParts** | **BigDecimal** | The number of parts in the message. |  [optional] |
-|**messagePrice** | **BigDecimal** | The price of the message. |  [optional] |
+|**messageParts** | **String** | The number of parts in the message. |  [optional] |
+|**messagePrice** | **String** | The price of the message. |  [optional] |
 |**customString** | **String** | The custom string of the message. |  [optional] |
 |**userId** | **BigDecimal** | The ID of the user. |  [optional] |
 |**subaccountId** | **BigDecimal** | The ID of the subaccount. |  [optional] |

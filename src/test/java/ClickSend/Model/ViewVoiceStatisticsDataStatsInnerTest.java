@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import ClickSend.Model.CancelAllSmsData;
-import ClickSend.Model.ViewVoiceStatisticsDataStatsInnerOutbound;
+import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

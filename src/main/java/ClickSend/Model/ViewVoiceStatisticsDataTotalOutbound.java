@@ -20,6 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -58,7 +59,7 @@ public class ViewVoiceStatisticsDataTotalOutbound {
   public static final String SERIALIZED_NAME_PRICE = "price";
   @SerializedName(SERIALIZED_NAME_PRICE)
   @javax.annotation.Nullable
-  private String price;
+  private BigDecimal price;
 
   public ViewVoiceStatisticsDataTotalOutbound() {
   }
@@ -82,7 +83,7 @@ public class ViewVoiceStatisticsDataTotalOutbound {
   }
 
 
-  public ViewVoiceStatisticsDataTotalOutbound price(@javax.annotation.Nullable String price) {
+  public ViewVoiceStatisticsDataTotalOutbound price(@javax.annotation.Nullable BigDecimal price) {
     this.price = price;
     return this;
   }
@@ -92,11 +93,11 @@ public class ViewVoiceStatisticsDataTotalOutbound {
    * @return price
    */
   @javax.annotation.Nullable
-  public String getPrice() {
+  public BigDecimal getPrice() {
     return price;
   }
 
-  public void setPrice(@javax.annotation.Nullable String price) {
+  public void setPrice(@javax.annotation.Nullable BigDecimal price) {
     this.price = price;
   }
 
@@ -171,9 +172,6 @@ public class ViewVoiceStatisticsDataTotalOutbound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("price") != null && !jsonObj.get("price").isJsonNull()) && !jsonObj.get("price").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("price").toString()));
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
