@@ -63,12 +63,12 @@ public class SendFaxData {
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
   @javax.annotation.Nullable
-  private String totalCount;
+  private Integer totalCount;
 
   public static final String SERIALIZED_NAME_QUEUED_COUNT = "queued_count";
   @SerializedName(SERIALIZED_NAME_QUEUED_COUNT)
   @javax.annotation.Nullable
-  private String queuedCount;
+  private Integer queuedCount;
 
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
@@ -102,7 +102,7 @@ public class SendFaxData {
   }
 
 
-  public SendFaxData totalCount(@javax.annotation.Nullable String totalCount) {
+  public SendFaxData totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
@@ -112,16 +112,16 @@ public class SendFaxData {
    * @return totalCount
    */
   @javax.annotation.Nullable
-  public String getTotalCount() {
+  public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(@javax.annotation.Nullable String totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
 
-  public SendFaxData queuedCount(@javax.annotation.Nullable String queuedCount) {
+  public SendFaxData queuedCount(@javax.annotation.Nullable Integer queuedCount) {
     this.queuedCount = queuedCount;
     return this;
   }
@@ -131,11 +131,11 @@ public class SendFaxData {
    * @return queuedCount
    */
   @javax.annotation.Nullable
-  public String getQueuedCount() {
+  public Integer getQueuedCount() {
     return queuedCount;
   }
 
-  public void setQueuedCount(@javax.annotation.Nullable String queuedCount) {
+  public void setQueuedCount(@javax.annotation.Nullable Integer queuedCount) {
     this.queuedCount = queuedCount;
   }
 
@@ -262,12 +262,6 @@ public class SendFaxData {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
-      }
-      if ((jsonObj.get("queued_count") != null && !jsonObj.get("queued_count").isJsonNull()) && !jsonObj.get("queued_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `queued_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("queued_count").toString()));
-      }
       if (jsonObj.get("messages") != null && !jsonObj.get("messages").isJsonNull()) {
         JsonArray jsonArraymessages = jsonObj.getAsJsonArray("messages");
         if (jsonArraymessages != null) {

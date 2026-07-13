@@ -54,7 +54,7 @@ public class ViewASpecificSmsTemplate {
   public static final String SERIALIZED_NAME_HTTP_CODE = "http_code";
   @SerializedName(SERIALIZED_NAME_HTTP_CODE)
   @javax.annotation.Nullable
-  private String httpCode;
+  private Integer httpCode;
 
   public static final String SERIALIZED_NAME_RESPONSE_CODE = "response_code";
   @SerializedName(SERIALIZED_NAME_RESPONSE_CODE)
@@ -74,7 +74,7 @@ public class ViewASpecificSmsTemplate {
   public ViewASpecificSmsTemplate() {
   }
 
-  public ViewASpecificSmsTemplate httpCode(@javax.annotation.Nullable String httpCode) {
+  public ViewASpecificSmsTemplate httpCode(@javax.annotation.Nullable Integer httpCode) {
     this.httpCode = httpCode;
     return this;
   }
@@ -84,11 +84,11 @@ public class ViewASpecificSmsTemplate {
    * @return httpCode
    */
   @javax.annotation.Nullable
-  public String getHttpCode() {
+  public Integer getHttpCode() {
     return httpCode;
   }
 
-  public void setHttpCode(@javax.annotation.Nullable String httpCode) {
+  public void setHttpCode(@javax.annotation.Nullable Integer httpCode) {
     this.httpCode = httpCode;
   }
 
@@ -224,9 +224,6 @@ public class ViewASpecificSmsTemplate {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("http_code") != null && !jsonObj.get("http_code").isJsonNull()) && !jsonObj.get("http_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `http_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("http_code").toString()));
-      }
       if ((jsonObj.get("response_code") != null && !jsonObj.get("response_code").isJsonNull()) && !jsonObj.get("response_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `response_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_code").toString()));
       }

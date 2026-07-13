@@ -55,7 +55,7 @@ public class CalculateMmsCampaignPriceData {
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
   @javax.annotation.Nullable
-  private String totalCount;
+  private Integer totalCount;
 
   public static final String SERIALIZED_NAME_TOTAL_PRICE = "total_price";
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
@@ -75,7 +75,7 @@ public class CalculateMmsCampaignPriceData {
   public CalculateMmsCampaignPriceData() {
   }
 
-  public CalculateMmsCampaignPriceData totalCount(@javax.annotation.Nullable String totalCount) {
+  public CalculateMmsCampaignPriceData totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
@@ -85,11 +85,11 @@ public class CalculateMmsCampaignPriceData {
    * @return totalCount
    */
   @javax.annotation.Nullable
-  public String getTotalCount() {
+  public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(@javax.annotation.Nullable String totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
@@ -225,9 +225,6 @@ public class CalculateMmsCampaignPriceData {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
-      }
       if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
       }

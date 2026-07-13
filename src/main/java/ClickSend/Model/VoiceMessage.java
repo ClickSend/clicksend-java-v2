@@ -90,7 +90,7 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private String schedule;
+  private Integer schedule;
 
   public static final String SERIALIZED_NAME_MESSAGE_ID = "message_id";
   @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
@@ -100,7 +100,7 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_MESSAGE_PARTS = "message_parts";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PARTS)
   @javax.annotation.Nullable
-  private String messageParts;
+  private Integer messageParts;
 
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
@@ -278,7 +278,7 @@ public class VoiceMessage {
   }
 
 
-  public VoiceMessage schedule(@javax.annotation.Nullable String schedule) {
+  public VoiceMessage schedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
     return this;
   }
@@ -288,11 +288,11 @@ public class VoiceMessage {
    * @return schedule
    */
   @javax.annotation.Nullable
-  public String getSchedule() {
+  public Integer getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable String schedule) {
+  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
   }
 
@@ -316,7 +316,7 @@ public class VoiceMessage {
   }
 
 
-  public VoiceMessage messageParts(@javax.annotation.Nullable String messageParts) {
+  public VoiceMessage messageParts(@javax.annotation.Nullable Integer messageParts) {
     this.messageParts = messageParts;
     return this;
   }
@@ -326,11 +326,11 @@ public class VoiceMessage {
    * @return messageParts
    */
   @javax.annotation.Nullable
-  public String getMessageParts() {
+  public Integer getMessageParts() {
     return messageParts;
   }
 
-  public void setMessageParts(@javax.annotation.Nullable String messageParts) {
+  public void setMessageParts(@javax.annotation.Nullable Integer messageParts) {
     this.messageParts = messageParts;
   }
 
@@ -618,14 +618,8 @@ public class VoiceMessage {
       if ((jsonObj.get("voice") != null && !jsonObj.get("voice").isJsonNull()) && !jsonObj.get("voice").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `voice` to be a primitive type in the JSON string but got `%s`", jsonObj.get("voice").toString()));
       }
-      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
-      }
       if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
-      }
-      if ((jsonObj.get("message_parts") != null && !jsonObj.get("message_parts").isJsonNull()) && !jsonObj.get("message_parts").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_parts` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_parts").toString()));
       }
       if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));

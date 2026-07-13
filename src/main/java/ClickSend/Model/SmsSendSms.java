@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -94,7 +93,7 @@ public class SmsSendSms {
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal messagePrice;
+  private String messagePrice;
 
   public static final String SERIALIZED_NAME_FROM_EMAIL = "from_email";
   @SerializedName(SERIALIZED_NAME_FROM_EMAIL)
@@ -301,7 +300,7 @@ public class SmsSendSms {
   }
 
 
-  public SmsSendSms messagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public SmsSendSms messagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
     return this;
   }
@@ -311,11 +310,11 @@ public class SmsSendSms {
    * @return messagePrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getMessagePrice() {
+  public String getMessagePrice() {
     return messagePrice;
   }
 
-  public void setMessagePrice(@javax.annotation.Nullable BigDecimal messagePrice) {
+  public void setMessagePrice(@javax.annotation.Nullable String messagePrice) {
     this.messagePrice = messagePrice;
   }
 
@@ -628,6 +627,9 @@ public class SmsSendSms {
       }
       if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
+      }
+      if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));
       }
       if ((jsonObj.get("from_email") != null && !jsonObj.get("from_email").isJsonNull()) && !jsonObj.get("from_email").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `from_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from_email").toString()));
