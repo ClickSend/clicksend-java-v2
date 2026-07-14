@@ -47,10 +47,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewSmsInboundAutomationsDataAllOfLinksInner
+ * ViewListsDataLinksInner
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewSmsInboundAutomationsDataAllOfLinksInner {
+public class ViewListsDataLinksInner {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
   @javax.annotation.Nullable
@@ -71,10 +71,10 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   @javax.annotation.Nullable
   private Boolean active;
 
-  public ViewSmsInboundAutomationsDataAllOfLinksInner() {
+  public ViewListsDataLinksInner() {
   }
 
-  public ViewSmsInboundAutomationsDataAllOfLinksInner url(@javax.annotation.Nullable String url) {
+  public ViewListsDataLinksInner url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
@@ -93,7 +93,7 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   }
 
 
-  public ViewSmsInboundAutomationsDataAllOfLinksInner label(@javax.annotation.Nullable String label) {
+  public ViewListsDataLinksInner label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
@@ -112,7 +112,7 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   }
 
 
-  public ViewSmsInboundAutomationsDataAllOfLinksInner page(@javax.annotation.Nullable Integer page) {
+  public ViewListsDataLinksInner page(@javax.annotation.Nullable Integer page) {
     this.page = page;
     return this;
   }
@@ -131,7 +131,7 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   }
 
 
-  public ViewSmsInboundAutomationsDataAllOfLinksInner active(@javax.annotation.Nullable Boolean active) {
+  public ViewListsDataLinksInner active(@javax.annotation.Nullable Boolean active) {
     this.active = active;
     return this;
   }
@@ -159,11 +159,11 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewSmsInboundAutomationsDataAllOfLinksInner viewSmsInboundAutomationsDataAllOfLinksInner = (ViewSmsInboundAutomationsDataAllOfLinksInner) o;
-    return Objects.equals(this.url, viewSmsInboundAutomationsDataAllOfLinksInner.url) &&
-        Objects.equals(this.label, viewSmsInboundAutomationsDataAllOfLinksInner.label) &&
-        Objects.equals(this.page, viewSmsInboundAutomationsDataAllOfLinksInner.page) &&
-        Objects.equals(this.active, viewSmsInboundAutomationsDataAllOfLinksInner.active);
+    ViewListsDataLinksInner viewListsDataLinksInner = (ViewListsDataLinksInner) o;
+    return Objects.equals(this.url, viewListsDataLinksInner.url) &&
+        Objects.equals(this.label, viewListsDataLinksInner.label) &&
+        Objects.equals(this.page, viewListsDataLinksInner.page) &&
+        Objects.equals(this.active, viewListsDataLinksInner.active);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -185,7 +185,7 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewSmsInboundAutomationsDataAllOfLinksInner {\n");
+    sb.append("class ViewListsDataLinksInner {\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    page: ").append(toIndentedString(page)).append("\n");
@@ -218,20 +218,20 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewSmsInboundAutomationsDataAllOfLinksInner
+   * @throws IOException if the JSON Element is invalid with respect to ViewListsDataLinksInner
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewSmsInboundAutomationsDataAllOfLinksInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewSmsInboundAutomationsDataAllOfLinksInner is not found in the empty JSON string", ViewSmsInboundAutomationsDataAllOfLinksInner.openapiRequiredFields.toString()));
+        if (!ViewListsDataLinksInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewListsDataLinksInner is not found in the empty JSON string", ViewListsDataLinksInner.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewSmsInboundAutomationsDataAllOfLinksInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewSmsInboundAutomationsDataAllOfLinksInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewListsDataLinksInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewListsDataLinksInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -247,22 +247,22 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewSmsInboundAutomationsDataAllOfLinksInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewSmsInboundAutomationsDataAllOfLinksInner' and its subtypes
+       if (!ViewListsDataLinksInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewListsDataLinksInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewSmsInboundAutomationsDataAllOfLinksInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewSmsInboundAutomationsDataAllOfLinksInner.class));
+       final TypeAdapter<ViewListsDataLinksInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewListsDataLinksInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewSmsInboundAutomationsDataAllOfLinksInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewListsDataLinksInner>() {
            @Override
-           public void write(JsonWriter out, ViewSmsInboundAutomationsDataAllOfLinksInner value) throws IOException {
+           public void write(JsonWriter out, ViewListsDataLinksInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewSmsInboundAutomationsDataAllOfLinksInner read(JsonReader in) throws IOException {
+           public ViewListsDataLinksInner read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -273,18 +273,18 @@ public class ViewSmsInboundAutomationsDataAllOfLinksInner {
   }
 
   /**
-   * Create an instance of ViewSmsInboundAutomationsDataAllOfLinksInner given an JSON string
+   * Create an instance of ViewListsDataLinksInner given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewSmsInboundAutomationsDataAllOfLinksInner
-   * @throws IOException if the JSON string is invalid with respect to ViewSmsInboundAutomationsDataAllOfLinksInner
+   * @return An instance of ViewListsDataLinksInner
+   * @throws IOException if the JSON string is invalid with respect to ViewListsDataLinksInner
    */
-  public static ViewSmsInboundAutomationsDataAllOfLinksInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewSmsInboundAutomationsDataAllOfLinksInner.class);
+  public static ViewListsDataLinksInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewListsDataLinksInner.class);
   }
 
   /**
-   * Convert an instance of ViewSmsInboundAutomationsDataAllOfLinksInner to an JSON string
+   * Convert an instance of ViewListsDataLinksInner to an JSON string
    *
    * @return JSON string
    */

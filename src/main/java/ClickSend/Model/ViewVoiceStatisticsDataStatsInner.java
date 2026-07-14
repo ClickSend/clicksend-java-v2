@@ -14,7 +14,6 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.CancelAllSmsData;
 import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -66,7 +65,7 @@ public class ViewVoiceStatisticsDataStatsInner {
   public static final String SERIALIZED_NAME_BOUNCED = "bounced";
   @SerializedName(SERIALIZED_NAME_BOUNCED)
   @javax.annotation.Nullable
-  private CancelAllSmsData bounced;
+  private ViewVoiceStatisticsDataTotalOutbound bounced;
 
   public ViewVoiceStatisticsDataStatsInner() {
   }
@@ -109,7 +108,7 @@ public class ViewVoiceStatisticsDataStatsInner {
   }
 
 
-  public ViewVoiceStatisticsDataStatsInner bounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public ViewVoiceStatisticsDataStatsInner bounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
     return this;
   }
@@ -119,11 +118,11 @@ public class ViewVoiceStatisticsDataStatsInner {
    * @return bounced
    */
   @javax.annotation.Nullable
-  public CancelAllSmsData getBounced() {
+  public ViewVoiceStatisticsDataTotalOutbound getBounced() {
     return bounced;
   }
 
-  public void setBounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public void setBounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
   }
 
@@ -206,7 +205,7 @@ public class ViewVoiceStatisticsDataStatsInner {
       }
       // validate the optional field `bounced`
       if (jsonObj.get("bounced") != null && !jsonObj.get("bounced").isJsonNull()) {
-        CancelAllSmsData.validateJsonElement(jsonObj.get("bounced"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("bounced"));
       }
   }
 

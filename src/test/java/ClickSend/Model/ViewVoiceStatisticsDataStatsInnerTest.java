@@ -13,7 +13,6 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.CancelAllSmsData;
 import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

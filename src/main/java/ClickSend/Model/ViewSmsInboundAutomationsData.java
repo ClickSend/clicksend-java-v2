@@ -15,7 +15,7 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import ClickSend.Model.SmsInboundRule;
-import ClickSend.Model.ViewSmsInboundAutomationsDataAllOfLinksInner;
+import ClickSend.Model.ViewListsDataLinksInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -113,7 +113,7 @@ public class ViewSmsInboundAutomationsData {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   @javax.annotation.Nullable
-  private List<ViewSmsInboundAutomationsDataAllOfLinksInner> links = new ArrayList<>();
+  private List<ViewListsDataLinksInner> links = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -332,12 +332,12 @@ public class ViewSmsInboundAutomationsData {
   }
 
 
-  public ViewSmsInboundAutomationsData links(@javax.annotation.Nullable List<ViewSmsInboundAutomationsDataAllOfLinksInner> links) {
+  public ViewSmsInboundAutomationsData links(@javax.annotation.Nullable List<ViewListsDataLinksInner> links) {
     this.links = links;
     return this;
   }
 
-  public ViewSmsInboundAutomationsData addLinksItem(ViewSmsInboundAutomationsDataAllOfLinksInner linksItem) {
+  public ViewSmsInboundAutomationsData addLinksItem(ViewListsDataLinksInner linksItem) {
     if (this.links == null) {
       this.links = new ArrayList<>();
     }
@@ -350,11 +350,11 @@ public class ViewSmsInboundAutomationsData {
    * @return links
    */
   @javax.annotation.Nullable
-  public List<ViewSmsInboundAutomationsDataAllOfLinksInner> getLinks() {
+  public List<ViewListsDataLinksInner> getLinks() {
     return links;
   }
 
-  public void setLinks(@javax.annotation.Nullable List<ViewSmsInboundAutomationsDataAllOfLinksInner> links) {
+  public void setLinks(@javax.annotation.Nullable List<ViewListsDataLinksInner> links) {
     this.links = links;
   }
 
@@ -514,7 +514,7 @@ public class ViewSmsInboundAutomationsData {
 
           // validate the optional field `links` (array)
           for (int i = 0; i < jsonArraylinks.size(); i++) {
-            ViewSmsInboundAutomationsDataAllOfLinksInner.validateJsonElement(jsonArraylinks.get(i));
+            ViewListsDataLinksInner.validateJsonElement(jsonArraylinks.get(i));
           };
         }
       }

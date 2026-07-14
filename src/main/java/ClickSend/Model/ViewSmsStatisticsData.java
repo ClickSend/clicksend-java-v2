@@ -15,7 +15,7 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import ClickSend.Model.Currency;
-import ClickSend.Model.ViewSmsStatisticsDataStatInner;
+import ClickSend.Model.ViewSmsStatisticsDataStatsInner;
 import ClickSend.Model.ViewSmsStatisticsDataTotal;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -60,10 +60,10 @@ public class ViewSmsStatisticsData {
   @javax.annotation.Nullable
   private ViewSmsStatisticsDataTotal total;
 
-  public static final String SERIALIZED_NAME_STAT = "stat";
-  @SerializedName(SERIALIZED_NAME_STAT)
+  public static final String SERIALIZED_NAME_STATS = "stats";
+  @SerializedName(SERIALIZED_NAME_STATS)
   @javax.annotation.Nullable
-  private List<ViewSmsStatisticsDataStatInner> stat = new ArrayList<>();
+  private List<ViewSmsStatisticsDataStatsInner> stats = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CURRENCY = "_currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
@@ -92,30 +92,30 @@ public class ViewSmsStatisticsData {
   }
 
 
-  public ViewSmsStatisticsData stat(@javax.annotation.Nullable List<ViewSmsStatisticsDataStatInner> stat) {
-    this.stat = stat;
+  public ViewSmsStatisticsData stats(@javax.annotation.Nullable List<ViewSmsStatisticsDataStatsInner> stats) {
+    this.stats = stats;
     return this;
   }
 
-  public ViewSmsStatisticsData addStatItem(ViewSmsStatisticsDataStatInner statItem) {
-    if (this.stat == null) {
-      this.stat = new ArrayList<>();
+  public ViewSmsStatisticsData addStatsItem(ViewSmsStatisticsDataStatsInner statsItem) {
+    if (this.stats == null) {
+      this.stats = new ArrayList<>();
     }
-    this.stat.add(statItem);
+    this.stats.add(statsItem);
     return this;
   }
 
   /**
-   * Get stat
-   * @return stat
+   * Get stats
+   * @return stats
    */
   @javax.annotation.Nullable
-  public List<ViewSmsStatisticsDataStatInner> getStat() {
-    return stat;
+  public List<ViewSmsStatisticsDataStatsInner> getStats() {
+    return stats;
   }
 
-  public void setStat(@javax.annotation.Nullable List<ViewSmsStatisticsDataStatInner> stat) {
-    this.stat = stat;
+  public void setStats(@javax.annotation.Nullable List<ViewSmsStatisticsDataStatsInner> stats) {
+    this.stats = stats;
   }
 
 
@@ -149,13 +149,13 @@ public class ViewSmsStatisticsData {
     }
     ViewSmsStatisticsData viewSmsStatisticsData = (ViewSmsStatisticsData) o;
     return Objects.equals(this.total, viewSmsStatisticsData.total) &&
-        Objects.equals(this.stat, viewSmsStatisticsData.stat) &&
+        Objects.equals(this.stats, viewSmsStatisticsData.stats) &&
         Objects.equals(this.currency, viewSmsStatisticsData.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, stat, currency);
+    return Objects.hash(total, stats, currency);
   }
 
   @Override
@@ -163,7 +163,7 @@ public class ViewSmsStatisticsData {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewSmsStatisticsData {\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
-    sb.append("    stat: ").append(toIndentedString(stat)).append("\n");
+    sb.append("    stats: ").append(toIndentedString(stats)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -183,7 +183,7 @@ public class ViewSmsStatisticsData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("total", "stat", "_currency"));
+    openapiFields = new HashSet<String>(Arrays.asList("total", "stats", "_currency"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -214,17 +214,17 @@ public class ViewSmsStatisticsData {
       if (jsonObj.get("total") != null && !jsonObj.get("total").isJsonNull()) {
         ViewSmsStatisticsDataTotal.validateJsonElement(jsonObj.get("total"));
       }
-      if (jsonObj.get("stat") != null && !jsonObj.get("stat").isJsonNull()) {
-        JsonArray jsonArraystat = jsonObj.getAsJsonArray("stat");
-        if (jsonArraystat != null) {
+      if (jsonObj.get("stats") != null && !jsonObj.get("stats").isJsonNull()) {
+        JsonArray jsonArraystats = jsonObj.getAsJsonArray("stats");
+        if (jsonArraystats != null) {
           // ensure the json data is an array
-          if (!jsonObj.get("stat").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `stat` to be an array in the JSON string but got `%s`", jsonObj.get("stat").toString()));
+          if (!jsonObj.get("stats").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `stats` to be an array in the JSON string but got `%s`", jsonObj.get("stats").toString()));
           }
 
-          // validate the optional field `stat` (array)
-          for (int i = 0; i < jsonArraystat.size(); i++) {
-            ViewSmsStatisticsDataStatInner.validateJsonElement(jsonArraystat.get(i));
+          // validate the optional field `stats` (array)
+          for (int i = 0; i < jsonArraystats.size(); i++) {
+            ViewSmsStatisticsDataStatsInner.validateJsonElement(jsonArraystats.get(i));
           };
         }
       }

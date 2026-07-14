@@ -15,6 +15,10 @@
 |**prevPageUrl** | **String** | The URL of the previous page of contacts. |  [optional] |
 |**from** | **Integer** | The number of the first contact on the current page. |  [optional] |
 |**to** | **Integer** | The number of the last contact on the current page. |  [optional] |
+|**firstPageUrl** | **String** | The URL of the first page of records. |  [optional] |
+|**lastPageUrl** | **String** | The URL of the last page of records. |  [optional] |
+|**path** | **String** | The base URL path used to build pagination links. |  [optional] |
+|**links** | [**List&lt;ViewListsDataLinksInner&gt;**](ViewListsDataLinksInner.md) | The list of pagination links. |  [optional] |
 |**data** | [**List&lt;ContactList&gt;**](ContactList.md) | The contacts in the list. |  [optional] |
 
 

@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import ClickSend.Model.ContactList;
+import ClickSend.Model.ViewListsDataLinksInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -102,6 +104,38 @@ public class ViewListsDataTest {
     @Test
     public void toTest() {
         // TODO: test to
+    }
+
+    /**
+     * Test the property 'firstPageUrl'
+     */
+    @Test
+    public void firstPageUrlTest() {
+        // TODO: test firstPageUrl
+    }
+
+    /**
+     * Test the property 'lastPageUrl'
+     */
+    @Test
+    public void lastPageUrlTest() {
+        // TODO: test lastPageUrl
+    }
+
+    /**
+     * Test the property 'path'
+     */
+    @Test
+    public void pathTest() {
+        // TODO: test path
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
     }
 
     /**

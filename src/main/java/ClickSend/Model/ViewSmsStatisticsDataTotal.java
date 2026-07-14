@@ -14,7 +14,6 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.CancelAllSmsData;
 import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -60,12 +59,12 @@ public class ViewSmsStatisticsDataTotal {
   public static final String SERIALIZED_NAME_INBOUND = "inbound";
   @SerializedName(SERIALIZED_NAME_INBOUND)
   @javax.annotation.Nullable
-  private CancelAllSmsData inbound;
+  private ViewVoiceStatisticsDataTotalOutbound inbound;
 
   public static final String SERIALIZED_NAME_BOUNCED = "bounced";
   @SerializedName(SERIALIZED_NAME_BOUNCED)
   @javax.annotation.Nullable
-  private CancelAllSmsData bounced;
+  private ViewVoiceStatisticsDataTotalOutbound bounced;
 
   public ViewSmsStatisticsDataTotal() {
   }
@@ -89,7 +88,7 @@ public class ViewSmsStatisticsDataTotal {
   }
 
 
-  public ViewSmsStatisticsDataTotal inbound(@javax.annotation.Nullable CancelAllSmsData inbound) {
+  public ViewSmsStatisticsDataTotal inbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound inbound) {
     this.inbound = inbound;
     return this;
   }
@@ -99,16 +98,16 @@ public class ViewSmsStatisticsDataTotal {
    * @return inbound
    */
   @javax.annotation.Nullable
-  public CancelAllSmsData getInbound() {
+  public ViewVoiceStatisticsDataTotalOutbound getInbound() {
     return inbound;
   }
 
-  public void setInbound(@javax.annotation.Nullable CancelAllSmsData inbound) {
+  public void setInbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound inbound) {
     this.inbound = inbound;
   }
 
 
-  public ViewSmsStatisticsDataTotal bounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public ViewSmsStatisticsDataTotal bounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
     return this;
   }
@@ -118,11 +117,11 @@ public class ViewSmsStatisticsDataTotal {
    * @return bounced
    */
   @javax.annotation.Nullable
-  public CancelAllSmsData getBounced() {
+  public ViewVoiceStatisticsDataTotalOutbound getBounced() {
     return bounced;
   }
 
-  public void setBounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public void setBounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
   }
 
@@ -205,11 +204,11 @@ public class ViewSmsStatisticsDataTotal {
       }
       // validate the optional field `inbound`
       if (jsonObj.get("inbound") != null && !jsonObj.get("inbound").isJsonNull()) {
-        CancelAllSmsData.validateJsonElement(jsonObj.get("inbound"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("inbound"));
       }
       // validate the optional field `bounced`
       if (jsonObj.get("bounced") != null && !jsonObj.get("bounced").isJsonNull()) {
-        CancelAllSmsData.validateJsonElement(jsonObj.get("bounced"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("bounced"));
       }
   }
 

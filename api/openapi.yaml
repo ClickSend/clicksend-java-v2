@@ -48532,20 +48532,23 @@ components:
               count: 1
               price: 0
             bounced:
-              count: 2
+              count: 1
+              price: 0
           stats:
           - date: 1441065600
             outbound:
               count: 1
               price: 0
             bounced:
-              count: 2
+              count: 1
+              price: 0
           - date: 1441065600
             outbound:
               count: 1
               price: 0
             bounced:
-              count: 2
+              count: 1
+              price: 0
           _currency:
             currency_name_short: AUD
             currency_prefix_d: $
@@ -48580,26 +48583,32 @@ components:
               count: 1
               price: 0
             inbound:
-              count: 2
+              count: 1
+              price: 0
             bounced:
-              count: 2
-          stat:
+              count: 1
+              price: 0
+          stats:
           - date: 1436918400
             outbound:
               count: 1
               price: 0
             inbound:
-              count: 2
+              count: 1
+              price: 0
             bounced:
-              count: 2
+              count: 1
+              price: 0
           - date: 1436918400
             outbound:
               count: 1
               price: 0
             inbound:
-              count: 2
+              count: 1
+              price: 0
             bounced:
-              count: 2
+              count: 1
+              price: 0
           _currency:
             currency_name_short: AUD
             currency_prefix_d: $
@@ -52251,6 +52260,18 @@ components:
           prev_page_url: https://api.clicksend.com/v3/lists?page=1
           from: 1
           to: 10
+          first_page_url: https://rest.clicksend.com/v3/lists?page=1
+          last_page_url: https://rest.clicksend.com/v3/lists?page=2
+          path: https://rest.clicksend.com/v3/lists
+          links:
+          - url: url
+            label: label
+            page: 0
+            active: true
+          - url: url
+            label: label
+            page: 0
+            active: true
           data:
           - list_id: 428
             list_name: ListCT3QrVL4od
@@ -53617,6 +53638,7 @@ components:
         action_address: "430"
         body: "Hello, World!"
         enabled: 1
+        webhook_type: json
       properties:
         inbound_rule_id:
           description: The ID of the inbound rule.
@@ -53655,6 +53677,11 @@ components:
           description: The status of the inbound rule.
           example: 1
           type: integer
+        webhook_type:
+          description: "The format used when calling the webhook (e.g. post, json)."
+          example: json
+          nullable: true
+          type: string
       type: object
     view-sms-inbound-automations:
       example:
@@ -53732,6 +53759,7 @@ components:
           action_address: "430"
           body: "Hello, World!"
           enabled: 1
+          webhook_type: json
       properties:
         http_code:
           description: The HTTP status code of the response.
@@ -53763,6 +53791,7 @@ components:
           action_address: "430"
           body: "Hello, World!"
           enabled: 1
+          webhook_type: json
       properties:
         http_code:
           description: The HTTP status code of the response.
@@ -53794,6 +53823,7 @@ components:
           action_address: "430"
           body: "Hello, World!"
           enabled: 1
+          webhook_type: json
       properties:
         http_code:
           description: The HTTP status code of the response.
@@ -59082,12 +59112,13 @@ components:
           count: 1
           price: 0
         bounced:
-          count: 2
+          count: 1
+          price: 0
       properties:
         outbound:
           $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         bounced:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
       type: object
     view_voice_statistics_data_stats_inner:
       example:
@@ -59096,7 +59127,8 @@ components:
           count: 1
           price: 0
         bounced:
-          count: 2
+          count: 1
+          price: 0
       properties:
         date:
           description: The date.
@@ -59105,7 +59137,7 @@ components:
         outbound:
           $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         bounced:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
       type: object
     view_voice_statistics_data:
       example:
@@ -59114,20 +59146,23 @@ components:
             count: 1
             price: 0
           bounced:
-            count: 2
+            count: 1
+            price: 0
         stats:
         - date: 1441065600
           outbound:
             count: 1
             price: 0
           bounced:
-            count: 2
+            count: 1
+            price: 0
         - date: 1441065600
           outbound:
             count: 1
             price: 0
           bounced:
-            count: 2
+            count: 1
+            price: 0
         _currency:
           currency_name_short: AUD
           currency_prefix_d: $
@@ -59151,27 +59186,31 @@ components:
           count: 1
           price: 0
         inbound:
-          count: 2
+          count: 1
+          price: 0
         bounced:
-          count: 2
+          count: 1
+          price: 0
       properties:
         outbound:
           $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         inbound:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         bounced:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
       type: object
-    view_sms_statistics_data_stat_inner:
+    view_sms_statistics_data_stats_inner:
       example:
         date: 1436918400
         outbound:
           count: 1
           price: 0
         inbound:
-          count: 2
+          count: 1
+          price: 0
         bounced:
-          count: 2
+          count: 1
+          price: 0
       properties:
         date:
           description: The date.
@@ -59180,9 +59219,9 @@ components:
         outbound:
           $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         inbound:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
         bounced:
-          $ref: "#/components/schemas/cancel_all_sms_data"
+          $ref: "#/components/schemas/view_voice_statistics_data_total_outbound"
       type: object
     view_sms_statistics_data:
       example:
@@ -59191,26 +59230,32 @@ components:
             count: 1
             price: 0
           inbound:
-            count: 2
+            count: 1
+            price: 0
           bounced:
-            count: 2
-        stat:
+            count: 1
+            price: 0
+        stats:
         - date: 1436918400
           outbound:
             count: 1
             price: 0
           inbound:
-            count: 2
+            count: 1
+            price: 0
           bounced:
-            count: 2
+            count: 1
+            price: 0
         - date: 1436918400
           outbound:
             count: 1
             price: 0
           inbound:
-            count: 2
+            count: 1
+            price: 0
           bounced:
-            count: 2
+            count: 1
+            price: 0
         _currency:
           currency_name_short: AUD
           currency_prefix_d: $
@@ -59221,9 +59266,9 @@ components:
       properties:
         total:
           $ref: "#/components/schemas/view_sms_statistics_data_total"
-        stat:
+        stats:
           items:
-            $ref: "#/components/schemas/view_sms_statistics_data_stat_inner"
+            $ref: "#/components/schemas/view_sms_statistics_data_stats_inner"
           type: array
         _currency:
           $ref: "#/components/schemas/currency"
@@ -60930,6 +60975,28 @@ components:
           example: 6
           type: number
       type: object
+    view_lists_data_links_inner:
+      example:
+        url: url
+        label: label
+        page: 0
+        active: true
+      properties:
+        url:
+          description: The URL of this page link.
+          nullable: true
+          type: string
+        label:
+          description: The display label for this page link.
+          type: string
+        page:
+          description: The page number this link points to.
+          nullable: true
+          type: integer
+        active:
+          description: Whether this link represents the current page.
+          type: boolean
+      type: object
     view_lists_data:
       example:
         total: 0
@@ -60940,6 +61007,18 @@ components:
         prev_page_url: https://api.clicksend.com/v3/lists?page=1
         from: 1
         to: 10
+        first_page_url: https://rest.clicksend.com/v3/lists?page=1
+        last_page_url: https://rest.clicksend.com/v3/lists?page=2
+        path: https://rest.clicksend.com/v3/lists
+        links:
+        - url: url
+          label: label
+          page: 0
+          active: true
+        - url: url
+          label: label
+          page: 0
+          active: true
         data:
         - list_id: 428
           list_name: ListCT3QrVL4od
@@ -60982,6 +61061,25 @@ components:
           description: The number of the last contact on the current page.
           example: 10
           type: integer
+        first_page_url:
+          description: The URL of the first page of records.
+          example: https://rest.clicksend.com/v3/lists?page=1
+          nullable: true
+          type: string
+        last_page_url:
+          description: The URL of the last page of records.
+          example: https://rest.clicksend.com/v3/lists?page=2
+          nullable: true
+          type: string
+        path:
+          description: The base URL path used to build pagination links.
+          example: https://rest.clicksend.com/v3/lists
+          type: string
+        links:
+          description: The list of pagination links.
+          items:
+            $ref: "#/components/schemas/view_lists_data_links_inner"
+          type: array
         data:
           description: The contacts in the list.
           example:
@@ -61504,28 +61602,6 @@ components:
           priority_post: 0
           date_added: 1449662203
           status: SUCCESS
-    view_sms_inbound_automations_data_allOf_links_inner:
-      example:
-        url: url
-        label: label
-        page: 0
-        active: true
-      properties:
-        url:
-          description: The URL of this page link.
-          nullable: true
-          type: string
-        label:
-          description: The display label for this page link.
-          type: string
-        page:
-          description: The page number this link points to.
-          nullable: true
-          type: integer
-        active:
-          description: Whether this link represents the current page.
-          type: boolean
-      type: object
     view_sms_inbound_automations_data:
       allOf:
       - $ref: "#/components/schemas/pagination"
@@ -61547,7 +61623,7 @@ components:
           links:
             description: The list of pagination links.
             items:
-              $ref: "#/components/schemas/view_sms_inbound_automations_data_allOf_links_inner"
+              $ref: "#/components/schemas/view_lists_data_links_inner"
             type: array
           data:
             example:

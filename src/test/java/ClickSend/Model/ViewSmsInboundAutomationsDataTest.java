@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import ClickSend.Model.SmsInboundRule;
-import ClickSend.Model.ViewSmsInboundAutomationsDataAllOfLinksInner;
+import ClickSend.Model.ViewListsDataLinksInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

@@ -96,6 +96,11 @@ public class SmsInboundRule {
   @javax.annotation.Nullable
   private Integer enabled;
 
+  public static final String SERIALIZED_NAME_WEBHOOK_TYPE = "webhook_type";
+  @SerializedName(SERIALIZED_NAME_WEBHOOK_TYPE)
+  @javax.annotation.Nullable
+  private String webhookType;
+
   public SmsInboundRule() {
   }
 
@@ -270,6 +275,25 @@ public class SmsInboundRule {
   }
 
 
+  public SmsInboundRule webhookType(@javax.annotation.Nullable String webhookType) {
+    this.webhookType = webhookType;
+    return this;
+  }
+
+  /**
+   * The format used when calling the webhook (e.g. post, json).
+   * @return webhookType
+   */
+  @javax.annotation.Nullable
+  public String getWebhookType() {
+    return webhookType;
+  }
+
+  public void setWebhookType(@javax.annotation.Nullable String webhookType) {
+    this.webhookType = webhookType;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -288,7 +312,8 @@ public class SmsInboundRule {
         Objects.equals(this.action, smsInboundRule.action) &&
         Objects.equals(this.actionAddress, smsInboundRule.actionAddress) &&
         Objects.equals(this.body, smsInboundRule.body) &&
-        Objects.equals(this.enabled, smsInboundRule.enabled);
+        Objects.equals(this.enabled, smsInboundRule.enabled) &&
+        Objects.equals(this.webhookType, smsInboundRule.webhookType);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -297,7 +322,7 @@ public class SmsInboundRule {
 
   @Override
   public int hashCode() {
-    return Objects.hash(inboundRuleId, dedicatedNumber, ruleName, messageSearchType, messageSearchTerm, action, actionAddress, body, enabled);
+    return Objects.hash(inboundRuleId, dedicatedNumber, ruleName, messageSearchType, messageSearchTerm, action, actionAddress, body, enabled, webhookType);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -320,6 +345,7 @@ public class SmsInboundRule {
     sb.append("    actionAddress: ").append(toIndentedString(actionAddress)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
+    sb.append("    webhookType: ").append(toIndentedString(webhookType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -338,7 +364,7 @@ public class SmsInboundRule {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("inbound_rule_id", "dedicated_number", "rule_name", "message_search_type", "message_search_term", "action", "action_address", "body", "enabled"));
+    openapiFields = new HashSet<String>(Arrays.asList("inbound_rule_id", "dedicated_number", "rule_name", "message_search_type", "message_search_term", "action", "action_address", "body", "enabled", "webhook_type"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -382,6 +408,9 @@ public class SmsInboundRule {
       }
       if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));
+      }
+      if ((jsonObj.get("webhook_type") != null && !jsonObj.get("webhook_type").isJsonNull()) && !jsonObj.get("webhook_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `webhook_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("webhook_type").toString()));
       }
   }
 

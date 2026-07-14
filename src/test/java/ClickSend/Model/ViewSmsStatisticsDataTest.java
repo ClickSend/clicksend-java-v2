@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import ClickSend.Model.Currency;
-import ClickSend.Model.ViewSmsStatisticsDataStatInner;
+import ClickSend.Model.ViewSmsStatisticsDataStatsInner;
 import ClickSend.Model.ViewSmsStatisticsDataTotal;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,11 +51,11 @@ public class ViewSmsStatisticsDataTest {
     }
 
     /**
-     * Test the property 'stat'
+     * Test the property 'stats'
      */
     @Test
-    public void statTest() {
-        // TODO: test stat
+    public void statsTest() {
+        // TODO: test stats
     }
 
     /**

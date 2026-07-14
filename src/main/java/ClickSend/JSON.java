@@ -460,6 +460,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListContactsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewLists.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListsData.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewListsDataLinksInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewMasterEmailTemplate.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewMasterEmailTemplates.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewMmsCampaign.CustomTypeAdapterFactory());
@@ -485,12 +486,11 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsInboundAutomation.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsInboundAutomations.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsInboundAutomationsData.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsInboundAutomationsDataAllOfLinksInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsReceipts.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsReceiptsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsStatistics.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsStatisticsData.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsStatisticsDataStatInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsStatisticsDataStatsInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsStatisticsDataTotal.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsTemplates.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewSmsTemplatesData.CustomTypeAdapterFactory());

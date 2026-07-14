@@ -16,6 +16,7 @@
 |**actionAddress** | **String** | The action address to be used in the inbound rule. |  [optional] |
 |**body** | **String** | The body of the inbound rule. |  [optional] |
 |**enabled** | **Integer** | The status of the inbound rule. |  [optional] |
+|**webhookType** | **String** | The format used when calling the webhook (e.g. post, json). |  [optional] |
 
 
 

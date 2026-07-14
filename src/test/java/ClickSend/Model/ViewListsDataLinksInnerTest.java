@@ -13,63 +13,61 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.CancelAllSmsData;
-import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewSmsStatisticsDataStatInner
+ * Model tests for ViewListsDataLinksInner
  */
-public class ViewSmsStatisticsDataStatInnerTest {
-    private final ViewSmsStatisticsDataStatInner model = new ViewSmsStatisticsDataStatInner();
+public class ViewListsDataLinksInnerTest {
+    private final ViewListsDataLinksInner model = new ViewListsDataLinksInner();
 
     /**
-     * Model tests for ViewSmsStatisticsDataStatInner
+     * Model tests for ViewListsDataLinksInner
      */
     @Test
-    public void testViewSmsStatisticsDataStatInner() {
-        // TODO: test ViewSmsStatisticsDataStatInner
+    public void testViewListsDataLinksInner() {
+        // TODO: test ViewListsDataLinksInner
     }
 
     /**
-     * Test the property 'date'
+     * Test the property 'url'
      */
     @Test
-    public void dateTest() {
-        // TODO: test date
+    public void urlTest() {
+        // TODO: test url
     }
 
     /**
-     * Test the property 'outbound'
+     * Test the property 'label'
      */
     @Test
-    public void outboundTest() {
-        // TODO: test outbound
+    public void labelTest() {
+        // TODO: test label
     }
 
     /**
-     * Test the property 'inbound'
+     * Test the property 'page'
      */
     @Test
-    public void inboundTest() {
-        // TODO: test inbound
+    public void pageTest() {
+        // TODO: test page
     }
 
     /**
-     * Test the property 'bounced'
+     * Test the property 'active'
      */
     @Test
-    public void bouncedTest() {
-        // TODO: test bounced
+    public void activeTest() {
+        // TODO: test active
     }
 
 }

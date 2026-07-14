@@ -110,4 +110,12 @@ public class SmsInboundRuleTest {
         // TODO: test enabled
     }
 
+    /**
+     * Test the property 'webhookType'
+     */
+    @Test
+    public void webhookTypeTest() {
+        // TODO: test webhookType
+    }
+
 }

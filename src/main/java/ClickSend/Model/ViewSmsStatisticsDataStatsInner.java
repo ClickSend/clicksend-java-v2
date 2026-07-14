@@ -14,7 +14,6 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.CancelAllSmsData;
 import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,10 +48,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewSmsStatisticsDataStatInner
+ * ViewSmsStatisticsDataStatsInner
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewSmsStatisticsDataStatInner {
+public class ViewSmsStatisticsDataStatsInner {
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
   @javax.annotation.Nullable
@@ -66,17 +65,17 @@ public class ViewSmsStatisticsDataStatInner {
   public static final String SERIALIZED_NAME_INBOUND = "inbound";
   @SerializedName(SERIALIZED_NAME_INBOUND)
   @javax.annotation.Nullable
-  private CancelAllSmsData inbound;
+  private ViewVoiceStatisticsDataTotalOutbound inbound;
 
   public static final String SERIALIZED_NAME_BOUNCED = "bounced";
   @SerializedName(SERIALIZED_NAME_BOUNCED)
   @javax.annotation.Nullable
-  private CancelAllSmsData bounced;
+  private ViewVoiceStatisticsDataTotalOutbound bounced;
 
-  public ViewSmsStatisticsDataStatInner() {
+  public ViewSmsStatisticsDataStatsInner() {
   }
 
-  public ViewSmsStatisticsDataStatInner date(@javax.annotation.Nullable BigDecimal date) {
+  public ViewSmsStatisticsDataStatsInner date(@javax.annotation.Nullable BigDecimal date) {
     this.date = date;
     return this;
   }
@@ -95,7 +94,7 @@ public class ViewSmsStatisticsDataStatInner {
   }
 
 
-  public ViewSmsStatisticsDataStatInner outbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound outbound) {
+  public ViewSmsStatisticsDataStatsInner outbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound outbound) {
     this.outbound = outbound;
     return this;
   }
@@ -114,7 +113,7 @@ public class ViewSmsStatisticsDataStatInner {
   }
 
 
-  public ViewSmsStatisticsDataStatInner inbound(@javax.annotation.Nullable CancelAllSmsData inbound) {
+  public ViewSmsStatisticsDataStatsInner inbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound inbound) {
     this.inbound = inbound;
     return this;
   }
@@ -124,16 +123,16 @@ public class ViewSmsStatisticsDataStatInner {
    * @return inbound
    */
   @javax.annotation.Nullable
-  public CancelAllSmsData getInbound() {
+  public ViewVoiceStatisticsDataTotalOutbound getInbound() {
     return inbound;
   }
 
-  public void setInbound(@javax.annotation.Nullable CancelAllSmsData inbound) {
+  public void setInbound(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound inbound) {
     this.inbound = inbound;
   }
 
 
-  public ViewSmsStatisticsDataStatInner bounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public ViewSmsStatisticsDataStatsInner bounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
     return this;
   }
@@ -143,11 +142,11 @@ public class ViewSmsStatisticsDataStatInner {
    * @return bounced
    */
   @javax.annotation.Nullable
-  public CancelAllSmsData getBounced() {
+  public ViewVoiceStatisticsDataTotalOutbound getBounced() {
     return bounced;
   }
 
-  public void setBounced(@javax.annotation.Nullable CancelAllSmsData bounced) {
+  public void setBounced(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound bounced) {
     this.bounced = bounced;
   }
 
@@ -161,11 +160,11 @@ public class ViewSmsStatisticsDataStatInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewSmsStatisticsDataStatInner viewSmsStatisticsDataStatInner = (ViewSmsStatisticsDataStatInner) o;
-    return Objects.equals(this.date, viewSmsStatisticsDataStatInner.date) &&
-        Objects.equals(this.outbound, viewSmsStatisticsDataStatInner.outbound) &&
-        Objects.equals(this.inbound, viewSmsStatisticsDataStatInner.inbound) &&
-        Objects.equals(this.bounced, viewSmsStatisticsDataStatInner.bounced);
+    ViewSmsStatisticsDataStatsInner viewSmsStatisticsDataStatsInner = (ViewSmsStatisticsDataStatsInner) o;
+    return Objects.equals(this.date, viewSmsStatisticsDataStatsInner.date) &&
+        Objects.equals(this.outbound, viewSmsStatisticsDataStatsInner.outbound) &&
+        Objects.equals(this.inbound, viewSmsStatisticsDataStatsInner.inbound) &&
+        Objects.equals(this.bounced, viewSmsStatisticsDataStatsInner.bounced);
   }
 
   @Override
@@ -176,7 +175,7 @@ public class ViewSmsStatisticsDataStatInner {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewSmsStatisticsDataStatInner {\n");
+    sb.append("class ViewSmsStatisticsDataStatsInner {\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    outbound: ").append(toIndentedString(outbound)).append("\n");
     sb.append("    inbound: ").append(toIndentedString(inbound)).append("\n");
@@ -209,20 +208,20 @@ public class ViewSmsStatisticsDataStatInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewSmsStatisticsDataStatInner
+   * @throws IOException if the JSON Element is invalid with respect to ViewSmsStatisticsDataStatsInner
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewSmsStatisticsDataStatInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewSmsStatisticsDataStatInner is not found in the empty JSON string", ViewSmsStatisticsDataStatInner.openapiRequiredFields.toString()));
+        if (!ViewSmsStatisticsDataStatsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewSmsStatisticsDataStatsInner is not found in the empty JSON string", ViewSmsStatisticsDataStatsInner.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewSmsStatisticsDataStatInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewSmsStatisticsDataStatInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewSmsStatisticsDataStatsInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewSmsStatisticsDataStatsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -232,11 +231,11 @@ public class ViewSmsStatisticsDataStatInner {
       }
       // validate the optional field `inbound`
       if (jsonObj.get("inbound") != null && !jsonObj.get("inbound").isJsonNull()) {
-        CancelAllSmsData.validateJsonElement(jsonObj.get("inbound"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("inbound"));
       }
       // validate the optional field `bounced`
       if (jsonObj.get("bounced") != null && !jsonObj.get("bounced").isJsonNull()) {
-        CancelAllSmsData.validateJsonElement(jsonObj.get("bounced"));
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("bounced"));
       }
   }
 
@@ -244,22 +243,22 @@ public class ViewSmsStatisticsDataStatInner {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewSmsStatisticsDataStatInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewSmsStatisticsDataStatInner' and its subtypes
+       if (!ViewSmsStatisticsDataStatsInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewSmsStatisticsDataStatsInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewSmsStatisticsDataStatInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewSmsStatisticsDataStatInner.class));
+       final TypeAdapter<ViewSmsStatisticsDataStatsInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewSmsStatisticsDataStatsInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewSmsStatisticsDataStatInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewSmsStatisticsDataStatsInner>() {
            @Override
-           public void write(JsonWriter out, ViewSmsStatisticsDataStatInner value) throws IOException {
+           public void write(JsonWriter out, ViewSmsStatisticsDataStatsInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewSmsStatisticsDataStatInner read(JsonReader in) throws IOException {
+           public ViewSmsStatisticsDataStatsInner read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -270,18 +269,18 @@ public class ViewSmsStatisticsDataStatInner {
   }
 
   /**
-   * Create an instance of ViewSmsStatisticsDataStatInner given an JSON string
+   * Create an instance of ViewSmsStatisticsDataStatsInner given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewSmsStatisticsDataStatInner
-   * @throws IOException if the JSON string is invalid with respect to ViewSmsStatisticsDataStatInner
+   * @return An instance of ViewSmsStatisticsDataStatsInner
+   * @throws IOException if the JSON string is invalid with respect to ViewSmsStatisticsDataStatsInner
    */
-  public static ViewSmsStatisticsDataStatInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewSmsStatisticsDataStatInner.class);
+  public static ViewSmsStatisticsDataStatsInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewSmsStatisticsDataStatsInner.class);
   }
 
   /**
-   * Convert an instance of ViewSmsStatisticsDataStatInner to an JSON string
+   * Convert an instance of ViewSmsStatisticsDataStatsInner to an JSON string
    *
    * @return JSON string
    */
