@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.ViewStrippedStringRulesDataDataInner;
+import ClickSend.Model.ViewStrippedStringRulesDataAllOfDataInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -84,10 +84,20 @@ public class ViewStrippedStringRulesData {
   @javax.annotation.Nullable
   private String prevPageUrl;
 
+  public static final String SERIALIZED_NAME_FROM = "from";
+  @SerializedName(SERIALIZED_NAME_FROM)
+  @javax.annotation.Nullable
+  private Integer from;
+
+  public static final String SERIALIZED_NAME_TO = "to";
+  @SerializedName(SERIALIZED_NAME_TO)
+  @javax.annotation.Nullable
+  private Integer to;
+
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private List<ViewStrippedStringRulesDataDataInner> data = new ArrayList<>();
+  private List<ViewStrippedStringRulesDataAllOfDataInner> data = new ArrayList<>();
 
   public ViewStrippedStringRulesData() {
   }
@@ -98,7 +108,7 @@ public class ViewStrippedStringRulesData {
   }
 
   /**
-   * The total number of records in the response.
+   * The total number of items available for viewing.
    * @return total
    */
   @javax.annotation.Nullable
@@ -117,7 +127,7 @@ public class ViewStrippedStringRulesData {
   }
 
   /**
-   * The number of records per page.
+   * The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
    * @return perPage
    */
   @javax.annotation.Nullable
@@ -174,7 +184,7 @@ public class ViewStrippedStringRulesData {
   }
 
   /**
-   * The URL of the next page of records.
+   * A URL of the next page. It will return **null** if there’s no next page.
    * @return nextPageUrl
    */
   @javax.annotation.Nullable
@@ -193,7 +203,7 @@ public class ViewStrippedStringRulesData {
   }
 
   /**
-   * The URL of the previous page of records.
+   * A URL of the previous page. It will return **null** if there’s no previous page.
    * @return prevPageUrl
    */
   @javax.annotation.Nullable
@@ -206,12 +216,50 @@ public class ViewStrippedStringRulesData {
   }
 
 
-  public ViewStrippedStringRulesData data(@javax.annotation.Nullable List<ViewStrippedStringRulesDataDataInner> data) {
+  public ViewStrippedStringRulesData from(@javax.annotation.Nullable Integer from) {
+    this.from = from;
+    return this;
+  }
+
+  /**
+   * The number of the first result in the current page.
+   * @return from
+   */
+  @javax.annotation.Nullable
+  public Integer getFrom() {
+    return from;
+  }
+
+  public void setFrom(@javax.annotation.Nullable Integer from) {
+    this.from = from;
+  }
+
+
+  public ViewStrippedStringRulesData to(@javax.annotation.Nullable Integer to) {
+    this.to = to;
+    return this;
+  }
+
+  /**
+   * The number of the last result in the current page.
+   * @return to
+   */
+  @javax.annotation.Nullable
+  public Integer getTo() {
+    return to;
+  }
+
+  public void setTo(@javax.annotation.Nullable Integer to) {
+    this.to = to;
+  }
+
+
+  public ViewStrippedStringRulesData data(@javax.annotation.Nullable List<ViewStrippedStringRulesDataAllOfDataInner> data) {
     this.data = data;
     return this;
   }
 
-  public ViewStrippedStringRulesData addDataItem(ViewStrippedStringRulesDataDataInner dataItem) {
+  public ViewStrippedStringRulesData addDataItem(ViewStrippedStringRulesDataAllOfDataInner dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -224,11 +272,11 @@ public class ViewStrippedStringRulesData {
    * @return data
    */
   @javax.annotation.Nullable
-  public List<ViewStrippedStringRulesDataDataInner> getData() {
+  public List<ViewStrippedStringRulesDataAllOfDataInner> getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable List<ViewStrippedStringRulesDataDataInner> data) {
+  public void setData(@javax.annotation.Nullable List<ViewStrippedStringRulesDataAllOfDataInner> data) {
     this.data = data;
   }
 
@@ -249,6 +297,8 @@ public class ViewStrippedStringRulesData {
         Objects.equals(this.lastPage, viewStrippedStringRulesData.lastPage) &&
         Objects.equals(this.nextPageUrl, viewStrippedStringRulesData.nextPageUrl) &&
         Objects.equals(this.prevPageUrl, viewStrippedStringRulesData.prevPageUrl) &&
+        Objects.equals(this.from, viewStrippedStringRulesData.from) &&
+        Objects.equals(this.to, viewStrippedStringRulesData.to) &&
         Objects.equals(this.data, viewStrippedStringRulesData.data);
   }
 
@@ -258,7 +308,7 @@ public class ViewStrippedStringRulesData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, data);
+    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, data);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -278,6 +328,8 @@ public class ViewStrippedStringRulesData {
     sb.append("    lastPage: ").append(toIndentedString(lastPage)).append("\n");
     sb.append("    nextPageUrl: ").append(toIndentedString(nextPageUrl)).append("\n");
     sb.append("    prevPageUrl: ").append(toIndentedString(prevPageUrl)).append("\n");
+    sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -297,7 +349,7 @@ public class ViewStrippedStringRulesData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "data"));
+    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "data"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -340,7 +392,7 @@ public class ViewStrippedStringRulesData {
 
           // validate the optional field `data` (array)
           for (int i = 0; i < jsonArraydata.size(); i++) {
-            ViewStrippedStringRulesDataDataInner.validateJsonElement(jsonArraydata.get(i));
+            ViewStrippedStringRulesDataAllOfDataInner.validateJsonElement(jsonArraydata.get(i));
           };
         }
       }

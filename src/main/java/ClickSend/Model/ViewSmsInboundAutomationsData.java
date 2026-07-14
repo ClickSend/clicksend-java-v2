@@ -15,6 +15,7 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import ClickSend.Model.SmsInboundRule;
+import ClickSend.Model.ViewSmsInboundAutomationsDataAllOfLinksInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -93,6 +94,26 @@ public class ViewSmsInboundAutomationsData {
   @SerializedName(SERIALIZED_NAME_TO)
   @javax.annotation.Nullable
   private Integer to;
+
+  public static final String SERIALIZED_NAME_FIRST_PAGE_URL = "first_page_url";
+  @SerializedName(SERIALIZED_NAME_FIRST_PAGE_URL)
+  @javax.annotation.Nullable
+  private String firstPageUrl;
+
+  public static final String SERIALIZED_NAME_LAST_PAGE_URL = "last_page_url";
+  @SerializedName(SERIALIZED_NAME_LAST_PAGE_URL)
+  @javax.annotation.Nullable
+  private String lastPageUrl;
+
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
+  private String path;
+
+  public static final String SERIALIZED_NAME_LINKS = "links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  @javax.annotation.Nullable
+  private List<ViewSmsInboundAutomationsDataAllOfLinksInner> links = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -254,6 +275,90 @@ public class ViewSmsInboundAutomationsData {
   }
 
 
+  public ViewSmsInboundAutomationsData firstPageUrl(@javax.annotation.Nullable String firstPageUrl) {
+    this.firstPageUrl = firstPageUrl;
+    return this;
+  }
+
+  /**
+   * The URL of the first page of records.
+   * @return firstPageUrl
+   */
+  @javax.annotation.Nullable
+  public String getFirstPageUrl() {
+    return firstPageUrl;
+  }
+
+  public void setFirstPageUrl(@javax.annotation.Nullable String firstPageUrl) {
+    this.firstPageUrl = firstPageUrl;
+  }
+
+
+  public ViewSmsInboundAutomationsData lastPageUrl(@javax.annotation.Nullable String lastPageUrl) {
+    this.lastPageUrl = lastPageUrl;
+    return this;
+  }
+
+  /**
+   * The URL of the last page of records.
+   * @return lastPageUrl
+   */
+  @javax.annotation.Nullable
+  public String getLastPageUrl() {
+    return lastPageUrl;
+  }
+
+  public void setLastPageUrl(@javax.annotation.Nullable String lastPageUrl) {
+    this.lastPageUrl = lastPageUrl;
+  }
+
+
+  public ViewSmsInboundAutomationsData path(@javax.annotation.Nullable String path) {
+    this.path = path;
+    return this;
+  }
+
+  /**
+   * The base URL path used to build pagination links.
+   * @return path
+   */
+  @javax.annotation.Nullable
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(@javax.annotation.Nullable String path) {
+    this.path = path;
+  }
+
+
+  public ViewSmsInboundAutomationsData links(@javax.annotation.Nullable List<ViewSmsInboundAutomationsDataAllOfLinksInner> links) {
+    this.links = links;
+    return this;
+  }
+
+  public ViewSmsInboundAutomationsData addLinksItem(ViewSmsInboundAutomationsDataAllOfLinksInner linksItem) {
+    if (this.links == null) {
+      this.links = new ArrayList<>();
+    }
+    this.links.add(linksItem);
+    return this;
+  }
+
+  /**
+   * The list of pagination links.
+   * @return links
+   */
+  @javax.annotation.Nullable
+  public List<ViewSmsInboundAutomationsDataAllOfLinksInner> getLinks() {
+    return links;
+  }
+
+  public void setLinks(@javax.annotation.Nullable List<ViewSmsInboundAutomationsDataAllOfLinksInner> links) {
+    this.links = links;
+  }
+
+
   public ViewSmsInboundAutomationsData data(@javax.annotation.Nullable List<SmsInboundRule> data) {
     this.data = data;
     return this;
@@ -299,6 +404,10 @@ public class ViewSmsInboundAutomationsData {
         Objects.equals(this.prevPageUrl, viewSmsInboundAutomationsData.prevPageUrl) &&
         Objects.equals(this.from, viewSmsInboundAutomationsData.from) &&
         Objects.equals(this.to, viewSmsInboundAutomationsData.to) &&
+        Objects.equals(this.firstPageUrl, viewSmsInboundAutomationsData.firstPageUrl) &&
+        Objects.equals(this.lastPageUrl, viewSmsInboundAutomationsData.lastPageUrl) &&
+        Objects.equals(this.path, viewSmsInboundAutomationsData.path) &&
+        Objects.equals(this.links, viewSmsInboundAutomationsData.links) &&
         Objects.equals(this.data, viewSmsInboundAutomationsData.data);
   }
 
@@ -308,7 +417,7 @@ public class ViewSmsInboundAutomationsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, data);
+    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, firstPageUrl, lastPageUrl, path, links, data);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -330,6 +439,10 @@ public class ViewSmsInboundAutomationsData {
     sb.append("    prevPageUrl: ").append(toIndentedString(prevPageUrl)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
+    sb.append("    firstPageUrl: ").append(toIndentedString(firstPageUrl)).append("\n");
+    sb.append("    lastPageUrl: ").append(toIndentedString(lastPageUrl)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -349,7 +462,7 @@ public class ViewSmsInboundAutomationsData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "data"));
+    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "first_page_url", "last_page_url", "path", "links", "data"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -381,6 +494,29 @@ public class ViewSmsInboundAutomationsData {
       }
       if ((jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonNull()) && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
+      }
+      if ((jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonNull()) && !jsonObj.get("first_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `first_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_page_url").toString()));
+      }
+      if ((jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonNull()) && !jsonObj.get("last_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `last_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page_url").toString()));
+      }
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
+      }
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
+        JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
+        if (jsonArraylinks != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("links").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `links` to be an array in the JSON string but got `%s`", jsonObj.get("links").toString()));
+          }
+
+          // validate the optional field `links` (array)
+          for (int i = 0; i < jsonArraylinks.size(); i++) {
+            ViewSmsInboundAutomationsDataAllOfLinksInner.validateJsonElement(jsonArraylinks.get(i));
+          };
+        }
       }
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");

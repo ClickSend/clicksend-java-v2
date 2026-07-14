@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -68,6 +69,14 @@ public class ViewAccountUsageDataSmsInnerTest {
     @Test
     public void totalPriceTest() {
         // TODO: test totalPrice
+    }
+
+    /**
+     * Test the property 'notes'
+     */
+    @Test
+    public void notesTest() {
+        // TODO: test notes
     }
 
 }

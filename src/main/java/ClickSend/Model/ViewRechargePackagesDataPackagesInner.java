@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -76,6 +77,11 @@ public class ViewRechargePackagesDataPackagesInner {
   @javax.annotation.Nullable
   private BigDecimal smsQuantity;
 
+  public static final String SERIALIZED_NAME_PRICE_SMS_CARRIER_FEE = "price_sms_carrier_fee";
+  @SerializedName(SERIALIZED_NAME_PRICE_SMS_CARRIER_FEE)
+  @javax.annotation.Nullable
+  private String priceSmsCarrierFee;
+
   public static final String SERIALIZED_NAME_VOICE_MOBILE_PRICE = "voice_mobile_price";
   @SerializedName(SERIALIZED_NAME_VOICE_MOBILE_PRICE)
   @javax.annotation.Nullable
@@ -95,6 +101,21 @@ public class ViewRechargePackagesDataPackagesInner {
   @SerializedName(SERIALIZED_NAME_VOICE_LANDLINE_QUANTITY)
   @javax.annotation.Nullable
   private BigDecimal voiceLandlineQuantity;
+
+  public static final String SERIALIZED_NAME_MMS_PRICE = "mms_price";
+  @SerializedName(SERIALIZED_NAME_MMS_PRICE)
+  @javax.annotation.Nullable
+  private BigDecimal mmsPrice;
+
+  public static final String SERIALIZED_NAME_MMS_QUANTITY = "mms_quantity";
+  @SerializedName(SERIALIZED_NAME_MMS_QUANTITY)
+  @javax.annotation.Nullable
+  private BigDecimal mmsQuantity;
+
+  public static final String SERIALIZED_NAME_PRICE_MMS_CARRIER_FEE = "price_mms_carrier_fee";
+  @SerializedName(SERIALIZED_NAME_PRICE_MMS_CARRIER_FEE)
+  @javax.annotation.Nullable
+  private String priceMmsCarrierFee;
 
   public static final String SERIALIZED_NAME_FAX_PRICE = "fax_price";
   @SerializedName(SERIALIZED_NAME_FAX_PRICE)
@@ -274,6 +295,25 @@ public class ViewRechargePackagesDataPackagesInner {
   }
 
 
+  public ViewRechargePackagesDataPackagesInner priceSmsCarrierFee(@javax.annotation.Nullable String priceSmsCarrierFee) {
+    this.priceSmsCarrierFee = priceSmsCarrierFee;
+    return this;
+  }
+
+  /**
+   * The carrier fee applied to SMS in this package.
+   * @return priceSmsCarrierFee
+   */
+  @javax.annotation.Nullable
+  public String getPriceSmsCarrierFee() {
+    return priceSmsCarrierFee;
+  }
+
+  public void setPriceSmsCarrierFee(@javax.annotation.Nullable String priceSmsCarrierFee) {
+    this.priceSmsCarrierFee = priceSmsCarrierFee;
+  }
+
+
   public ViewRechargePackagesDataPackagesInner voiceMobilePrice(@javax.annotation.Nullable BigDecimal voiceMobilePrice) {
     this.voiceMobilePrice = voiceMobilePrice;
     return this;
@@ -347,6 +387,63 @@ public class ViewRechargePackagesDataPackagesInner {
 
   public void setVoiceLandlineQuantity(@javax.annotation.Nullable BigDecimal voiceLandlineQuantity) {
     this.voiceLandlineQuantity = voiceLandlineQuantity;
+  }
+
+
+  public ViewRechargePackagesDataPackagesInner mmsPrice(@javax.annotation.Nullable BigDecimal mmsPrice) {
+    this.mmsPrice = mmsPrice;
+    return this;
+  }
+
+  /**
+   * The price of the MMS.
+   * @return mmsPrice
+   */
+  @javax.annotation.Nullable
+  public BigDecimal getMmsPrice() {
+    return mmsPrice;
+  }
+
+  public void setMmsPrice(@javax.annotation.Nullable BigDecimal mmsPrice) {
+    this.mmsPrice = mmsPrice;
+  }
+
+
+  public ViewRechargePackagesDataPackagesInner mmsQuantity(@javax.annotation.Nullable BigDecimal mmsQuantity) {
+    this.mmsQuantity = mmsQuantity;
+    return this;
+  }
+
+  /**
+   * The quantity of the MMS.
+   * @return mmsQuantity
+   */
+  @javax.annotation.Nullable
+  public BigDecimal getMmsQuantity() {
+    return mmsQuantity;
+  }
+
+  public void setMmsQuantity(@javax.annotation.Nullable BigDecimal mmsQuantity) {
+    this.mmsQuantity = mmsQuantity;
+  }
+
+
+  public ViewRechargePackagesDataPackagesInner priceMmsCarrierFee(@javax.annotation.Nullable String priceMmsCarrierFee) {
+    this.priceMmsCarrierFee = priceMmsCarrierFee;
+    return this;
+  }
+
+  /**
+   * The carrier fee applied to MMS in this package.
+   * @return priceMmsCarrierFee
+   */
+  @javax.annotation.Nullable
+  public String getPriceMmsCarrierFee() {
+    return priceMmsCarrierFee;
+  }
+
+  public void setPriceMmsCarrierFee(@javax.annotation.Nullable String priceMmsCarrierFee) {
+    this.priceMmsCarrierFee = priceMmsCarrierFee;
   }
 
 
@@ -669,10 +766,14 @@ public class ViewRechargePackagesDataPackagesInner {
         Objects.equals(this.priceRate, viewRechargePackagesDataPackagesInner.priceRate) &&
         Objects.equals(this.smsPrice, viewRechargePackagesDataPackagesInner.smsPrice) &&
         Objects.equals(this.smsQuantity, viewRechargePackagesDataPackagesInner.smsQuantity) &&
+        Objects.equals(this.priceSmsCarrierFee, viewRechargePackagesDataPackagesInner.priceSmsCarrierFee) &&
         Objects.equals(this.voiceMobilePrice, viewRechargePackagesDataPackagesInner.voiceMobilePrice) &&
         Objects.equals(this.voiceMobileQuantity, viewRechargePackagesDataPackagesInner.voiceMobileQuantity) &&
         Objects.equals(this.voiceLandlinePrice, viewRechargePackagesDataPackagesInner.voiceLandlinePrice) &&
         Objects.equals(this.voiceLandlineQuantity, viewRechargePackagesDataPackagesInner.voiceLandlineQuantity) &&
+        Objects.equals(this.mmsPrice, viewRechargePackagesDataPackagesInner.mmsPrice) &&
+        Objects.equals(this.mmsQuantity, viewRechargePackagesDataPackagesInner.mmsQuantity) &&
+        Objects.equals(this.priceMmsCarrierFee, viewRechargePackagesDataPackagesInner.priceMmsCarrierFee) &&
         Objects.equals(this.faxPrice, viewRechargePackagesDataPackagesInner.faxPrice) &&
         Objects.equals(this.faxQuantity, viewRechargePackagesDataPackagesInner.faxQuantity) &&
         Objects.equals(this.emailPrice, viewRechargePackagesDataPackagesInner.emailPrice) &&
@@ -691,9 +792,20 @@ public class ViewRechargePackagesDataPackagesInner {
         Objects.equals(this.automationPrice, viewRechargePackagesDataPackagesInner.automationPrice);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(packageId, packagePrice, priceRate, smsPrice, smsQuantity, voiceMobilePrice, voiceMobileQuantity, voiceLandlinePrice, voiceLandlineQuantity, faxPrice, faxQuantity, emailPrice, emailQuantity, postLetterBlackPrice, postLetterColourPrice, postPageBlackPrice, postPageColourPrice, postLetterBlackQuantity, postLetterColourQuantity, postDirectMailDlPrice, postDirectMailA5Price, postDirectMailMinQuantity, postcardPrice, postcardQuantity, automationPrice);
+    return Objects.hash(packageId, packagePrice, priceRate, smsPrice, smsQuantity, priceSmsCarrierFee, voiceMobilePrice, voiceMobileQuantity, voiceLandlinePrice, voiceLandlineQuantity, mmsPrice, mmsQuantity, priceMmsCarrierFee, faxPrice, faxQuantity, emailPrice, emailQuantity, postLetterBlackPrice, postLetterColourPrice, postPageBlackPrice, postPageColourPrice, postLetterBlackQuantity, postLetterColourQuantity, postDirectMailDlPrice, postDirectMailA5Price, postDirectMailMinQuantity, postcardPrice, postcardQuantity, automationPrice);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -705,10 +817,14 @@ public class ViewRechargePackagesDataPackagesInner {
     sb.append("    priceRate: ").append(toIndentedString(priceRate)).append("\n");
     sb.append("    smsPrice: ").append(toIndentedString(smsPrice)).append("\n");
     sb.append("    smsQuantity: ").append(toIndentedString(smsQuantity)).append("\n");
+    sb.append("    priceSmsCarrierFee: ").append(toIndentedString(priceSmsCarrierFee)).append("\n");
     sb.append("    voiceMobilePrice: ").append(toIndentedString(voiceMobilePrice)).append("\n");
     sb.append("    voiceMobileQuantity: ").append(toIndentedString(voiceMobileQuantity)).append("\n");
     sb.append("    voiceLandlinePrice: ").append(toIndentedString(voiceLandlinePrice)).append("\n");
     sb.append("    voiceLandlineQuantity: ").append(toIndentedString(voiceLandlineQuantity)).append("\n");
+    sb.append("    mmsPrice: ").append(toIndentedString(mmsPrice)).append("\n");
+    sb.append("    mmsQuantity: ").append(toIndentedString(mmsQuantity)).append("\n");
+    sb.append("    priceMmsCarrierFee: ").append(toIndentedString(priceMmsCarrierFee)).append("\n");
     sb.append("    faxPrice: ").append(toIndentedString(faxPrice)).append("\n");
     sb.append("    faxQuantity: ").append(toIndentedString(faxQuantity)).append("\n");
     sb.append("    emailPrice: ").append(toIndentedString(emailPrice)).append("\n");
@@ -743,7 +859,7 @@ public class ViewRechargePackagesDataPackagesInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("package_id", "package_price", "price_rate", "sms_price", "sms_quantity", "voice_mobile_price", "voice_mobile_quantity", "voice_landline_price", "voice_landline_quantity", "fax_price", "fax_quantity", "email_price", "email_quantity", "post_letter_black_price", "post_letter_colour_price", "post_page_black_price", "post_page_colour_price", "post_letter_black_quantity", "post_letter_colour_quantity", "post_direct_mail_dl_price", "post_direct_mail_a5_price", "post_direct_mail_min_quantity", "postcard_price", "postcard_quantity", "automation_price"));
+    openapiFields = new HashSet<String>(Arrays.asList("package_id", "package_price", "price_rate", "sms_price", "sms_quantity", "price_sms_carrier_fee", "voice_mobile_price", "voice_mobile_quantity", "voice_landline_price", "voice_landline_quantity", "mms_price", "mms_quantity", "price_mms_carrier_fee", "fax_price", "fax_quantity", "email_price", "email_quantity", "post_letter_black_price", "post_letter_colour_price", "post_page_black_price", "post_page_colour_price", "post_letter_black_quantity", "post_letter_colour_quantity", "post_direct_mail_dl_price", "post_direct_mail_a5_price", "post_direct_mail_min_quantity", "postcard_price", "postcard_quantity", "automation_price"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -772,6 +888,12 @@ public class ViewRechargePackagesDataPackagesInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("package_price") != null && !jsonObj.get("package_price").isJsonNull()) && !jsonObj.get("package_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `package_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("package_price").toString()));
+      }
+      if ((jsonObj.get("price_sms_carrier_fee") != null && !jsonObj.get("price_sms_carrier_fee").isJsonNull()) && !jsonObj.get("price_sms_carrier_fee").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `price_sms_carrier_fee` to be a primitive type in the JSON string but got `%s`", jsonObj.get("price_sms_carrier_fee").toString()));
+      }
+      if ((jsonObj.get("price_mms_carrier_fee") != null && !jsonObj.get("price_mms_carrier_fee").isJsonNull()) && !jsonObj.get("price_mms_carrier_fee").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `price_mms_carrier_fee` to be a primitive type in the JSON string but got `%s`", jsonObj.get("price_mms_carrier_fee").toString()));
       }
   }
 

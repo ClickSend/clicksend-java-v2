@@ -70,6 +70,16 @@ public class ContactList {
   @javax.annotation.Nullable
   private Integer contactsCount;
 
+  public static final String SERIALIZED_NAME_IMPORT_IN_PROGRESS = "_import_in_progress";
+  @SerializedName(SERIALIZED_NAME_IMPORT_IN_PROGRESS)
+  @javax.annotation.Nullable
+  private Integer importInProgress;
+
+  public static final String SERIALIZED_NAME_OPTOUT_IN_PROGRESS = "_optout_in_progress";
+  @SerializedName(SERIALIZED_NAME_OPTOUT_IN_PROGRESS)
+  @javax.annotation.Nullable
+  private Integer optoutInProgress;
+
   public ContactList() {
   }
 
@@ -149,6 +159,44 @@ public class ContactList {
   }
 
 
+  public ContactList importInProgress(@javax.annotation.Nullable Integer importInProgress) {
+    this.importInProgress = importInProgress;
+    return this;
+  }
+
+  /**
+   * Flag indicating if a contact import is currently in progress for this list.
+   * @return importInProgress
+   */
+  @javax.annotation.Nullable
+  public Integer getImportInProgress() {
+    return importInProgress;
+  }
+
+  public void setImportInProgress(@javax.annotation.Nullable Integer importInProgress) {
+    this.importInProgress = importInProgress;
+  }
+
+
+  public ContactList optoutInProgress(@javax.annotation.Nullable Integer optoutInProgress) {
+    this.optoutInProgress = optoutInProgress;
+    return this;
+  }
+
+  /**
+   * Flag indicating if an opt-out removal is currently in progress for this list.
+   * @return optoutInProgress
+   */
+  @javax.annotation.Nullable
+  public Integer getOptoutInProgress() {
+    return optoutInProgress;
+  }
+
+  public void setOptoutInProgress(@javax.annotation.Nullable Integer optoutInProgress) {
+    this.optoutInProgress = optoutInProgress;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -162,12 +210,14 @@ public class ContactList {
     return Objects.equals(this.listId, contactList.listId) &&
         Objects.equals(this.listName, contactList.listName) &&
         Objects.equals(this.listEmailId, contactList.listEmailId) &&
-        Objects.equals(this.contactsCount, contactList.contactsCount);
+        Objects.equals(this.contactsCount, contactList.contactsCount) &&
+        Objects.equals(this.importInProgress, contactList.importInProgress) &&
+        Objects.equals(this.optoutInProgress, contactList.optoutInProgress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(listId, listName, listEmailId, contactsCount);
+    return Objects.hash(listId, listName, listEmailId, contactsCount, importInProgress, optoutInProgress);
   }
 
   @Override
@@ -178,6 +228,8 @@ public class ContactList {
     sb.append("    listName: ").append(toIndentedString(listName)).append("\n");
     sb.append("    listEmailId: ").append(toIndentedString(listEmailId)).append("\n");
     sb.append("    contactsCount: ").append(toIndentedString(contactsCount)).append("\n");
+    sb.append("    importInProgress: ").append(toIndentedString(importInProgress)).append("\n");
+    sb.append("    optoutInProgress: ").append(toIndentedString(optoutInProgress)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -196,7 +248,7 @@ public class ContactList {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("list_id", "list_name", "list_email_id", "_contacts_count"));
+    openapiFields = new HashSet<String>(Arrays.asList("list_id", "list_name", "list_email_id", "_contacts_count", "_import_in_progress", "_optout_in_progress"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);

@@ -12,10 +12,14 @@
 |**priceRate** | **Integer** | The pricing tier used to determine the cost per message. |  [optional] |
 |**smsPrice** | **BigDecimal** | The price of the SMS. |  [optional] |
 |**smsQuantity** | **BigDecimal** | The quantity of the SMS. |  [optional] |
+|**priceSmsCarrierFee** | **String** | The carrier fee applied to SMS in this package. |  [optional] |
 |**voiceMobilePrice** | **BigDecimal** | The price of the voice mobile. |  [optional] |
 |**voiceMobileQuantity** | **BigDecimal** | The quantity of the voice mobile. |  [optional] |
 |**voiceLandlinePrice** | **BigDecimal** | The price of the voice landline. |  [optional] |
 |**voiceLandlineQuantity** | **BigDecimal** | The quantity of the voice landline. |  [optional] |
+|**mmsPrice** | **BigDecimal** | The price of the MMS. |  [optional] |
+|**mmsQuantity** | **BigDecimal** | The quantity of the MMS. |  [optional] |
+|**priceMmsCarrierFee** | **String** | The carrier fee applied to MMS in this package. |  [optional] |
 |**faxPrice** | **BigDecimal** | The price of the fax. |  [optional] |
 |**faxQuantity** | **BigDecimal** | The quantity of the fax. |  [optional] |
 |**emailPrice** | **BigDecimal** | The price of the email. |  [optional] |

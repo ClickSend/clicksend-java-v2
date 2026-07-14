@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -96,6 +97,11 @@ public class OwnNumber {
   @SerializedName(SERIALIZED_NAME_VERIFIED_TIMESTAMP)
   @javax.annotation.Nullable
   private OffsetDateTime verifiedTimestamp;
+
+  public static final String SERIALIZED_NAME_NOTIFIED_TIMESTAMP = "notified_timestamp";
+  @SerializedName(SERIALIZED_NAME_NOTIFIED_TIMESTAMP)
+  @javax.annotation.Nullable
+  private String notifiedTimestamp;
 
   public static final String SERIALIZED_NAME_IS_NEARING_EXPIRATION = "is_nearing_expiration";
   @SerializedName(SERIALIZED_NAME_IS_NEARING_EXPIRATION)
@@ -286,6 +292,25 @@ public class OwnNumber {
   }
 
 
+  public OwnNumber notifiedTimestamp(@javax.annotation.Nullable String notifiedTimestamp) {
+    this.notifiedTimestamp = notifiedTimestamp;
+    return this;
+  }
+
+  /**
+   * The timestamp when the user was last notified about this number, if applicable.
+   * @return notifiedTimestamp
+   */
+  @javax.annotation.Nullable
+  public String getNotifiedTimestamp() {
+    return notifiedTimestamp;
+  }
+
+  public void setNotifiedTimestamp(@javax.annotation.Nullable String notifiedTimestamp) {
+    this.notifiedTimestamp = notifiedTimestamp;
+  }
+
+
   public OwnNumber isNearingExpiration(@javax.annotation.Nullable Boolean isNearingExpiration) {
     this.isNearingExpiration = isNearingExpiration;
     return this;
@@ -362,14 +387,26 @@ public class OwnNumber {
         Objects.equals(this.label, ownNumber.label) &&
         Objects.equals(this.status, ownNumber.status) &&
         Objects.equals(this.verifiedTimestamp, ownNumber.verifiedTimestamp) &&
+        Objects.equals(this.notifiedTimestamp, ownNumber.notifiedTimestamp) &&
         Objects.equals(this.isNearingExpiration, ownNumber.isNearingExpiration) &&
         Objects.equals(this.createdTimestamp, ownNumber.createdTimestamp) &&
         Objects.equals(this.updatedTimestamp, ownNumber.updatedTimestamp);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountId, workspaceId, userId, phoneNumber, country, label, status, verifiedTimestamp, isNearingExpiration, createdTimestamp, updatedTimestamp);
+    return Objects.hash(id, accountId, workspaceId, userId, phoneNumber, country, label, status, verifiedTimestamp, notifiedTimestamp, isNearingExpiration, createdTimestamp, updatedTimestamp);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -385,6 +422,7 @@ public class OwnNumber {
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    verifiedTimestamp: ").append(toIndentedString(verifiedTimestamp)).append("\n");
+    sb.append("    notifiedTimestamp: ").append(toIndentedString(notifiedTimestamp)).append("\n");
     sb.append("    isNearingExpiration: ").append(toIndentedString(isNearingExpiration)).append("\n");
     sb.append("    createdTimestamp: ").append(toIndentedString(createdTimestamp)).append("\n");
     sb.append("    updatedTimestamp: ").append(toIndentedString(updatedTimestamp)).append("\n");
@@ -406,7 +444,7 @@ public class OwnNumber {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("id", "account_id", "workspace_id", "user_id", "phone_number", "country", "label", "status", "verified_timestamp", "is_nearing_expiration", "created_timestamp", "updated_timestamp"));
+    openapiFields = new HashSet<String>(Arrays.asList("id", "account_id", "workspace_id", "user_id", "phone_number", "country", "label", "status", "verified_timestamp", "notified_timestamp", "is_nearing_expiration", "created_timestamp", "updated_timestamp"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -456,6 +494,9 @@ public class OwnNumber {
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      if ((jsonObj.get("notified_timestamp") != null && !jsonObj.get("notified_timestamp").isJsonNull()) && !jsonObj.get("notified_timestamp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notified_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notified_timestamp").toString()));
       }
   }
 

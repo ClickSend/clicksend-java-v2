@@ -71,6 +71,21 @@ public class ViewMmsHistoryDataAllOfDataInner {
   @javax.annotation.Nullable
   private String body;
 
+  public static final String SERIALIZED_NAME_SUBJECT = "subject";
+  @SerializedName(SERIALIZED_NAME_SUBJECT)
+  @javax.annotation.Nullable
+  private String subject;
+
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
+  private Integer priority;
+
+  public static final String SERIALIZED_NAME_MEDIA_FILE_URL = "_media_file_url";
+  @SerializedName(SERIALIZED_NAME_MEDIA_FILE_URL)
+  @javax.annotation.Nullable
+  private String mediaFileUrl;
+
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   @javax.annotation.Nullable
@@ -85,6 +100,11 @@ public class ViewMmsHistoryDataAllOfDataInner {
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
   private String schedule;
+
+  public static final String SERIALIZED_NAME_DATE_ADDED = "date_added";
+  @SerializedName(SERIALIZED_NAME_DATE_ADDED)
+  @javax.annotation.Nullable
+  private Integer dateAdded;
 
   public static final String SERIALIZED_NAME_STATUS_CODE = "status_code";
   @SerializedName(SERIALIZED_NAME_STATUS_CODE)
@@ -255,6 +275,63 @@ public class ViewMmsHistoryDataAllOfDataInner {
   }
 
 
+  public ViewMmsHistoryDataAllOfDataInner subject(@javax.annotation.Nullable String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+  /**
+   * The subject of the message.
+   * @return subject
+   */
+  @javax.annotation.Nullable
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(@javax.annotation.Nullable String subject) {
+    this.subject = subject;
+  }
+
+
+  public ViewMmsHistoryDataAllOfDataInner priority(@javax.annotation.Nullable Integer priority) {
+    this.priority = priority;
+    return this;
+  }
+
+  /**
+   * The priority of the message.
+   * @return priority
+   */
+  @javax.annotation.Nullable
+  public Integer getPriority() {
+    return priority;
+  }
+
+  public void setPriority(@javax.annotation.Nullable Integer priority) {
+    this.priority = priority;
+  }
+
+
+  public ViewMmsHistoryDataAllOfDataInner mediaFileUrl(@javax.annotation.Nullable String mediaFileUrl) {
+    this.mediaFileUrl = mediaFileUrl;
+    return this;
+  }
+
+  /**
+   * A temporary, signed URL to download the message&#39;s media attachment.
+   * @return mediaFileUrl
+   */
+  @javax.annotation.Nullable
+  public String getMediaFileUrl() {
+    return mediaFileUrl;
+  }
+
+  public void setMediaFileUrl(@javax.annotation.Nullable String mediaFileUrl) {
+    this.mediaFileUrl = mediaFileUrl;
+  }
+
+
   public ViewMmsHistoryDataAllOfDataInner status(@javax.annotation.Nullable String status) {
     this.status = status;
     return this;
@@ -309,6 +386,25 @@ public class ViewMmsHistoryDataAllOfDataInner {
 
   public void setSchedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
+  }
+
+
+  public ViewMmsHistoryDataAllOfDataInner dateAdded(@javax.annotation.Nullable Integer dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+  /**
+   * The Unix timestamp when the message was added.
+   * @return dateAdded
+   */
+  @javax.annotation.Nullable
+  public Integer getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(@javax.annotation.Nullable Integer dateAdded) {
+    this.dateAdded = dateAdded;
   }
 
 
@@ -668,9 +764,13 @@ public class ViewMmsHistoryDataAllOfDataInner {
         Objects.equals(this.date, viewMmsHistoryDataAllOfDataInner.date) &&
         Objects.equals(this.to, viewMmsHistoryDataAllOfDataInner.to) &&
         Objects.equals(this.body, viewMmsHistoryDataAllOfDataInner.body) &&
+        Objects.equals(this.subject, viewMmsHistoryDataAllOfDataInner.subject) &&
+        Objects.equals(this.priority, viewMmsHistoryDataAllOfDataInner.priority) &&
+        Objects.equals(this.mediaFileUrl, viewMmsHistoryDataAllOfDataInner.mediaFileUrl) &&
         Objects.equals(this.status, viewMmsHistoryDataAllOfDataInner.status) &&
         Objects.equals(this.from, viewMmsHistoryDataAllOfDataInner.from) &&
         Objects.equals(this.schedule, viewMmsHistoryDataAllOfDataInner.schedule) &&
+        Objects.equals(this.dateAdded, viewMmsHistoryDataAllOfDataInner.dateAdded) &&
         Objects.equals(this.statusCode, viewMmsHistoryDataAllOfDataInner.statusCode) &&
         Objects.equals(this.statusText, viewMmsHistoryDataAllOfDataInner.statusText) &&
         Objects.equals(this.errorCode, viewMmsHistoryDataAllOfDataInner.errorCode) &&
@@ -697,7 +797,7 @@ public class ViewMmsHistoryDataAllOfDataInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(direction, date, to, body, status, from, schedule, statusCode, statusText, errorCode, errorText, messageId, messageParts, messagePrice, fromEmail, listId, customString, contactId, userId, subaccountId, country, carrier, firstName, lastName, apiUsername);
+    return Objects.hash(direction, date, to, body, subject, priority, mediaFileUrl, status, from, schedule, dateAdded, statusCode, statusText, errorCode, errorText, messageId, messageParts, messagePrice, fromEmail, listId, customString, contactId, userId, subaccountId, country, carrier, firstName, lastName, apiUsername);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -715,9 +815,13 @@ public class ViewMmsHistoryDataAllOfDataInner {
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    mediaFileUrl: ").append(toIndentedString(mediaFileUrl)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    statusText: ").append(toIndentedString(statusText)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
@@ -754,7 +858,7 @@ public class ViewMmsHistoryDataAllOfDataInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("direction", "date", "to", "body", "status", "from", "schedule", "status_code", "status_text", "error_code", "error_text", "message_id", "message_parts", "message_price", "from_email", "list_id", "custom_string", "contact_id", "user_id", "subaccount_id", "country", "carrier", "first_name", "last_name", "_api_username"));
+    openapiFields = new HashSet<String>(Arrays.asList("direction", "date", "to", "body", "subject", "priority", "_media_file_url", "status", "from", "schedule", "date_added", "status_code", "status_text", "error_code", "error_text", "message_id", "message_parts", "message_price", "from_email", "list_id", "custom_string", "contact_id", "user_id", "subaccount_id", "country", "carrier", "first_name", "last_name", "_api_username"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -792,6 +896,12 @@ public class ViewMmsHistoryDataAllOfDataInner {
       }
       if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));
+      }
+      if ((jsonObj.get("subject") != null && !jsonObj.get("subject").isJsonNull()) && !jsonObj.get("subject").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `subject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subject").toString()));
+      }
+      if ((jsonObj.get("_media_file_url") != null && !jsonObj.get("_media_file_url").isJsonNull()) && !jsonObj.get("_media_file_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `_media_file_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_media_file_url").toString()));
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));

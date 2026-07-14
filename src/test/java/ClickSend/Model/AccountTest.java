@@ -13,6 +13,7 @@
 
 package ClickSend.Model;
 
+import ClickSend.Model.AccountReferrerChosen;
 import ClickSend.Model.Currency;
 import ClickSend.Model.Subaccount;
 import com.google.gson.TypeAdapter;
@@ -78,6 +79,14 @@ public class AccountTest {
     @Test
     public void bannedTest() {
         // TODO: test banned
+    }
+
+    /**
+     * Test the property 'dateSignUp'
+     */
+    @Test
+    public void dateSignUpTest() {
+        // TODO: test dateSignUp
     }
 
     /**
@@ -161,11 +170,27 @@ public class AccountTest {
     }
 
     /**
+     * Test the property 'priority'
+     */
+    @Test
+    public void priorityTest() {
+        // TODO: test priority
+    }
+
+    /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
         // TODO: test country
+    }
+
+    /**
+     * Test the property 'countryIp'
+     */
+    @Test
+    public void countryIpTest() {
+        // TODO: test countryIp
     }
 
     /**
@@ -265,6 +290,62 @@ public class AccountTest {
     }
 
     /**
+     * Test the property 'privateUploads'
+     */
+    @Test
+    public void privateUploadsTest() {
+        // TODO: test privateUploads
+    }
+
+    /**
+     * Test the property 'faxQuality'
+     */
+    @Test
+    public void faxQualityTest() {
+        // TODO: test faxQuality
+    }
+
+    /**
+     * Test the property 'settingSmsHideYourNumber'
+     */
+    @Test
+    public void settingSmsHideYourNumberTest() {
+        // TODO: test settingSmsHideYourNumber
+    }
+
+    /**
+     * Test the property 'settingSmsHideBusinessName'
+     */
+    @Test
+    public void settingSmsHideBusinessNameTest() {
+        // TODO: test settingSmsHideBusinessName
+    }
+
+    /**
+     * Test the property 'pricingVariant'
+     */
+    @Test
+    public void pricingVariantTest() {
+        // TODO: test pricingVariant
+    }
+
+    /**
+     * Test the property 'onTrial'
+     */
+    @Test
+    public void onTrialTest() {
+        // TODO: test onTrial
+    }
+
+    /**
+     * Test the property 'trialExpiry'
+     */
+    @Test
+    public void trialExpiryTest() {
+        // TODO: test trialExpiry
+    }
+
+    /**
      * Test the property 'currency'
      */
     @Test
@@ -278,6 +359,14 @@ public class AccountTest {
     @Test
     public void subaccountTest() {
         // TODO: test subaccount
+    }
+
+    /**
+     * Test the property 'referrerChosen'
+     */
+    @Test
+    public void referrerChosenTest() {
+        // TODO: test referrerChosen
     }
 
 }

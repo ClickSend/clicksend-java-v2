@@ -25,17 +25,17 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewAllowedEmailsDataInner
+ * Model tests for AddAllowedEmailData
  */
-public class ViewAllowedEmailsDataInnerTest {
-    private final ViewAllowedEmailsDataInner model = new ViewAllowedEmailsDataInner();
+public class AddAllowedEmailDataTest {
+    private final AddAllowedEmailData model = new AddAllowedEmailData();
 
     /**
-     * Model tests for ViewAllowedEmailsDataInner
+     * Model tests for AddAllowedEmailData
      */
     @Test
-    public void testViewAllowedEmailsDataInner() {
-        // TODO: test ViewAllowedEmailsDataInner
+    public void testAddAllowedEmailData() {
+        // TODO: test AddAllowedEmailData
     }
 
     /**

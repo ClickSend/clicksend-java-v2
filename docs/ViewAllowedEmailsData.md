@@ -1,6 +1,6 @@
 
 
-# ViewAllMmsCampaignsData
+# ViewAllowedEmailsData
 
 
 ## Properties
@@ -15,7 +15,7 @@
 |**prevPageUrl** | **String** | A URL of the previous page. It will return **null** if there’s no previous page. |  [optional] |
 |**from** | **Integer** | The number of the first result in the current page. |  [optional] |
 |**to** | **Integer** | The number of the last result in the current page. |  [optional] |
-|**data** | [**List&lt;MmsCampaign&gt;**](MmsCampaign.md) |  |  [optional] |
+|**data** | [**List&lt;ViewAllowedEmailsDataAllOfDataInner&gt;**](ViewAllowedEmailsDataAllOfDataInner.md) |  |  [optional] |
 
 
 

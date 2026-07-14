@@ -1,6 +1,6 @@
 
 
-# ViewAllowedEmailsDataInner
+# AddAllowedEmailData
 
 
 ## Properties

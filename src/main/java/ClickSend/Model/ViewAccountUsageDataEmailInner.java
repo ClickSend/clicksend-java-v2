@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -69,6 +70,11 @@ public class ViewAccountUsageDataEmailInner {
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
   @javax.annotation.Nullable
   private String totalPrice;
+
+  public static final String SERIALIZED_NAME_NOTES = "notes";
+  @SerializedName(SERIALIZED_NAME_NOTES)
+  @javax.annotation.Nullable
+  private String notes;
 
   public ViewAccountUsageDataEmailInner() {
   }
@@ -149,6 +155,25 @@ public class ViewAccountUsageDataEmailInner {
   }
 
 
+  public ViewAccountUsageDataEmailInner notes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+    return this;
+  }
+
+  /**
+   * Optional notes.
+   * @return notes
+   */
+  @javax.annotation.Nullable
+  public String getNotes() {
+    return notes;
+  }
+
+  public void setNotes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -162,12 +187,24 @@ public class ViewAccountUsageDataEmailInner {
     return Objects.equals(this.subaccountId, viewAccountUsageDataEmailInner.subaccountId) &&
         Objects.equals(this.username, viewAccountUsageDataEmailInner.username) &&
         Objects.equals(this.totalCount, viewAccountUsageDataEmailInner.totalCount) &&
-        Objects.equals(this.totalPrice, viewAccountUsageDataEmailInner.totalPrice);
+        Objects.equals(this.totalPrice, viewAccountUsageDataEmailInner.totalPrice) &&
+        Objects.equals(this.notes, viewAccountUsageDataEmailInner.notes);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subaccountId, username, totalCount, totalPrice);
+    return Objects.hash(subaccountId, username, totalCount, totalPrice, notes);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -178,6 +215,7 @@ public class ViewAccountUsageDataEmailInner {
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
     sb.append("    totalPrice: ").append(toIndentedString(totalPrice)).append("\n");
+    sb.append("    notes: ").append(toIndentedString(notes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -196,7 +234,7 @@ public class ViewAccountUsageDataEmailInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price"));
+    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price", "notes"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -228,6 +266,9 @@ public class ViewAccountUsageDataEmailInner {
       }
       if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
+      }
+      if ((jsonObj.get("notes") != null && !jsonObj.get("notes").isJsonNull()) && !jsonObj.get("notes").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notes").toString()));
       }
   }
 

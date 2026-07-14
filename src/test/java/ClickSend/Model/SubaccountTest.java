@@ -95,6 +95,14 @@ public class SubaccountTest {
     }
 
     /**
+     * Test the property 'accessSmpp'
+     */
+    @Test
+    public void accessSmppTest() {
+        // TODO: test accessSmpp
+    }
+
+    /**
      * Test the property 'accessUsers'
      */
     @Test
@@ -183,11 +191,27 @@ public class SubaccountTest {
     }
 
     /**
+     * Test the property 'accessGlobalSending'
+     */
+    @Test
+    public void accessGlobalSendingTest() {
+        // TODO: test accessGlobalSending
+    }
+
+    /**
      * Test the property 'accessMms'
      */
     @Test
     public void accessMmsTest() {
         // TODO: test accessMms
+    }
+
+    /**
+     * Test the property 'hidePricing'
+     */
+    @Test
+    public void hidePricingTest() {
+        // TODO: test hidePricing
     }
 
     /**
@@ -204,6 +228,22 @@ public class SubaccountTest {
     @Test
     public void notesTest() {
         // TODO: test notes
+    }
+
+    /**
+     * Test the property 'isMain'
+     */
+    @Test
+    public void isMainTest() {
+        // TODO: test isMain
+    }
+
+    /**
+     * Test the property 'signUpType'
+     */
+    @Test
+    public void signUpTypeTest() {
+        // TODO: test signUpType
     }
 
 }

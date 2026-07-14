@@ -76,7 +76,7 @@ public class CalculateSmsPriceData {
   @javax.annotation.Nullable
   private List<Sms> messages = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_CURRENCY = "currency";
+  public static final String SERIALIZED_NAME_CURRENCY = "_currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
   @javax.annotation.Nullable
   private Currency currency;
@@ -288,7 +288,7 @@ public class CalculateSmsPriceData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("total_price", "total_count", "queued_count", "messages", "currency", "_summary", "blocked_count"));
+    openapiFields = new HashSet<String>(Arrays.asList("total_price", "total_count", "queued_count", "messages", "_currency", "_summary", "blocked_count"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -329,9 +329,9 @@ public class CalculateSmsPriceData {
           };
         }
       }
-      // validate the optional field `currency`
-      if (jsonObj.get("currency") != null && !jsonObj.get("currency").isJsonNull()) {
-        Currency.validateJsonElement(jsonObj.get("currency"));
+      // validate the optional field `_currency`
+      if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
+        Currency.validateJsonElement(jsonObj.get("_currency"));
       }
       // validate the optional field `_summary`
       if (jsonObj.get("_summary") != null && !jsonObj.get("_summary").isJsonNull()) {

@@ -46,58 +46,58 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewStrippedStringRulesDataDataInner
+ * The referral source chosen at sign-up, if any.
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewStrippedStringRulesDataDataInner {
-  public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
-  @SerializedName(SERIALIZED_NAME_RULE_ID)
+public class AccountReferrerChosen {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
   @javax.annotation.Nullable
-  private Integer ruleId;
+  private Integer id;
 
-  public static final String SERIALIZED_NAME_STRIP_STRING = "strip_string";
-  @SerializedName(SERIALIZED_NAME_STRIP_STRING)
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
   @javax.annotation.Nullable
-  private String stripString;
+  private String name;
 
-  public ViewStrippedStringRulesDataDataInner() {
+  public AccountReferrerChosen() {
   }
 
-  public ViewStrippedStringRulesDataDataInner ruleId(@javax.annotation.Nullable Integer ruleId) {
-    this.ruleId = ruleId;
+  public AccountReferrerChosen id(@javax.annotation.Nullable Integer id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * The ID of the rule.
-   * @return ruleId
+   * The ID of the referral source.
+   * @return id
    */
   @javax.annotation.Nullable
-  public Integer getRuleId() {
-    return ruleId;
+  public Integer getId() {
+    return id;
   }
 
-  public void setRuleId(@javax.annotation.Nullable Integer ruleId) {
-    this.ruleId = ruleId;
+  public void setId(@javax.annotation.Nullable Integer id) {
+    this.id = id;
   }
 
 
-  public ViewStrippedStringRulesDataDataInner stripString(@javax.annotation.Nullable String stripString) {
-    this.stripString = stripString;
+  public AccountReferrerChosen name(@javax.annotation.Nullable String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * The string to be stripped.
-   * @return stripString
+   * The name of the referral source.
+   * @return name
    */
   @javax.annotation.Nullable
-  public String getStripString() {
-    return stripString;
+  public String getName() {
+    return name;
   }
 
-  public void setStripString(@javax.annotation.Nullable String stripString) {
-    this.stripString = stripString;
+  public void setName(@javax.annotation.Nullable String name) {
+    this.name = name;
   }
 
 
@@ -110,22 +110,22 @@ public class ViewStrippedStringRulesDataDataInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewStrippedStringRulesDataDataInner viewStrippedStringRulesDataDataInner = (ViewStrippedStringRulesDataDataInner) o;
-    return Objects.equals(this.ruleId, viewStrippedStringRulesDataDataInner.ruleId) &&
-        Objects.equals(this.stripString, viewStrippedStringRulesDataDataInner.stripString);
+    AccountReferrerChosen accountReferrerChosen = (AccountReferrerChosen) o;
+    return Objects.equals(this.id, accountReferrerChosen.id) &&
+        Objects.equals(this.name, accountReferrerChosen.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ruleId, stripString);
+    return Objects.hash(id, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewStrippedStringRulesDataDataInner {\n");
-    sb.append("    ruleId: ").append(toIndentedString(ruleId)).append("\n");
-    sb.append("    stripString: ").append(toIndentedString(stripString)).append("\n");
+    sb.append("class AccountReferrerChosen {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -144,7 +144,7 @@ public class ViewStrippedStringRulesDataDataInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("rule_id", "strip_string"));
+    openapiFields = new HashSet<String>(Arrays.asList("id", "name"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -154,25 +154,25 @@ public class ViewStrippedStringRulesDataDataInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewStrippedStringRulesDataDataInner
+   * @throws IOException if the JSON Element is invalid with respect to AccountReferrerChosen
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewStrippedStringRulesDataDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewStrippedStringRulesDataDataInner is not found in the empty JSON string", ViewStrippedStringRulesDataDataInner.openapiRequiredFields.toString()));
+        if (!AccountReferrerChosen.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in AccountReferrerChosen is not found in the empty JSON string", AccountReferrerChosen.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewStrippedStringRulesDataDataInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewStrippedStringRulesDataDataInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!AccountReferrerChosen.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AccountReferrerChosen` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("strip_string") != null && !jsonObj.get("strip_string").isJsonNull()) && !jsonObj.get("strip_string").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `strip_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("strip_string").toString()));
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -180,22 +180,22 @@ public class ViewStrippedStringRulesDataDataInner {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewStrippedStringRulesDataDataInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewStrippedStringRulesDataDataInner' and its subtypes
+       if (!AccountReferrerChosen.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AccountReferrerChosen' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewStrippedStringRulesDataDataInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewStrippedStringRulesDataDataInner.class));
+       final TypeAdapter<AccountReferrerChosen> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AccountReferrerChosen.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewStrippedStringRulesDataDataInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<AccountReferrerChosen>() {
            @Override
-           public void write(JsonWriter out, ViewStrippedStringRulesDataDataInner value) throws IOException {
+           public void write(JsonWriter out, AccountReferrerChosen value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewStrippedStringRulesDataDataInner read(JsonReader in) throws IOException {
+           public AccountReferrerChosen read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -206,18 +206,18 @@ public class ViewStrippedStringRulesDataDataInner {
   }
 
   /**
-   * Create an instance of ViewStrippedStringRulesDataDataInner given an JSON string
+   * Create an instance of AccountReferrerChosen given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewStrippedStringRulesDataDataInner
-   * @throws IOException if the JSON string is invalid with respect to ViewStrippedStringRulesDataDataInner
+   * @return An instance of AccountReferrerChosen
+   * @throws IOException if the JSON string is invalid with respect to AccountReferrerChosen
    */
-  public static ViewStrippedStringRulesDataDataInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewStrippedStringRulesDataDataInner.class);
+  public static AccountReferrerChosen fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AccountReferrerChosen.class);
   }
 
   /**
-   * Convert an instance of ViewStrippedStringRulesDataDataInner to an JSON string
+   * Convert an instance of AccountReferrerChosen to an JSON string
    *
    * @return JSON string
    */

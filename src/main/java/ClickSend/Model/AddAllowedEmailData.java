@@ -47,10 +47,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewAllowedEmailsDataInner
+ * AddAllowedEmailData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewAllowedEmailsDataInner {
+public class AddAllowedEmailData {
   public static final String SERIALIZED_NAME_EMAIL_ADDRESS_ID = "email_address_id";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESS_ID)
   @javax.annotation.Nullable
@@ -66,10 +66,10 @@ public class ViewAllowedEmailsDataInner {
   @javax.annotation.Nullable
   private String from;
 
-  public ViewAllowedEmailsDataInner() {
+  public AddAllowedEmailData() {
   }
 
-  public ViewAllowedEmailsDataInner emailAddressId(@javax.annotation.Nullable BigDecimal emailAddressId) {
+  public AddAllowedEmailData emailAddressId(@javax.annotation.Nullable BigDecimal emailAddressId) {
     this.emailAddressId = emailAddressId;
     return this;
   }
@@ -88,7 +88,7 @@ public class ViewAllowedEmailsDataInner {
   }
 
 
-  public ViewAllowedEmailsDataInner emailAddress(@javax.annotation.Nullable String emailAddress) {
+  public AddAllowedEmailData emailAddress(@javax.annotation.Nullable String emailAddress) {
     this.emailAddress = emailAddress;
     return this;
   }
@@ -107,7 +107,7 @@ public class ViewAllowedEmailsDataInner {
   }
 
 
-  public ViewAllowedEmailsDataInner from(@javax.annotation.Nullable String from) {
+  public AddAllowedEmailData from(@javax.annotation.Nullable String from) {
     this.from = from;
     return this;
   }
@@ -135,10 +135,10 @@ public class ViewAllowedEmailsDataInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewAllowedEmailsDataInner viewAllowedEmailsDataInner = (ViewAllowedEmailsDataInner) o;
-    return Objects.equals(this.emailAddressId, viewAllowedEmailsDataInner.emailAddressId) &&
-        Objects.equals(this.emailAddress, viewAllowedEmailsDataInner.emailAddress) &&
-        Objects.equals(this.from, viewAllowedEmailsDataInner.from);
+    AddAllowedEmailData addAllowedEmailData = (AddAllowedEmailData) o;
+    return Objects.equals(this.emailAddressId, addAllowedEmailData.emailAddressId) &&
+        Objects.equals(this.emailAddress, addAllowedEmailData.emailAddress) &&
+        Objects.equals(this.from, addAllowedEmailData.from);
   }
 
   @Override
@@ -149,7 +149,7 @@ public class ViewAllowedEmailsDataInner {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewAllowedEmailsDataInner {\n");
+    sb.append("class AddAllowedEmailData {\n");
     sb.append("    emailAddressId: ").append(toIndentedString(emailAddressId)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
@@ -181,20 +181,20 @@ public class ViewAllowedEmailsDataInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewAllowedEmailsDataInner
+   * @throws IOException if the JSON Element is invalid with respect to AddAllowedEmailData
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewAllowedEmailsDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAllowedEmailsDataInner is not found in the empty JSON string", ViewAllowedEmailsDataInner.openapiRequiredFields.toString()));
+        if (!AddAllowedEmailData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in AddAllowedEmailData is not found in the empty JSON string", AddAllowedEmailData.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewAllowedEmailsDataInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAllowedEmailsDataInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!AddAllowedEmailData.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AddAllowedEmailData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -210,22 +210,22 @@ public class ViewAllowedEmailsDataInner {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewAllowedEmailsDataInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewAllowedEmailsDataInner' and its subtypes
+       if (!AddAllowedEmailData.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AddAllowedEmailData' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewAllowedEmailsDataInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAllowedEmailsDataInner.class));
+       final TypeAdapter<AddAllowedEmailData> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AddAllowedEmailData.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewAllowedEmailsDataInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<AddAllowedEmailData>() {
            @Override
-           public void write(JsonWriter out, ViewAllowedEmailsDataInner value) throws IOException {
+           public void write(JsonWriter out, AddAllowedEmailData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewAllowedEmailsDataInner read(JsonReader in) throws IOException {
+           public AddAllowedEmailData read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -236,18 +236,18 @@ public class ViewAllowedEmailsDataInner {
   }
 
   /**
-   * Create an instance of ViewAllowedEmailsDataInner given an JSON string
+   * Create an instance of AddAllowedEmailData given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewAllowedEmailsDataInner
-   * @throws IOException if the JSON string is invalid with respect to ViewAllowedEmailsDataInner
+   * @return An instance of AddAllowedEmailData
+   * @throws IOException if the JSON string is invalid with respect to AddAllowedEmailData
    */
-  public static ViewAllowedEmailsDataInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewAllowedEmailsDataInner.class);
+  public static AddAllowedEmailData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddAllowedEmailData.class);
   }
 
   /**
-   * Convert an instance of ViewAllowedEmailsDataInner to an JSON string
+   * Convert an instance of AddAllowedEmailData to an JSON string
    *
    * @return JSON string
    */

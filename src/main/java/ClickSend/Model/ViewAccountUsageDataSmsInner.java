@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -70,6 +71,11 @@ public class ViewAccountUsageDataSmsInner {
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
   @javax.annotation.Nullable
   private BigDecimal totalPrice;
+
+  public static final String SERIALIZED_NAME_NOTES = "notes";
+  @SerializedName(SERIALIZED_NAME_NOTES)
+  @javax.annotation.Nullable
+  private String notes;
 
   public ViewAccountUsageDataSmsInner() {
   }
@@ -150,6 +156,25 @@ public class ViewAccountUsageDataSmsInner {
   }
 
 
+  public ViewAccountUsageDataSmsInner notes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+    return this;
+  }
+
+  /**
+   * Optional notes.
+   * @return notes
+   */
+  @javax.annotation.Nullable
+  public String getNotes() {
+    return notes;
+  }
+
+  public void setNotes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -163,12 +188,24 @@ public class ViewAccountUsageDataSmsInner {
     return Objects.equals(this.subaccountId, viewAccountUsageDataSmsInner.subaccountId) &&
         Objects.equals(this.username, viewAccountUsageDataSmsInner.username) &&
         Objects.equals(this.totalCount, viewAccountUsageDataSmsInner.totalCount) &&
-        Objects.equals(this.totalPrice, viewAccountUsageDataSmsInner.totalPrice);
+        Objects.equals(this.totalPrice, viewAccountUsageDataSmsInner.totalPrice) &&
+        Objects.equals(this.notes, viewAccountUsageDataSmsInner.notes);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subaccountId, username, totalCount, totalPrice);
+    return Objects.hash(subaccountId, username, totalCount, totalPrice, notes);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -179,6 +216,7 @@ public class ViewAccountUsageDataSmsInner {
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
     sb.append("    totalPrice: ").append(toIndentedString(totalPrice)).append("\n");
+    sb.append("    notes: ").append(toIndentedString(notes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -197,7 +235,7 @@ public class ViewAccountUsageDataSmsInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price"));
+    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price", "notes"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -229,6 +267,9 @@ public class ViewAccountUsageDataSmsInner {
       }
       if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
+      }
+      if ((jsonObj.get("notes") != null && !jsonObj.get("notes").isJsonNull()) && !jsonObj.get("notes").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notes").toString()));
       }
   }
 

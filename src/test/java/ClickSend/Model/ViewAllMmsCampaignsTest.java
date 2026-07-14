@@ -13,14 +13,17 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.ViewAllMmsCampaignsData;
+import ClickSend.Model.MmsCampaign;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -39,27 +42,67 @@ public class ViewAllMmsCampaignsTest {
     }
 
     /**
-     * Test the property 'httpCode'
+     * Test the property 'total'
      */
     @Test
-    public void httpCodeTest() {
-        // TODO: test httpCode
+    public void totalTest() {
+        // TODO: test total
     }
 
     /**
-     * Test the property 'responseCode'
+     * Test the property 'perPage'
      */
     @Test
-    public void responseCodeTest() {
-        // TODO: test responseCode
+    public void perPageTest() {
+        // TODO: test perPage
     }
 
     /**
-     * Test the property 'responseMsg'
+     * Test the property 'currentPage'
      */
     @Test
-    public void responseMsgTest() {
-        // TODO: test responseMsg
+    public void currentPageTest() {
+        // TODO: test currentPage
+    }
+
+    /**
+     * Test the property 'lastPage'
+     */
+    @Test
+    public void lastPageTest() {
+        // TODO: test lastPage
+    }
+
+    /**
+     * Test the property 'nextPageUrl'
+     */
+    @Test
+    public void nextPageUrlTest() {
+        // TODO: test nextPageUrl
+    }
+
+    /**
+     * Test the property 'prevPageUrl'
+     */
+    @Test
+    public void prevPageUrlTest() {
+        // TODO: test prevPageUrl
+    }
+
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+        // TODO: test from
+    }
+
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+        // TODO: test to
     }
 
     /**

@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -109,6 +110,14 @@ public class OwnNumberTest {
     @Test
     public void verifiedTimestampTest() {
         // TODO: test verifiedTimestamp
+    }
+
+    /**
+     * Test the property 'notifiedTimestamp'
+     */
+    @Test
+    public void notifiedTimestampTest() {
+        // TODO: test notifiedTimestamp
     }
 
     /**

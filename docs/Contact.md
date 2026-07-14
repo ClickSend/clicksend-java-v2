@@ -16,8 +16,8 @@
 |**custom2** | **String** | Custom field 2. |  [optional] |
 |**custom3** | **String** | Custom field 3. |  [optional] |
 |**custom4** | **String** | Custom field 4. |  [optional] |
-|**dateAdded** | **OffsetDateTime** | The date when the contact was added. |  [optional] |
-|**dateUpdated** | **OffsetDateTime** | The date when the contact was last updated. |  [optional] |
+|**dateAdded** | **String** | The date when the contact was added. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \&quot;1783997542\&quot;) instead of ISO 8601. |  [optional] |
+|**dateUpdated** | **String** | The date when the contact was last updated. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \&quot;1783997542\&quot;) instead of ISO 8601. |  [optional] |
 |**faxNumber** | **String** | The fax number of the contact. |  [optional] |
 |**organizationName** | **String** | The organization name of the contact. |  [optional] |
 |**email** | **String** | The email address of the contact. |  [optional] |

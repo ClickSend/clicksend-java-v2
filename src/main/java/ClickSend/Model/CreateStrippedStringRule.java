@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.ViewStrippedStringRulesDataDataInner;
+import ClickSend.Model.ViewStrippedStringRulesDataAllOfDataInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -69,7 +69,7 @@ public class CreateStrippedStringRule {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private ViewStrippedStringRulesDataDataInner data;
+  private ViewStrippedStringRulesDataAllOfDataInner data;
 
   public CreateStrippedStringRule() {
   }
@@ -131,7 +131,7 @@ public class CreateStrippedStringRule {
   }
 
 
-  public CreateStrippedStringRule data(@javax.annotation.Nullable ViewStrippedStringRulesDataDataInner data) {
+  public CreateStrippedStringRule data(@javax.annotation.Nullable ViewStrippedStringRulesDataAllOfDataInner data) {
     this.data = data;
     return this;
   }
@@ -141,11 +141,11 @@ public class CreateStrippedStringRule {
    * @return data
    */
   @javax.annotation.Nullable
-  public ViewStrippedStringRulesDataDataInner getData() {
+  public ViewStrippedStringRulesDataAllOfDataInner getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable ViewStrippedStringRulesDataDataInner data) {
+  public void setData(@javax.annotation.Nullable ViewStrippedStringRulesDataAllOfDataInner data) {
     this.data = data;
   }
 
@@ -232,7 +232,7 @@ public class CreateStrippedStringRule {
       }
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ViewStrippedStringRulesDataDataInner.validateJsonElement(jsonObj.get("data"));
+        ViewStrippedStringRulesDataAllOfDataInner.validateJsonElement(jsonObj.get("data"));
       }
   }
 

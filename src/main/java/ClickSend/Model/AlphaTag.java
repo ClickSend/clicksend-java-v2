@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -97,12 +96,12 @@ public class AlphaTag {
   public static final String SERIALIZED_NAME_CREATED_TIMESTAMP = "created_timestamp";
   @SerializedName(SERIALIZED_NAME_CREATED_TIMESTAMP)
   @javax.annotation.Nullable
-  private OffsetDateTime createdTimestamp;
+  private String createdTimestamp;
 
   public static final String SERIALIZED_NAME_UPDATED_TIMESTAMP = "updated_timestamp";
   @SerializedName(SERIALIZED_NAME_UPDATED_TIMESTAMP)
   @javax.annotation.Nullable
-  private OffsetDateTime updatedTimestamp;
+  private String updatedTimestamp;
 
   public AlphaTag() {
   }
@@ -267,40 +266,40 @@ public class AlphaTag {
   }
 
 
-  public AlphaTag createdTimestamp(@javax.annotation.Nullable OffsetDateTime createdTimestamp) {
+  public AlphaTag createdTimestamp(@javax.annotation.Nullable String createdTimestamp) {
     this.createdTimestamp = createdTimestamp;
     return this;
   }
 
   /**
-   * The timestamp when the record was created.
+   * The timestamp when the record was created. Usually ISO 8601 (e.g. \&quot;2021-05-11T01:00:00.123Z\&quot;), but returned as a plain string rather than a strict date-time since some older records don&#39;t include a UTC offset (e.g. \&quot;2024-01-10T10:55:26.818097\&quot;).
    * @return createdTimestamp
    */
   @javax.annotation.Nullable
-  public OffsetDateTime getCreatedTimestamp() {
+  public String getCreatedTimestamp() {
     return createdTimestamp;
   }
 
-  public void setCreatedTimestamp(@javax.annotation.Nullable OffsetDateTime createdTimestamp) {
+  public void setCreatedTimestamp(@javax.annotation.Nullable String createdTimestamp) {
     this.createdTimestamp = createdTimestamp;
   }
 
 
-  public AlphaTag updatedTimestamp(@javax.annotation.Nullable OffsetDateTime updatedTimestamp) {
+  public AlphaTag updatedTimestamp(@javax.annotation.Nullable String updatedTimestamp) {
     this.updatedTimestamp = updatedTimestamp;
     return this;
   }
 
   /**
-   * The timestamp when the record was last updated.
+   * The timestamp when the record was last updated. Usually ISO 8601 (e.g. \&quot;2021-05-11T01:05:00.123Z\&quot;), but returned as a plain string rather than a strict date-time since some older records don&#39;t include a UTC offset.
    * @return updatedTimestamp
    */
   @javax.annotation.Nullable
-  public OffsetDateTime getUpdatedTimestamp() {
+  public String getUpdatedTimestamp() {
     return updatedTimestamp;
   }
 
-  public void setUpdatedTimestamp(@javax.annotation.Nullable OffsetDateTime updatedTimestamp) {
+  public void setUpdatedTimestamp(@javax.annotation.Nullable String updatedTimestamp) {
     this.updatedTimestamp = updatedTimestamp;
   }
 
@@ -426,6 +425,12 @@ public class AlphaTag {
       // ensure the optional json data is an array if present
       if (jsonObj.get("countries") != null && !jsonObj.get("countries").isJsonNull() && !jsonObj.get("countries").isJsonArray()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `countries` to be an array in the JSON string but got `%s`", jsonObj.get("countries").toString()));
+      }
+      if ((jsonObj.get("created_timestamp") != null && !jsonObj.get("created_timestamp").isJsonNull()) && !jsonObj.get("created_timestamp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `created_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_timestamp").toString()));
+      }
+      if ((jsonObj.get("updated_timestamp") != null && !jsonObj.get("updated_timestamp").isJsonNull()) && !jsonObj.get("updated_timestamp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `updated_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_timestamp").toString()));
       }
   }
 

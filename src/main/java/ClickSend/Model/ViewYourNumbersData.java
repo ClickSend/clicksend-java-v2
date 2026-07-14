@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
+import ClickSend.Model.Currency;
 import ClickSend.Model.ViewYourNumbersDataAllOfDataInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -98,6 +99,11 @@ public class ViewYourNumbersData {
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
   private List<ViewYourNumbersDataAllOfDataInner> data = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_CURRENCY = "_currency";
+  @SerializedName(SERIALIZED_NAME_CURRENCY)
+  @javax.annotation.Nullable
+  private Currency currency;
 
   public ViewYourNumbersData() {
   }
@@ -281,6 +287,25 @@ public class ViewYourNumbersData {
   }
 
 
+  public ViewYourNumbersData currency(@javax.annotation.Nullable Currency currency) {
+    this.currency = currency;
+    return this;
+  }
+
+  /**
+   * Get currency
+   * @return currency
+   */
+  @javax.annotation.Nullable
+  public Currency getCurrency() {
+    return currency;
+  }
+
+  public void setCurrency(@javax.annotation.Nullable Currency currency) {
+    this.currency = currency;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -299,7 +324,8 @@ public class ViewYourNumbersData {
         Objects.equals(this.prevPageUrl, viewYourNumbersData.prevPageUrl) &&
         Objects.equals(this.from, viewYourNumbersData.from) &&
         Objects.equals(this.to, viewYourNumbersData.to) &&
-        Objects.equals(this.data, viewYourNumbersData.data);
+        Objects.equals(this.data, viewYourNumbersData.data) &&
+        Objects.equals(this.currency, viewYourNumbersData.currency);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -308,7 +334,7 @@ public class ViewYourNumbersData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, data);
+    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, data, currency);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -331,6 +357,7 @@ public class ViewYourNumbersData {
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -349,7 +376,7 @@ public class ViewYourNumbersData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "data"));
+    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "data", "_currency"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -395,6 +422,10 @@ public class ViewYourNumbersData {
             ViewYourNumbersDataAllOfDataInner.validateJsonElement(jsonArraydata.get(i));
           };
         }
+      }
+      // validate the optional field `_currency`
+      if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
+        Currency.validateJsonElement(jsonObj.get("_currency"));
       }
   }
 

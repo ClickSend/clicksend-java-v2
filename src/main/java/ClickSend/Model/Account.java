@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
+import ClickSend.Model.AccountReferrerChosen;
 import ClickSend.Model.Currency;
 import ClickSend.Model.Subaccount;
 import com.google.gson.TypeAdapter;
@@ -78,6 +79,11 @@ public class Account {
   @javax.annotation.Nullable
   private Integer banned;
 
+  public static final String SERIALIZED_NAME_DATE_SIGN_UP = "date_sign_up";
+  @SerializedName(SERIALIZED_NAME_DATE_SIGN_UP)
+  @javax.annotation.Nullable
+  private Integer dateSignUp;
+
   public static final String SERIALIZED_NAME_BALANCE = "balance";
   @SerializedName(SERIALIZED_NAME_BALANCE)
   @javax.annotation.Nullable
@@ -128,10 +134,20 @@ public class Account {
   @javax.annotation.Nullable
   private String accountBillingMobile;
 
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
+  private Integer priority;
+
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
   @javax.annotation.Nullable
   private String country;
+
+  public static final String SERIALIZED_NAME_COUNTRY_IP = "country_ip";
+  @SerializedName(SERIALIZED_NAME_COUNTRY_IP)
+  @javax.annotation.Nullable
+  private String countryIp;
 
   public static final String SERIALIZED_NAME_DEFAULT_COUNTRY_SMS = "default_country_sms";
   @SerializedName(SERIALIZED_NAME_DEFAULT_COUNTRY_SMS)
@@ -193,6 +209,41 @@ public class Account {
   @javax.annotation.Nullable
   private Integer priceRate;
 
+  public static final String SERIALIZED_NAME_PRIVATE_UPLOADS = "private_uploads";
+  @SerializedName(SERIALIZED_NAME_PRIVATE_UPLOADS)
+  @javax.annotation.Nullable
+  private Integer privateUploads;
+
+  public static final String SERIALIZED_NAME_FAX_QUALITY = "fax_quality";
+  @SerializedName(SERIALIZED_NAME_FAX_QUALITY)
+  @javax.annotation.Nullable
+  private Integer faxQuality;
+
+  public static final String SERIALIZED_NAME_SETTING_SMS_HIDE_YOUR_NUMBER = "setting_sms_hide_your_number";
+  @SerializedName(SERIALIZED_NAME_SETTING_SMS_HIDE_YOUR_NUMBER)
+  @javax.annotation.Nullable
+  private Integer settingSmsHideYourNumber;
+
+  public static final String SERIALIZED_NAME_SETTING_SMS_HIDE_BUSINESS_NAME = "setting_sms_hide_business_name";
+  @SerializedName(SERIALIZED_NAME_SETTING_SMS_HIDE_BUSINESS_NAME)
+  @javax.annotation.Nullable
+  private Integer settingSmsHideBusinessName;
+
+  public static final String SERIALIZED_NAME_PRICING_VARIANT = "pricing_variant";
+  @SerializedName(SERIALIZED_NAME_PRICING_VARIANT)
+  @javax.annotation.Nullable
+  private Integer pricingVariant;
+
+  public static final String SERIALIZED_NAME_ON_TRIAL = "on_trial";
+  @SerializedName(SERIALIZED_NAME_ON_TRIAL)
+  @javax.annotation.Nullable
+  private Integer onTrial;
+
+  public static final String SERIALIZED_NAME_TRIAL_EXPIRY = "trial_expiry";
+  @SerializedName(SERIALIZED_NAME_TRIAL_EXPIRY)
+  @javax.annotation.Nullable
+  private String trialExpiry;
+
   public static final String SERIALIZED_NAME_CURRENCY = "_currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
   @javax.annotation.Nullable
@@ -202,6 +253,11 @@ public class Account {
   @SerializedName(SERIALIZED_NAME_SUBACCOUNT)
   @javax.annotation.Nullable
   private Subaccount subaccount;
+
+  public static final String SERIALIZED_NAME_REFERRER_CHOSEN = "_referrer_chosen";
+  @SerializedName(SERIALIZED_NAME_REFERRER_CHOSEN)
+  @javax.annotation.Nullable
+  private AccountReferrerChosen referrerChosen;
 
   public Account() {
   }
@@ -298,6 +354,25 @@ public class Account {
 
   public void setBanned(@javax.annotation.Nullable Integer banned) {
     this.banned = banned;
+  }
+
+
+  public Account dateSignUp(@javax.annotation.Nullable Integer dateSignUp) {
+    this.dateSignUp = dateSignUp;
+    return this;
+  }
+
+  /**
+   * The Unix timestamp of when the account was created.
+   * @return dateSignUp
+   */
+  @javax.annotation.Nullable
+  public Integer getDateSignUp() {
+    return dateSignUp;
+  }
+
+  public void setDateSignUp(@javax.annotation.Nullable Integer dateSignUp) {
+    this.dateSignUp = dateSignUp;
   }
 
 
@@ -491,6 +566,25 @@ public class Account {
   }
 
 
+  public Account priority(@javax.annotation.Nullable Integer priority) {
+    this.priority = priority;
+    return this;
+  }
+
+  /**
+   * The account&#39;s priority tier.
+   * @return priority
+   */
+  @javax.annotation.Nullable
+  public Integer getPriority() {
+    return priority;
+  }
+
+  public void setPriority(@javax.annotation.Nullable Integer priority) {
+    this.priority = priority;
+  }
+
+
   public Account country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
@@ -507,6 +601,25 @@ public class Account {
 
   public void setCountry(@javax.annotation.Nullable String country) {
     this.country = country;
+  }
+
+
+  public Account countryIp(@javax.annotation.Nullable String countryIp) {
+    this.countryIp = countryIp;
+    return this;
+  }
+
+  /**
+   * The country the user is currently connecting from, based on IP address.
+   * @return countryIp
+   */
+  @javax.annotation.Nullable
+  public String getCountryIp() {
+    return countryIp;
+  }
+
+  public void setCountryIp(@javax.annotation.Nullable String countryIp) {
+    this.countryIp = countryIp;
   }
 
 
@@ -738,6 +851,139 @@ public class Account {
   }
 
 
+  public Account privateUploads(@javax.annotation.Nullable Integer privateUploads) {
+    this.privateUploads = privateUploads;
+    return this;
+  }
+
+  /**
+   * Flag indicating if uploaded media is kept private.
+   * @return privateUploads
+   */
+  @javax.annotation.Nullable
+  public Integer getPrivateUploads() {
+    return privateUploads;
+  }
+
+  public void setPrivateUploads(@javax.annotation.Nullable Integer privateUploads) {
+    this.privateUploads = privateUploads;
+  }
+
+
+  public Account faxQuality(@javax.annotation.Nullable Integer faxQuality) {
+    this.faxQuality = faxQuality;
+    return this;
+  }
+
+  /**
+   * The quality setting used for outgoing faxes.
+   * @return faxQuality
+   */
+  @javax.annotation.Nullable
+  public Integer getFaxQuality() {
+    return faxQuality;
+  }
+
+  public void setFaxQuality(@javax.annotation.Nullable Integer faxQuality) {
+    this.faxQuality = faxQuality;
+  }
+
+
+  public Account settingSmsHideYourNumber(@javax.annotation.Nullable Integer settingSmsHideYourNumber) {
+    this.settingSmsHideYourNumber = settingSmsHideYourNumber;
+    return this;
+  }
+
+  /**
+   * Flag indicating if your number is hidden on outgoing SMS.
+   * @return settingSmsHideYourNumber
+   */
+  @javax.annotation.Nullable
+  public Integer getSettingSmsHideYourNumber() {
+    return settingSmsHideYourNumber;
+  }
+
+  public void setSettingSmsHideYourNumber(@javax.annotation.Nullable Integer settingSmsHideYourNumber) {
+    this.settingSmsHideYourNumber = settingSmsHideYourNumber;
+  }
+
+
+  public Account settingSmsHideBusinessName(@javax.annotation.Nullable Integer settingSmsHideBusinessName) {
+    this.settingSmsHideBusinessName = settingSmsHideBusinessName;
+    return this;
+  }
+
+  /**
+   * Flag indicating if the business name is hidden on outgoing SMS.
+   * @return settingSmsHideBusinessName
+   */
+  @javax.annotation.Nullable
+  public Integer getSettingSmsHideBusinessName() {
+    return settingSmsHideBusinessName;
+  }
+
+  public void setSettingSmsHideBusinessName(@javax.annotation.Nullable Integer settingSmsHideBusinessName) {
+    this.settingSmsHideBusinessName = settingSmsHideBusinessName;
+  }
+
+
+  public Account pricingVariant(@javax.annotation.Nullable Integer pricingVariant) {
+    this.pricingVariant = pricingVariant;
+    return this;
+  }
+
+  /**
+   * The pricing variant applied to the account.
+   * @return pricingVariant
+   */
+  @javax.annotation.Nullable
+  public Integer getPricingVariant() {
+    return pricingVariant;
+  }
+
+  public void setPricingVariant(@javax.annotation.Nullable Integer pricingVariant) {
+    this.pricingVariant = pricingVariant;
+  }
+
+
+  public Account onTrial(@javax.annotation.Nullable Integer onTrial) {
+    this.onTrial = onTrial;
+    return this;
+  }
+
+  /**
+   * Flag indicating if the account is currently on a trial.
+   * @return onTrial
+   */
+  @javax.annotation.Nullable
+  public Integer getOnTrial() {
+    return onTrial;
+  }
+
+  public void setOnTrial(@javax.annotation.Nullable Integer onTrial) {
+    this.onTrial = onTrial;
+  }
+
+
+  public Account trialExpiry(@javax.annotation.Nullable String trialExpiry) {
+    this.trialExpiry = trialExpiry;
+    return this;
+  }
+
+  /**
+   * The date the trial expires, if the account is on a trial.
+   * @return trialExpiry
+   */
+  @javax.annotation.Nullable
+  public String getTrialExpiry() {
+    return trialExpiry;
+  }
+
+  public void setTrialExpiry(@javax.annotation.Nullable String trialExpiry) {
+    this.trialExpiry = trialExpiry;
+  }
+
+
   public Account currency(@javax.annotation.Nullable Currency currency) {
     this.currency = currency;
     return this;
@@ -776,6 +1022,25 @@ public class Account {
   }
 
 
+  public Account referrerChosen(@javax.annotation.Nullable AccountReferrerChosen referrerChosen) {
+    this.referrerChosen = referrerChosen;
+    return this;
+  }
+
+  /**
+   * Get referrerChosen
+   * @return referrerChosen
+   */
+  @javax.annotation.Nullable
+  public AccountReferrerChosen getReferrerChosen() {
+    return referrerChosen;
+  }
+
+  public void setReferrerChosen(@javax.annotation.Nullable AccountReferrerChosen referrerChosen) {
+    this.referrerChosen = referrerChosen;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -791,6 +1056,7 @@ public class Account {
         Objects.equals(this.userEmail, account.userEmail) &&
         Objects.equals(this.active, account.active) &&
         Objects.equals(this.banned, account.banned) &&
+        Objects.equals(this.dateSignUp, account.dateSignUp) &&
         Objects.equals(this.balance, account.balance) &&
         Objects.equals(this.userPhone, account.userPhone) &&
         Objects.equals(this.replyTo, account.replyTo) &&
@@ -801,7 +1067,9 @@ public class Account {
         Objects.equals(this.accountName, account.accountName) &&
         Objects.equals(this.accountBillingEmail, account.accountBillingEmail) &&
         Objects.equals(this.accountBillingMobile, account.accountBillingMobile) &&
+        Objects.equals(this.priority, account.priority) &&
         Objects.equals(this.country, account.country) &&
+        Objects.equals(this.countryIp, account.countryIp) &&
         Objects.equals(this.defaultCountrySms, account.defaultCountrySms) &&
         Objects.equals(this.autoRecharge, account.autoRecharge) &&
         Objects.equals(this.autoRechargeAmount, account.autoRechargeAmount) &&
@@ -814,8 +1082,16 @@ public class Account {
         Objects.equals(this.balanceCommission, account.balanceCommission) &&
         Objects.equals(this.timezone, account.timezone) &&
         Objects.equals(this.priceRate, account.priceRate) &&
+        Objects.equals(this.privateUploads, account.privateUploads) &&
+        Objects.equals(this.faxQuality, account.faxQuality) &&
+        Objects.equals(this.settingSmsHideYourNumber, account.settingSmsHideYourNumber) &&
+        Objects.equals(this.settingSmsHideBusinessName, account.settingSmsHideBusinessName) &&
+        Objects.equals(this.pricingVariant, account.pricingVariant) &&
+        Objects.equals(this.onTrial, account.onTrial) &&
+        Objects.equals(this.trialExpiry, account.trialExpiry) &&
         Objects.equals(this.currency, account.currency) &&
-        Objects.equals(this.subaccount, account.subaccount);
+        Objects.equals(this.subaccount, account.subaccount) &&
+        Objects.equals(this.referrerChosen, account.referrerChosen);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -824,7 +1100,7 @@ public class Account {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, username, userEmail, active, banned, balance, userPhone, replyTo, deliveryTo, userFirstName, userLastName, account, accountName, accountBillingEmail, accountBillingMobile, country, defaultCountrySms, autoRecharge, autoRechargeAmount, lowCreditAmount, settingUnicodeSms, settingEmailSmsSubject, settingFixSenderId, settingSmsMessageCharLimit, oldDashboard, balanceCommission, timezone, priceRate, currency, subaccount);
+    return Objects.hash(userId, username, userEmail, active, banned, dateSignUp, balance, userPhone, replyTo, deliveryTo, userFirstName, userLastName, account, accountName, accountBillingEmail, accountBillingMobile, priority, country, countryIp, defaultCountrySms, autoRecharge, autoRechargeAmount, lowCreditAmount, settingUnicodeSms, settingEmailSmsSubject, settingFixSenderId, settingSmsMessageCharLimit, oldDashboard, balanceCommission, timezone, priceRate, privateUploads, faxQuality, settingSmsHideYourNumber, settingSmsHideBusinessName, pricingVariant, onTrial, trialExpiry, currency, subaccount, referrerChosen);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -843,6 +1119,7 @@ public class Account {
     sb.append("    userEmail: ").append(toIndentedString(userEmail)).append("\n");
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    banned: ").append(toIndentedString(banned)).append("\n");
+    sb.append("    dateSignUp: ").append(toIndentedString(dateSignUp)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
     sb.append("    userPhone: ").append(toIndentedString(userPhone)).append("\n");
     sb.append("    replyTo: ").append(toIndentedString(replyTo)).append("\n");
@@ -853,7 +1130,9 @@ public class Account {
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountBillingEmail: ").append(toIndentedString(accountBillingEmail)).append("\n");
     sb.append("    accountBillingMobile: ").append(toIndentedString(accountBillingMobile)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
+    sb.append("    countryIp: ").append(toIndentedString(countryIp)).append("\n");
     sb.append("    defaultCountrySms: ").append(toIndentedString(defaultCountrySms)).append("\n");
     sb.append("    autoRecharge: ").append(toIndentedString(autoRecharge)).append("\n");
     sb.append("    autoRechargeAmount: ").append(toIndentedString(autoRechargeAmount)).append("\n");
@@ -866,8 +1145,16 @@ public class Account {
     sb.append("    balanceCommission: ").append(toIndentedString(balanceCommission)).append("\n");
     sb.append("    timezone: ").append(toIndentedString(timezone)).append("\n");
     sb.append("    priceRate: ").append(toIndentedString(priceRate)).append("\n");
+    sb.append("    privateUploads: ").append(toIndentedString(privateUploads)).append("\n");
+    sb.append("    faxQuality: ").append(toIndentedString(faxQuality)).append("\n");
+    sb.append("    settingSmsHideYourNumber: ").append(toIndentedString(settingSmsHideYourNumber)).append("\n");
+    sb.append("    settingSmsHideBusinessName: ").append(toIndentedString(settingSmsHideBusinessName)).append("\n");
+    sb.append("    pricingVariant: ").append(toIndentedString(pricingVariant)).append("\n");
+    sb.append("    onTrial: ").append(toIndentedString(onTrial)).append("\n");
+    sb.append("    trialExpiry: ").append(toIndentedString(trialExpiry)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    subaccount: ").append(toIndentedString(subaccount)).append("\n");
+    sb.append("    referrerChosen: ").append(toIndentedString(referrerChosen)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -886,7 +1173,7 @@ public class Account {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("user_id", "username", "user_email", "active", "banned", "balance", "user_phone", "reply_to", "delivery_to", "user_first_name", "user_last_name", "account", "account_name", "account_billing_email", "account_billing_mobile", "country", "default_country_sms", "auto_recharge", "auto_recharge_amount", "low_credit_amount", "setting_unicode_sms", "setting_email_sms_subject", "setting_fix_sender_id", "setting_sms_message_char_limit", "old_dashboard", "balance_commission", "timezone", "price_rate", "_currency", "_subaccount"));
+    openapiFields = new HashSet<String>(Arrays.asList("user_id", "username", "user_email", "active", "banned", "date_sign_up", "balance", "user_phone", "reply_to", "delivery_to", "user_first_name", "user_last_name", "account", "account_name", "account_billing_email", "account_billing_mobile", "priority", "country", "country_ip", "default_country_sms", "auto_recharge", "auto_recharge_amount", "low_credit_amount", "setting_unicode_sms", "setting_email_sms_subject", "setting_fix_sender_id", "setting_sms_message_char_limit", "old_dashboard", "balance_commission", "timezone", "price_rate", "private_uploads", "fax_quality", "setting_sms_hide_your_number", "setting_sms_hide_business_name", "pricing_variant", "on_trial", "trial_expiry", "_currency", "_subaccount", "_referrer_chosen"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -949,6 +1236,9 @@ public class Account {
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
+      if ((jsonObj.get("country_ip") != null && !jsonObj.get("country_ip").isJsonNull()) && !jsonObj.get("country_ip").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `country_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country_ip").toString()));
+      }
       if ((jsonObj.get("default_country_sms") != null && !jsonObj.get("default_country_sms").isJsonNull()) && !jsonObj.get("default_country_sms").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `default_country_sms` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_country_sms").toString()));
       }
@@ -964,6 +1254,9 @@ public class Account {
       if ((jsonObj.get("timezone") != null && !jsonObj.get("timezone").isJsonNull()) && !jsonObj.get("timezone").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `timezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timezone").toString()));
       }
+      if ((jsonObj.get("trial_expiry") != null && !jsonObj.get("trial_expiry").isJsonNull()) && !jsonObj.get("trial_expiry").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `trial_expiry` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trial_expiry").toString()));
+      }
       // validate the optional field `_currency`
       if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
         Currency.validateJsonElement(jsonObj.get("_currency"));
@@ -971,6 +1264,10 @@ public class Account {
       // validate the optional field `_subaccount`
       if (jsonObj.get("_subaccount") != null && !jsonObj.get("_subaccount").isJsonNull()) {
         Subaccount.validateJsonElement(jsonObj.get("_subaccount"));
+      }
+      // validate the optional field `_referrer_chosen`
+      if (jsonObj.get("_referrer_chosen") != null && !jsonObj.get("_referrer_chosen").isJsonNull()) {
+        AccountReferrerChosen.validateJsonElement(jsonObj.get("_referrer_chosen"));
       }
   }
 

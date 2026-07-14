@@ -14,6 +14,7 @@
 |**firstName** | **String** | The first name of the subaccount. |  [optional] |
 |**lastName** | **String** | The last name of the subaccount. |  [optional] |
 |**apiKey** | **String** | The API key of the subaccount. |  [optional] |
+|**accessSmpp** | **Integer** | Flag indicating if the subaccount has access to SMPP. |  [optional] |
 |**accessUsers** | **Integer** | Flag indicating if the subaccount has access to users. |  [optional] |
 |**accessBilling** | **Integer** | Flag indicating if the subaccount has access to billing. |  [optional] |
 |**accessReporting** | **Integer** | Flag indicating if the subaccount has access to reporting. |  [optional] |
@@ -25,9 +26,13 @@
 |**accessFax** | **Integer** | Flag indicating if the subaccount has access to fax services. |  [optional] |
 |**accessPost** | **Integer** | Flag indicating if the subaccount has access to post services. |  [optional] |
 |**accessReseller** | **Integer** | Flag indicating if the subaccount has access to reseller services. |  [optional] |
+|**accessGlobalSending** | **Integer** | Flag indicating if the subaccount has access to global sending. |  [optional] |
 |**accessMms** | **Integer** | Flag indicating if the subaccount has access to MMS services. |  [optional] |
+|**hidePricing** | **Integer** | Flag indicating if pricing is hidden for the subaccount. |  [optional] |
 |**shareCampaigns** | **Integer** | Flag indicating if the subaccount can share campaigns. |  [optional] |
 |**notes** | **String** | Additional notes for the subaccount. |  [optional] |
+|**isMain** | **Integer** | Flag indicating if this is the main account rather than a subaccount. |  [optional] |
+|**signUpType** | **String** | The sign-up type used to create the subaccount, if applicable. |  [optional] |
 
 
 

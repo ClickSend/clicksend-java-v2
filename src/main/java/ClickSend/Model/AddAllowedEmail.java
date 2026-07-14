@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.ViewAllowedEmailsDataInner;
+import ClickSend.Model.AddAllowedEmailData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -69,7 +69,7 @@ public class AddAllowedEmail {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private ViewAllowedEmailsDataInner data;
+  private AddAllowedEmailData data;
 
   public AddAllowedEmail() {
   }
@@ -131,7 +131,7 @@ public class AddAllowedEmail {
   }
 
 
-  public AddAllowedEmail data(@javax.annotation.Nullable ViewAllowedEmailsDataInner data) {
+  public AddAllowedEmail data(@javax.annotation.Nullable AddAllowedEmailData data) {
     this.data = data;
     return this;
   }
@@ -141,11 +141,11 @@ public class AddAllowedEmail {
    * @return data
    */
   @javax.annotation.Nullable
-  public ViewAllowedEmailsDataInner getData() {
+  public AddAllowedEmailData getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable ViewAllowedEmailsDataInner data) {
+  public void setData(@javax.annotation.Nullable AddAllowedEmailData data) {
     this.data = data;
   }
 
@@ -232,7 +232,7 @@ public class AddAllowedEmail {
       }
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ViewAllowedEmailsDataInner.validateJsonElement(jsonObj.get("data"));
+        AddAllowedEmailData.validateJsonElement(jsonObj.get("data"));
       }
   }
 

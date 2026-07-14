@@ -19,22 +19,48 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewAccountUsageDataVoiceInner
+ * Model tests for ViewAllowedEmailsDataAllOfDataInner
  */
-public class ViewAccountUsageDataVoiceInnerTest {
-    private final ViewAccountUsageDataVoiceInner model = new ViewAccountUsageDataVoiceInner();
+public class ViewAllowedEmailsDataAllOfDataInnerTest {
+    private final ViewAllowedEmailsDataAllOfDataInner model = new ViewAllowedEmailsDataAllOfDataInner();
 
     /**
-     * Model tests for ViewAccountUsageDataVoiceInner
+     * Model tests for ViewAllowedEmailsDataAllOfDataInner
      */
     @Test
-    public void testViewAccountUsageDataVoiceInner() {
-        // TODO: test ViewAccountUsageDataVoiceInner
+    public void testViewAllowedEmailsDataAllOfDataInner() {
+        // TODO: test ViewAllowedEmailsDataAllOfDataInner
+    }
+
+    /**
+     * Test the property 'emailAddressId'
+     */
+    @Test
+    public void emailAddressIdTest() {
+        // TODO: test emailAddressId
+    }
+
+    /**
+     * Test the property 'emailAddress'
+     */
+    @Test
+    public void emailAddressTest() {
+        // TODO: test emailAddress
+    }
+
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+        // TODO: test from
     }
 
     /**
@@ -46,27 +72,35 @@ public class ViewAccountUsageDataVoiceInnerTest {
     }
 
     /**
-     * Test the property 'username'
+     * Test the property 'fromFax'
      */
     @Test
-    public void usernameTest() {
-        // TODO: test username
+    public void fromFaxTest() {
+        // TODO: test fromFax
     }
 
     /**
-     * Test the property 'totalCount'
+     * Test the property 'voice'
      */
     @Test
-    public void totalCountTest() {
-        // TODO: test totalCount
+    public void voiceTest() {
+        // TODO: test voice
     }
 
     /**
-     * Test the property 'totalPrice'
+     * Test the property 'lang'
      */
     @Test
-    public void totalPriceTest() {
-        // TODO: test totalPrice
+    public void langTest() {
+        // TODO: test lang
+    }
+
+    /**
+     * Test the property 'subaccountName'
+     */
+    @Test
+    public void subaccountNameTest() {
+        // TODO: test subaccountName
     }
 
 }

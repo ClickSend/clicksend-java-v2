@@ -102,7 +102,7 @@ public class DeliveryIssue {
   @javax.annotation.Nullable
   private BigDecimal resolved;
 
-  public static final String SERIALIZED_NAME_EMAIL_ADDRESS = "email-address";
+  public static final String SERIALIZED_NAME_EMAIL_ADDRESS = "email_address";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESS)
   @javax.annotation.Nullable
   private String emailAddress;
@@ -391,7 +391,7 @@ public class DeliveryIssue {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("issue_id", "user_id", "message_id", "type", "description", "client_comments", "support_comments", "status", "date_added", "resolved", "email-address"));
+    openapiFields = new HashSet<String>(Arrays.asList("issue_id", "user_id", "message_id", "type", "description", "client_comments", "support_comments", "status", "date_added", "resolved", "email_address"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -439,8 +439,8 @@ public class DeliveryIssue {
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
-      if ((jsonObj.get("email-address") != null && !jsonObj.get("email-address").isJsonNull()) && !jsonObj.get("email-address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `email-address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email-address").toString()));
+      if ((jsonObj.get("email_address") != null && !jsonObj.get("email_address").isJsonNull()) && !jsonObj.get("email_address").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `email_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email_address").toString()));
       }
   }
 

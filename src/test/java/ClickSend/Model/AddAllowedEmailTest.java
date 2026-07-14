@@ -13,7 +13,7 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.ViewAllowedEmailsDataInner;
+import ClickSend.Model.AddAllowedEmailData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

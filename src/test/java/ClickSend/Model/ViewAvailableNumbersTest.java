@@ -13,7 +13,6 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.Currency;
 import ClickSend.Model.ViewAvailableNumbersData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -69,14 +68,6 @@ public class ViewAvailableNumbersTest {
     @Test
     public void dataTest() {
         // TODO: test data
-    }
-
-    /**
-     * Test the property 'currency'
-     */
-    @Test
-    public void currencyTest() {
-        // TODO: test currency
     }
 
 }

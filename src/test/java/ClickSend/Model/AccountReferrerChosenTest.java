@@ -24,33 +24,33 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewStrippedStringRulesDataDataInner
+ * Model tests for AccountReferrerChosen
  */
-public class ViewStrippedStringRulesDataDataInnerTest {
-    private final ViewStrippedStringRulesDataDataInner model = new ViewStrippedStringRulesDataDataInner();
+public class AccountReferrerChosenTest {
+    private final AccountReferrerChosen model = new AccountReferrerChosen();
 
     /**
-     * Model tests for ViewStrippedStringRulesDataDataInner
+     * Model tests for AccountReferrerChosen
      */
     @Test
-    public void testViewStrippedStringRulesDataDataInner() {
-        // TODO: test ViewStrippedStringRulesDataDataInner
+    public void testAccountReferrerChosen() {
+        // TODO: test AccountReferrerChosen
     }
 
     /**
-     * Test the property 'ruleId'
+     * Test the property 'id'
      */
     @Test
-    public void ruleIdTest() {
-        // TODO: test ruleId
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'stripString'
+     * Test the property 'name'
      */
     @Test
-    public void stripStringTest() {
-        // TODO: test stripString
+    public void nameTest() {
+        // TODO: test name
     }
 
 }

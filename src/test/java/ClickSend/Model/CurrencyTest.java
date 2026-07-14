@@ -69,4 +69,20 @@ public class CurrencyTest {
         // TODO: test currencyNameLong
     }
 
+    /**
+     * Test the property 'minRechargeAmount'
+     */
+    @Test
+    public void minRechargeAmountTest() {
+        // TODO: test minRechargeAmount
+    }
+
+    /**
+     * Test the property 'maxRechargeAmount'
+     */
+    @Test
+    public void maxRechargeAmountTest() {
+        // TODO: test maxRechargeAmount
+    }
+
 }

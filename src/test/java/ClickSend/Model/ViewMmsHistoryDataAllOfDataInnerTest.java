@@ -71,6 +71,30 @@ public class ViewMmsHistoryDataAllOfDataInnerTest {
     }
 
     /**
+     * Test the property 'subject'
+     */
+    @Test
+    public void subjectTest() {
+        // TODO: test subject
+    }
+
+    /**
+     * Test the property 'priority'
+     */
+    @Test
+    public void priorityTest() {
+        // TODO: test priority
+    }
+
+    /**
+     * Test the property 'mediaFileUrl'
+     */
+    @Test
+    public void mediaFileUrlTest() {
+        // TODO: test mediaFileUrl
+    }
+
+    /**
      * Test the property 'status'
      */
     @Test
@@ -92,6 +116,14 @@ public class ViewMmsHistoryDataAllOfDataInnerTest {
     @Test
     public void scheduleTest() {
         // TODO: test schedule
+    }
+
+    /**
+     * Test the property 'dateAdded'
+     */
+    @Test
+    public void dateAddedTest() {
+        // TODO: test dateAdded
     }
 
     /**

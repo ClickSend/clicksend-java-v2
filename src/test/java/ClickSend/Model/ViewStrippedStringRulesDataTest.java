@@ -13,7 +13,7 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.ViewStrippedStringRulesDataDataInner;
+import ClickSend.Model.ViewStrippedStringRulesDataAllOfDataInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -87,6 +87,22 @@ public class ViewStrippedStringRulesDataTest {
     @Test
     public void prevPageUrlTest() {
         // TODO: test prevPageUrl
+    }
+
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+        // TODO: test from
+    }
+
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+        // TODO: test to
     }
 
     /**

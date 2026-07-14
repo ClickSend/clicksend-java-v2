@@ -16,6 +16,7 @@
 |**from** | **Integer** | The number of the first result in the current page. |  [optional] |
 |**to** | **Integer** | The number of the last result in the current page. |  [optional] |
 |**data** | [**List&lt;ViewYourNumbersDataAllOfDataInner&gt;**](ViewYourNumbersDataAllOfDataInner.md) |  |  [optional] |
+|**currency** | [**Currency**](Currency.md) |  |  [optional] |
 
 
 

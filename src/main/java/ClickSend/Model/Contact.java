@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -100,12 +99,12 @@ public class Contact {
   public static final String SERIALIZED_NAME_DATE_ADDED = "date_added";
   @SerializedName(SERIALIZED_NAME_DATE_ADDED)
   @javax.annotation.Nullable
-  private OffsetDateTime dateAdded;
+  private String dateAdded;
 
   public static final String SERIALIZED_NAME_DATE_UPDATED = "date_updated";
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
   @javax.annotation.Nullable
-  private OffsetDateTime dateUpdated;
+  private String dateUpdated;
 
   public static final String SERIALIZED_NAME_FAX_NUMBER = "fax_number";
   @SerializedName(SERIALIZED_NAME_FAX_NUMBER)
@@ -331,40 +330,40 @@ public class Contact {
   }
 
 
-  public Contact dateAdded(@javax.annotation.Nullable OffsetDateTime dateAdded) {
+  public Contact dateAdded(@javax.annotation.Nullable String dateAdded) {
     this.dateAdded = dateAdded;
     return this;
   }
 
   /**
-   * The date when the contact was added.
+   * The date when the contact was added. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \&quot;1783997542\&quot;) instead of ISO 8601.
    * @return dateAdded
    */
   @javax.annotation.Nullable
-  public OffsetDateTime getDateAdded() {
+  public String getDateAdded() {
     return dateAdded;
   }
 
-  public void setDateAdded(@javax.annotation.Nullable OffsetDateTime dateAdded) {
+  public void setDateAdded(@javax.annotation.Nullable String dateAdded) {
     this.dateAdded = dateAdded;
   }
 
 
-  public Contact dateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
+  public Contact dateUpdated(@javax.annotation.Nullable String dateUpdated) {
     this.dateUpdated = dateUpdated;
     return this;
   }
 
   /**
-   * The date when the contact was last updated.
+   * The date when the contact was last updated. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \&quot;1783997542\&quot;) instead of ISO 8601.
    * @return dateUpdated
    */
   @javax.annotation.Nullable
-  public OffsetDateTime getDateUpdated() {
+  public String getDateUpdated() {
     return dateUpdated;
   }
 
-  public void setDateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
+  public void setDateUpdated(@javax.annotation.Nullable String dateUpdated) {
     this.dateUpdated = dateUpdated;
   }
 
@@ -698,6 +697,12 @@ public class Contact {
       }
       if ((jsonObj.get("custom_4") != null && !jsonObj.get("custom_4").isJsonNull()) && !jsonObj.get("custom_4").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `custom_4` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custom_4").toString()));
+      }
+      if ((jsonObj.get("date_added") != null && !jsonObj.get("date_added").isJsonNull()) && !jsonObj.get("date_added").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date_added` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date_added").toString()));
+      }
+      if ((jsonObj.get("date_updated") != null && !jsonObj.get("date_updated").isJsonNull()) && !jsonObj.get("date_updated").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date_updated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date_updated").toString()));
       }
       if ((jsonObj.get("fax_number") != null && !jsonObj.get("fax_number").isJsonNull()) && !jsonObj.get("fax_number").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `fax_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fax_number").toString()));

@@ -69,4 +69,20 @@ public class ContactListTest {
         // TODO: test contactsCount
     }
 
+    /**
+     * Test the property 'importInProgress'
+     */
+    @Test
+    public void importInProgressTest() {
+        // TODO: test importInProgress
+    }
+
+    /**
+     * Test the property 'optoutInProgress'
+     */
+    @Test
+    public void optoutInProgressTest() {
+        // TODO: test optoutInProgress
+    }
+
 }

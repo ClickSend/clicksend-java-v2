@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -79,6 +80,14 @@ public class ViewRechargePackagesDataPackagesInnerTest {
     }
 
     /**
+     * Test the property 'priceSmsCarrierFee'
+     */
+    @Test
+    public void priceSmsCarrierFeeTest() {
+        // TODO: test priceSmsCarrierFee
+    }
+
+    /**
      * Test the property 'voiceMobilePrice'
      */
     @Test
@@ -108,6 +117,30 @@ public class ViewRechargePackagesDataPackagesInnerTest {
     @Test
     public void voiceLandlineQuantityTest() {
         // TODO: test voiceLandlineQuantity
+    }
+
+    /**
+     * Test the property 'mmsPrice'
+     */
+    @Test
+    public void mmsPriceTest() {
+        // TODO: test mmsPrice
+    }
+
+    /**
+     * Test the property 'mmsQuantity'
+     */
+    @Test
+    public void mmsQuantityTest() {
+        // TODO: test mmsQuantity
+    }
+
+    /**
+     * Test the property 'priceMmsCarrierFee'
+     */
+    @Test
+    public void priceMmsCarrierFeeTest() {
+        // TODO: test priceMmsCarrierFee
     }
 
     /**

@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import ClickSend.Model.SmsInboundRule;
+import ClickSend.Model.ViewSmsInboundAutomationsDataAllOfLinksInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -103,6 +104,38 @@ public class ViewSmsInboundAutomationsDataTest {
     @Test
     public void toTest() {
         // TODO: test to
+    }
+
+    /**
+     * Test the property 'firstPageUrl'
+     */
+    @Test
+    public void firstPageUrlTest() {
+        // TODO: test firstPageUrl
+    }
+
+    /**
+     * Test the property 'lastPageUrl'
+     */
+    @Test
+    public void lastPageUrlTest() {
+        // TODO: test lastPageUrl
+    }
+
+    /**
+     * Test the property 'path'
+     */
+    @Test
+    public void pathTest() {
+        // TODO: test path
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
     }
 
     /**

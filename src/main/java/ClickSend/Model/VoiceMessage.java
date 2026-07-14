@@ -55,7 +55,17 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
   @javax.annotation.Nullable
-  private BigDecimal date;
+  private String date;
+
+  public static final String SERIALIZED_NAME_DATE_ADDED = "date_added";
+  @SerializedName(SERIALIZED_NAME_DATE_ADDED)
+  @javax.annotation.Nullable
+  private Integer dateAdded;
+
+  public static final String SERIALIZED_NAME_LIST_ID = "list_id";
+  @SerializedName(SERIALIZED_NAME_LIST_ID)
+  @javax.annotation.Nullable
+  private String listId;
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
@@ -90,7 +100,7 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private Integer schedule;
+  private String schedule;
 
   public static final String SERIALIZED_NAME_MESSAGE_ID = "message_id";
   @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
@@ -100,7 +110,7 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_MESSAGE_PARTS = "message_parts";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PARTS)
   @javax.annotation.Nullable
-  private Integer messageParts;
+  private String messageParts;
 
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
@@ -137,30 +147,98 @@ public class VoiceMessage {
   @javax.annotation.Nullable
   private BigDecimal machineDetection;
 
+  public static final String SERIALIZED_NAME_MACHINE_DETECTED = "machine_detected";
+  @SerializedName(SERIALIZED_NAME_MACHINE_DETECTED)
+  @javax.annotation.Nullable
+  private BigDecimal machineDetected;
+
+  public static final String SERIALIZED_NAME_DIGITS = "digits";
+  @SerializedName(SERIALIZED_NAME_DIGITS)
+  @javax.annotation.Nullable
+  private String digits;
+
+  public static final String SERIALIZED_NAME_CARRIER = "carrier";
+  @SerializedName(SERIALIZED_NAME_CARRIER)
+  @javax.annotation.Nullable
+  private String carrier;
+
+  public static final String SERIALIZED_NAME_STATUS_CODE = "status_code";
+  @SerializedName(SERIALIZED_NAME_STATUS_CODE)
+  @javax.annotation.Nullable
+  private String statusCode;
+
+  public static final String SERIALIZED_NAME_STATUS_TEXT = "status_text";
+  @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  @javax.annotation.Nullable
+  private String statusText;
+
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   @javax.annotation.Nullable
   private String status;
 
+  public static final String SERIALIZED_NAME_API_USERNAME = "_api_username";
+  @SerializedName(SERIALIZED_NAME_API_USERNAME)
+  @javax.annotation.Nullable
+  private String apiUsername;
+
   public VoiceMessage() {
   }
 
-  public VoiceMessage date(@javax.annotation.Nullable BigDecimal date) {
+  public VoiceMessage date(@javax.annotation.Nullable String date) {
     this.date = date;
     return this;
   }
 
   /**
-   * The date.
+   * The date, if applicable. May be null; see also &#x60;date_added&#x60;.
    * @return date
    */
   @javax.annotation.Nullable
-  public BigDecimal getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(@javax.annotation.Nullable BigDecimal date) {
+  public void setDate(@javax.annotation.Nullable String date) {
     this.date = date;
+  }
+
+
+  public VoiceMessage dateAdded(@javax.annotation.Nullable Integer dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+  /**
+   * The Unix timestamp when the message was added.
+   * @return dateAdded
+   */
+  @javax.annotation.Nullable
+  public Integer getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(@javax.annotation.Nullable Integer dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+
+  public VoiceMessage listId(@javax.annotation.Nullable String listId) {
+    this.listId = listId;
+    return this;
+  }
+
+  /**
+   * The ID of the list associated with the message, if applicable.
+   * @return listId
+   */
+  @javax.annotation.Nullable
+  public String getListId() {
+    return listId;
+  }
+
+  public void setListId(@javax.annotation.Nullable String listId) {
+    this.listId = listId;
   }
 
 
@@ -278,21 +356,21 @@ public class VoiceMessage {
   }
 
 
-  public VoiceMessage schedule(@javax.annotation.Nullable Integer schedule) {
+  public VoiceMessage schedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
     return this;
   }
 
   /**
-   * The timestamp when the message should be sent.
+   * The timestamp when the message should be sent. Returned as a string since it may be an empty string when no schedule was set.
    * @return schedule
    */
   @javax.annotation.Nullable
-  public Integer getSchedule() {
+  public String getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
+  public void setSchedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
   }
 
@@ -316,7 +394,7 @@ public class VoiceMessage {
   }
 
 
-  public VoiceMessage messageParts(@javax.annotation.Nullable Integer messageParts) {
+  public VoiceMessage messageParts(@javax.annotation.Nullable String messageParts) {
     this.messageParts = messageParts;
     return this;
   }
@@ -326,11 +404,11 @@ public class VoiceMessage {
    * @return messageParts
    */
   @javax.annotation.Nullable
-  public Integer getMessageParts() {
+  public String getMessageParts() {
     return messageParts;
   }
 
-  public void setMessageParts(@javax.annotation.Nullable Integer messageParts) {
+  public void setMessageParts(@javax.annotation.Nullable String messageParts) {
     this.messageParts = messageParts;
   }
 
@@ -468,6 +546,101 @@ public class VoiceMessage {
   }
 
 
+  public VoiceMessage machineDetected(@javax.annotation.Nullable BigDecimal machineDetected) {
+    this.machineDetected = machineDetected;
+    return this;
+  }
+
+  /**
+   * Flag indicating if an answering machine was detected.
+   * @return machineDetected
+   */
+  @javax.annotation.Nullable
+  public BigDecimal getMachineDetected() {
+    return machineDetected;
+  }
+
+  public void setMachineDetected(@javax.annotation.Nullable BigDecimal machineDetected) {
+    this.machineDetected = machineDetected;
+  }
+
+
+  public VoiceMessage digits(@javax.annotation.Nullable String digits) {
+    this.digits = digits;
+    return this;
+  }
+
+  /**
+   * The digits entered by the recipient, if any input was collected.
+   * @return digits
+   */
+  @javax.annotation.Nullable
+  public String getDigits() {
+    return digits;
+  }
+
+  public void setDigits(@javax.annotation.Nullable String digits) {
+    this.digits = digits;
+  }
+
+
+  public VoiceMessage carrier(@javax.annotation.Nullable String carrier) {
+    this.carrier = carrier;
+    return this;
+  }
+
+  /**
+   * The carrier of the recipient&#39;s phone number.
+   * @return carrier
+   */
+  @javax.annotation.Nullable
+  public String getCarrier() {
+    return carrier;
+  }
+
+  public void setCarrier(@javax.annotation.Nullable String carrier) {
+    this.carrier = carrier;
+  }
+
+
+  public VoiceMessage statusCode(@javax.annotation.Nullable String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+  /**
+   * The status code of the message.
+   * @return statusCode
+   */
+  @javax.annotation.Nullable
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(@javax.annotation.Nullable String statusCode) {
+    this.statusCode = statusCode;
+  }
+
+
+  public VoiceMessage statusText(@javax.annotation.Nullable String statusText) {
+    this.statusText = statusText;
+    return this;
+  }
+
+  /**
+   * A human-readable description of the status.
+   * @return statusText
+   */
+  @javax.annotation.Nullable
+  public String getStatusText() {
+    return statusText;
+  }
+
+  public void setStatusText(@javax.annotation.Nullable String statusText) {
+    this.statusText = statusText;
+  }
+
+
   public VoiceMessage status(@javax.annotation.Nullable String status) {
     this.status = status;
     return this;
@@ -487,6 +660,25 @@ public class VoiceMessage {
   }
 
 
+  public VoiceMessage apiUsername(@javax.annotation.Nullable String apiUsername) {
+    this.apiUsername = apiUsername;
+    return this;
+  }
+
+  /**
+   * The API username associated with the message.
+   * @return apiUsername
+   */
+  @javax.annotation.Nullable
+  public String getApiUsername() {
+    return apiUsername;
+  }
+
+  public void setApiUsername(@javax.annotation.Nullable String apiUsername) {
+    this.apiUsername = apiUsername;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -498,6 +690,8 @@ public class VoiceMessage {
     }
     VoiceMessage voiceMessage = (VoiceMessage) o;
     return Objects.equals(this.date, voiceMessage.date) &&
+        Objects.equals(this.dateAdded, voiceMessage.dateAdded) &&
+        Objects.equals(this.listId, voiceMessage.listId) &&
         Objects.equals(this.to, voiceMessage.to) &&
         Objects.equals(this.toType, voiceMessage.toType) &&
         Objects.equals(this.body, voiceMessage.body) &&
@@ -514,7 +708,13 @@ public class VoiceMessage {
         Objects.equals(this.country, voiceMessage.country) &&
         Objects.equals(this.requireInput, voiceMessage.requireInput) &&
         Objects.equals(this.machineDetection, voiceMessage.machineDetection) &&
-        Objects.equals(this.status, voiceMessage.status);
+        Objects.equals(this.machineDetected, voiceMessage.machineDetected) &&
+        Objects.equals(this.digits, voiceMessage.digits) &&
+        Objects.equals(this.carrier, voiceMessage.carrier) &&
+        Objects.equals(this.statusCode, voiceMessage.statusCode) &&
+        Objects.equals(this.statusText, voiceMessage.statusText) &&
+        Objects.equals(this.status, voiceMessage.status) &&
+        Objects.equals(this.apiUsername, voiceMessage.apiUsername);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -523,7 +723,7 @@ public class VoiceMessage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(date, to, toType, body, from, lang, voice, schedule, messageId, messageParts, messagePrice, customString, userId, subaccountId, country, requireInput, machineDetection, status);
+    return Objects.hash(date, dateAdded, listId, to, toType, body, from, lang, voice, schedule, messageId, messageParts, messagePrice, customString, userId, subaccountId, country, requireInput, machineDetection, machineDetected, digits, carrier, statusCode, statusText, status, apiUsername);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -538,6 +738,8 @@ public class VoiceMessage {
     StringBuilder sb = new StringBuilder();
     sb.append("class VoiceMessage {\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    toType: ").append(toIndentedString(toType)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
@@ -554,7 +756,13 @@ public class VoiceMessage {
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    requireInput: ").append(toIndentedString(requireInput)).append("\n");
     sb.append("    machineDetection: ").append(toIndentedString(machineDetection)).append("\n");
+    sb.append("    machineDetected: ").append(toIndentedString(machineDetected)).append("\n");
+    sb.append("    digits: ").append(toIndentedString(digits)).append("\n");
+    sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    statusText: ").append(toIndentedString(statusText)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    apiUsername: ").append(toIndentedString(apiUsername)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -573,7 +781,7 @@ public class VoiceMessage {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("date", "to", "to_type", "body", "from", "lang", "voice", "schedule", "message_id", "message_parts", "message_price", "custom_string", "user_id", "subaccount_id", "country", "require_input", "machine_detection", "status"));
+    openapiFields = new HashSet<String>(Arrays.asList("date", "date_added", "list_id", "to", "to_type", "body", "from", "lang", "voice", "schedule", "message_id", "message_parts", "message_price", "custom_string", "user_id", "subaccount_id", "country", "require_input", "machine_detection", "machine_detected", "digits", "carrier", "status_code", "status_text", "status", "_api_username"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -600,6 +808,12 @@ public class VoiceMessage {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("date") != null && !jsonObj.get("date").isJsonNull()) && !jsonObj.get("date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date").toString()));
+      }
+      if ((jsonObj.get("list_id") != null && !jsonObj.get("list_id").isJsonNull()) && !jsonObj.get("list_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `list_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("list_id").toString()));
+      }
       if ((jsonObj.get("to") != null && !jsonObj.get("to").isJsonNull()) && !jsonObj.get("to").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
       }
@@ -618,8 +832,14 @@ public class VoiceMessage {
       if ((jsonObj.get("voice") != null && !jsonObj.get("voice").isJsonNull()) && !jsonObj.get("voice").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `voice` to be a primitive type in the JSON string but got `%s`", jsonObj.get("voice").toString()));
       }
+      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
+      }
       if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
+      }
+      if ((jsonObj.get("message_parts") != null && !jsonObj.get("message_parts").isJsonNull()) && !jsonObj.get("message_parts").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_parts` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_parts").toString()));
       }
       if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));
@@ -630,8 +850,23 @@ public class VoiceMessage {
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
+      if ((jsonObj.get("digits") != null && !jsonObj.get("digits").isJsonNull()) && !jsonObj.get("digits").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `digits` to be a primitive type in the JSON string but got `%s`", jsonObj.get("digits").toString()));
+      }
+      if ((jsonObj.get("carrier") != null && !jsonObj.get("carrier").isJsonNull()) && !jsonObj.get("carrier").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `carrier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("carrier").toString()));
+      }
+      if ((jsonObj.get("status_code") != null && !jsonObj.get("status_code").isJsonNull()) && !jsonObj.get("status_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_code").toString()));
+      }
+      if ((jsonObj.get("status_text") != null && !jsonObj.get("status_text").isJsonNull()) && !jsonObj.get("status_text").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
+      }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      if ((jsonObj.get("_api_username") != null && !jsonObj.get("_api_username").isJsonNull()) && !jsonObj.get("_api_username").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `_api_username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_api_username").toString()));
       }
   }
 

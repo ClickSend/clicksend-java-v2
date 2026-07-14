@@ -14,16 +14,14 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.DeliveryIssue;
+import ClickSend.Model.GetAllDeliveryIssuesData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -71,7 +69,7 @@ public class GetAllDeliveryIssues {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private List<DeliveryIssue> data = new ArrayList<>();
+  private GetAllDeliveryIssuesData data;
 
   public GetAllDeliveryIssues() {
   }
@@ -133,16 +131,8 @@ public class GetAllDeliveryIssues {
   }
 
 
-  public GetAllDeliveryIssues data(@javax.annotation.Nullable List<DeliveryIssue> data) {
+  public GetAllDeliveryIssues data(@javax.annotation.Nullable GetAllDeliveryIssuesData data) {
     this.data = data;
-    return this;
-  }
-
-  public GetAllDeliveryIssues addDataItem(DeliveryIssue dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<>();
-    }
-    this.data.add(dataItem);
     return this;
   }
 
@@ -151,11 +141,11 @@ public class GetAllDeliveryIssues {
    * @return data
    */
   @javax.annotation.Nullable
-  public List<DeliveryIssue> getData() {
+  public GetAllDeliveryIssuesData getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable List<DeliveryIssue> data) {
+  public void setData(@javax.annotation.Nullable GetAllDeliveryIssuesData data) {
     this.data = data;
   }
 
@@ -240,19 +230,9 @@ public class GetAllDeliveryIssues {
       if ((jsonObj.get("response_msg") != null && !jsonObj.get("response_msg").isJsonNull()) && !jsonObj.get("response_msg").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `response_msg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_msg").toString()));
       }
+      // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
-
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            DeliveryIssue.validateJsonElement(jsonArraydata.get(i));
-          };
-        }
+        GetAllDeliveryIssuesData.validateJsonElement(jsonObj.get("data"));
       }
   }
 

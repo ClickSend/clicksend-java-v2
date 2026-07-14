@@ -1,6 +1,6 @@
 
 
-# ViewStrippedStringRulesDataDataInner
+# ViewStrippedStringRulesDataAllOfDataInner
 
 
 ## Properties

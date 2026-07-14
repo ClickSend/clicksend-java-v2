@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
+import ClickSend.Model.AccountReferrerChosen;
 import ClickSend.Model.GlobalSendingRegistrationStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -80,7 +81,7 @@ public class GlobalSending {
   public static final String SERIALIZED_NAME_REGISTRATION_ENTITY = "registration_entity";
   @SerializedName(SERIALIZED_NAME_REGISTRATION_ENTITY)
   @javax.annotation.Nullable
-  private String registrationEntity;
+  private AccountReferrerChosen registrationEntity;
 
   public static final String SERIALIZED_NAME_REGISTRATION_STATUS = "registration_status";
   @SerializedName(SERIALIZED_NAME_REGISTRATION_STATUS)
@@ -100,12 +101,12 @@ public class GlobalSending {
   public static final String SERIALIZED_NAME_BLOCK_REGISTRATION = "block_registration";
   @SerializedName(SERIALIZED_NAME_BLOCK_REGISTRATION)
   @javax.annotation.Nullable
-  private Integer blockRegistration;
+  private Boolean blockRegistration;
 
   public static final String SERIALIZED_NAME_BLOCK_LEADS = "block_leads";
   @SerializedName(SERIALIZED_NAME_BLOCK_LEADS)
   @javax.annotation.Nullable
-  private Integer blockLeads;
+  private Boolean blockLeads;
 
   public static final String SERIALIZED_NAME_TRIAL_FROM_ADDRESS = "trial_from_address";
   @SerializedName(SERIALIZED_NAME_TRIAL_FROM_ADDRESS)
@@ -115,7 +116,7 @@ public class GlobalSending {
   public static final String SERIALIZED_NAME_RESTRICTED_SENDING = "restricted_sending";
   @SerializedName(SERIALIZED_NAME_RESTRICTED_SENDING)
   @javax.annotation.Nullable
-  private Integer restrictedSending;
+  private Boolean restrictedSending;
 
   public static final String SERIALIZED_NAME_TRIAL_SENDING = "trial_sending";
   @SerializedName(SERIALIZED_NAME_TRIAL_SENDING)
@@ -240,21 +241,21 @@ public class GlobalSending {
   }
 
 
-  public GlobalSending registrationEntity(@javax.annotation.Nullable String registrationEntity) {
+  public GlobalSending registrationEntity(@javax.annotation.Nullable AccountReferrerChosen registrationEntity) {
     this.registrationEntity = registrationEntity;
     return this;
   }
 
   /**
-   * The entity responsible for the registration.
+   * Get registrationEntity
    * @return registrationEntity
    */
   @javax.annotation.Nullable
-  public String getRegistrationEntity() {
+  public AccountReferrerChosen getRegistrationEntity() {
     return registrationEntity;
   }
 
-  public void setRegistrationEntity(@javax.annotation.Nullable String registrationEntity) {
+  public void setRegistrationEntity(@javax.annotation.Nullable AccountReferrerChosen registrationEntity) {
     this.registrationEntity = registrationEntity;
   }
 
@@ -316,7 +317,7 @@ public class GlobalSending {
   }
 
 
-  public GlobalSending blockRegistration(@javax.annotation.Nullable Integer blockRegistration) {
+  public GlobalSending blockRegistration(@javax.annotation.Nullable Boolean blockRegistration) {
     this.blockRegistration = blockRegistration;
     return this;
   }
@@ -326,16 +327,16 @@ public class GlobalSending {
    * @return blockRegistration
    */
   @javax.annotation.Nullable
-  public Integer getBlockRegistration() {
+  public Boolean getBlockRegistration() {
     return blockRegistration;
   }
 
-  public void setBlockRegistration(@javax.annotation.Nullable Integer blockRegistration) {
+  public void setBlockRegistration(@javax.annotation.Nullable Boolean blockRegistration) {
     this.blockRegistration = blockRegistration;
   }
 
 
-  public GlobalSending blockLeads(@javax.annotation.Nullable Integer blockLeads) {
+  public GlobalSending blockLeads(@javax.annotation.Nullable Boolean blockLeads) {
     this.blockLeads = blockLeads;
     return this;
   }
@@ -345,11 +346,11 @@ public class GlobalSending {
    * @return blockLeads
    */
   @javax.annotation.Nullable
-  public Integer getBlockLeads() {
+  public Boolean getBlockLeads() {
     return blockLeads;
   }
 
-  public void setBlockLeads(@javax.annotation.Nullable Integer blockLeads) {
+  public void setBlockLeads(@javax.annotation.Nullable Boolean blockLeads) {
     this.blockLeads = blockLeads;
   }
 
@@ -373,7 +374,7 @@ public class GlobalSending {
   }
 
 
-  public GlobalSending restrictedSending(@javax.annotation.Nullable Integer restrictedSending) {
+  public GlobalSending restrictedSending(@javax.annotation.Nullable Boolean restrictedSending) {
     this.restrictedSending = restrictedSending;
     return this;
   }
@@ -383,11 +384,11 @@ public class GlobalSending {
    * @return restrictedSending
    */
   @javax.annotation.Nullable
-  public Integer getRestrictedSending() {
+  public Boolean getRestrictedSending() {
     return restrictedSending;
   }
 
-  public void setRestrictedSending(@javax.annotation.Nullable Integer restrictedSending) {
+  public void setRestrictedSending(@javax.annotation.Nullable Boolean restrictedSending) {
     this.restrictedSending = restrictedSending;
   }
 
@@ -612,8 +613,9 @@ public class GlobalSending {
       if ((jsonObj.get("agreed_at") != null && !jsonObj.get("agreed_at").isJsonNull()) && !jsonObj.get("agreed_at").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `agreed_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agreed_at").toString()));
       }
-      if ((jsonObj.get("registration_entity") != null && !jsonObj.get("registration_entity").isJsonNull()) && !jsonObj.get("registration_entity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `registration_entity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("registration_entity").toString()));
+      // validate the optional field `registration_entity`
+      if (jsonObj.get("registration_entity") != null && !jsonObj.get("registration_entity").isJsonNull()) {
+        AccountReferrerChosen.validateJsonElement(jsonObj.get("registration_entity"));
       }
       // validate the optional field `registration_status`
       if (jsonObj.get("registration_status") != null && !jsonObj.get("registration_status").isJsonNull()) {

@@ -53,7 +53,7 @@ public class Sms {
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
   @javax.annotation.Nullable
-  private Integer date;
+  private String date;
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
@@ -118,21 +118,21 @@ public class Sms {
   public Sms() {
   }
 
-  public Sms date(@javax.annotation.Nullable Integer date) {
+  public Sms date(@javax.annotation.Nullable String date) {
     this.date = date;
     return this;
   }
 
   /**
-   * The date you sent the message. It is in &lt;a href&#x3D;\&quot;http://help.clicksend.com/what-is-a-unix-timestamp\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Unix format&lt;/a&gt;.
+   * The date you sent the message. It is in &lt;a href&#x3D;\&quot;http://help.clicksend.com/what-is-a-unix-timestamp\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Unix format&lt;/a&gt;. Returned as a string since it may be an empty string in price-calculation responses where no message has actually been sent yet.
    * @return date
    */
   @javax.annotation.Nullable
-  public Integer getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(@javax.annotation.Nullable Integer date) {
+  public void setDate(@javax.annotation.Nullable String date) {
     this.date = date;
   }
 
@@ -457,6 +457,9 @@ public class Sms {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("date") != null && !jsonObj.get("date").isJsonNull()) && !jsonObj.get("date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date").toString()));
+      }
       if ((jsonObj.get("to") != null && !jsonObj.get("to").isJsonNull()) && !jsonObj.get("to").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
       }

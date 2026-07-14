@@ -14,7 +14,6 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.Currency;
 import ClickSend.Model.ViewAvailableNumbersData;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -71,11 +70,6 @@ public class ViewAvailableNumbers {
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
   private ViewAvailableNumbersData data;
-
-  public static final String SERIALIZED_NAME_CURRENCY = "_currency";
-  @SerializedName(SERIALIZED_NAME_CURRENCY)
-  @javax.annotation.Nullable
-  private Currency currency;
 
   public ViewAvailableNumbers() {
   }
@@ -156,25 +150,6 @@ public class ViewAvailableNumbers {
   }
 
 
-  public ViewAvailableNumbers currency(@javax.annotation.Nullable Currency currency) {
-    this.currency = currency;
-    return this;
-  }
-
-  /**
-   * Get currency
-   * @return currency
-   */
-  @javax.annotation.Nullable
-  public Currency getCurrency() {
-    return currency;
-  }
-
-  public void setCurrency(@javax.annotation.Nullable Currency currency) {
-    this.currency = currency;
-  }
-
-
 
   @Override
   public boolean equals(Object o) {
@@ -188,13 +163,12 @@ public class ViewAvailableNumbers {
     return Objects.equals(this.httpCode, viewAvailableNumbers.httpCode) &&
         Objects.equals(this.responseCode, viewAvailableNumbers.responseCode) &&
         Objects.equals(this.responseMsg, viewAvailableNumbers.responseMsg) &&
-        Objects.equals(this.data, viewAvailableNumbers.data) &&
-        Objects.equals(this.currency, viewAvailableNumbers.currency);
+        Objects.equals(this.data, viewAvailableNumbers.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(httpCode, responseCode, responseMsg, data, currency);
+    return Objects.hash(httpCode, responseCode, responseMsg, data);
   }
 
   @Override
@@ -205,7 +179,6 @@ public class ViewAvailableNumbers {
     sb.append("    responseCode: ").append(toIndentedString(responseCode)).append("\n");
     sb.append("    responseMsg: ").append(toIndentedString(responseMsg)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -224,7 +197,7 @@ public class ViewAvailableNumbers {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("http_code", "response_code", "response_msg", "data", "_currency"));
+    openapiFields = new HashSet<String>(Arrays.asList("http_code", "response_code", "response_msg", "data"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -260,10 +233,6 @@ public class ViewAvailableNumbers {
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         ViewAvailableNumbersData.validateJsonElement(jsonObj.get("data"));
-      }
-      // validate the optional field `_currency`
-      if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
-        Currency.validateJsonElement(jsonObj.get("_currency"));
       }
   }
 

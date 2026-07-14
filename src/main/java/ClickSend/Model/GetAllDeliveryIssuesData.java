@@ -14,7 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.MmsCampaign;
+import ClickSend.Model.DeliveryIssue;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,10 +50,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewAllMmsCampaignsData
+ * GetAllDeliveryIssuesData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewAllMmsCampaignsData {
+public class GetAllDeliveryIssuesData {
   public static final String SERIALIZED_NAME_TOTAL = "total";
   @SerializedName(SERIALIZED_NAME_TOTAL)
   @javax.annotation.Nullable
@@ -97,12 +97,12 @@ public class ViewAllMmsCampaignsData {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private List<MmsCampaign> data = new ArrayList<>();
+  private List<DeliveryIssue> data = new ArrayList<>();
 
-  public ViewAllMmsCampaignsData() {
+  public GetAllDeliveryIssuesData() {
   }
 
-  public ViewAllMmsCampaignsData total(@javax.annotation.Nullable Integer total) {
+  public GetAllDeliveryIssuesData total(@javax.annotation.Nullable Integer total) {
     this.total = total;
     return this;
   }
@@ -121,7 +121,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData perPage(@javax.annotation.Nullable Integer perPage) {
+  public GetAllDeliveryIssuesData perPage(@javax.annotation.Nullable Integer perPage) {
     this.perPage = perPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData currentPage(@javax.annotation.Nullable Integer currentPage) {
+  public GetAllDeliveryIssuesData currentPage(@javax.annotation.Nullable Integer currentPage) {
     this.currentPage = currentPage;
     return this;
   }
@@ -159,7 +159,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData lastPage(@javax.annotation.Nullable Integer lastPage) {
+  public GetAllDeliveryIssuesData lastPage(@javax.annotation.Nullable Integer lastPage) {
     this.lastPage = lastPage;
     return this;
   }
@@ -178,7 +178,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData nextPageUrl(@javax.annotation.Nullable String nextPageUrl) {
+  public GetAllDeliveryIssuesData nextPageUrl(@javax.annotation.Nullable String nextPageUrl) {
     this.nextPageUrl = nextPageUrl;
     return this;
   }
@@ -197,7 +197,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData prevPageUrl(@javax.annotation.Nullable String prevPageUrl) {
+  public GetAllDeliveryIssuesData prevPageUrl(@javax.annotation.Nullable String prevPageUrl) {
     this.prevPageUrl = prevPageUrl;
     return this;
   }
@@ -216,7 +216,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData from(@javax.annotation.Nullable Integer from) {
+  public GetAllDeliveryIssuesData from(@javax.annotation.Nullable Integer from) {
     this.from = from;
     return this;
   }
@@ -235,7 +235,7 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData to(@javax.annotation.Nullable Integer to) {
+  public GetAllDeliveryIssuesData to(@javax.annotation.Nullable Integer to) {
     this.to = to;
     return this;
   }
@@ -254,12 +254,12 @@ public class ViewAllMmsCampaignsData {
   }
 
 
-  public ViewAllMmsCampaignsData data(@javax.annotation.Nullable List<MmsCampaign> data) {
+  public GetAllDeliveryIssuesData data(@javax.annotation.Nullable List<DeliveryIssue> data) {
     this.data = data;
     return this;
   }
 
-  public ViewAllMmsCampaignsData addDataItem(MmsCampaign dataItem) {
+  public GetAllDeliveryIssuesData addDataItem(DeliveryIssue dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -272,11 +272,11 @@ public class ViewAllMmsCampaignsData {
    * @return data
    */
   @javax.annotation.Nullable
-  public List<MmsCampaign> getData() {
+  public List<DeliveryIssue> getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable List<MmsCampaign> data) {
+  public void setData(@javax.annotation.Nullable List<DeliveryIssue> data) {
     this.data = data;
   }
 
@@ -290,16 +290,16 @@ public class ViewAllMmsCampaignsData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewAllMmsCampaignsData viewAllMmsCampaignsData = (ViewAllMmsCampaignsData) o;
-    return Objects.equals(this.total, viewAllMmsCampaignsData.total) &&
-        Objects.equals(this.perPage, viewAllMmsCampaignsData.perPage) &&
-        Objects.equals(this.currentPage, viewAllMmsCampaignsData.currentPage) &&
-        Objects.equals(this.lastPage, viewAllMmsCampaignsData.lastPage) &&
-        Objects.equals(this.nextPageUrl, viewAllMmsCampaignsData.nextPageUrl) &&
-        Objects.equals(this.prevPageUrl, viewAllMmsCampaignsData.prevPageUrl) &&
-        Objects.equals(this.from, viewAllMmsCampaignsData.from) &&
-        Objects.equals(this.to, viewAllMmsCampaignsData.to) &&
-        Objects.equals(this.data, viewAllMmsCampaignsData.data);
+    GetAllDeliveryIssuesData getAllDeliveryIssuesData = (GetAllDeliveryIssuesData) o;
+    return Objects.equals(this.total, getAllDeliveryIssuesData.total) &&
+        Objects.equals(this.perPage, getAllDeliveryIssuesData.perPage) &&
+        Objects.equals(this.currentPage, getAllDeliveryIssuesData.currentPage) &&
+        Objects.equals(this.lastPage, getAllDeliveryIssuesData.lastPage) &&
+        Objects.equals(this.nextPageUrl, getAllDeliveryIssuesData.nextPageUrl) &&
+        Objects.equals(this.prevPageUrl, getAllDeliveryIssuesData.prevPageUrl) &&
+        Objects.equals(this.from, getAllDeliveryIssuesData.from) &&
+        Objects.equals(this.to, getAllDeliveryIssuesData.to) &&
+        Objects.equals(this.data, getAllDeliveryIssuesData.data);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -321,7 +321,7 @@ public class ViewAllMmsCampaignsData {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewAllMmsCampaignsData {\n");
+    sb.append("class GetAllDeliveryIssuesData {\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("    perPage: ").append(toIndentedString(perPage)).append("\n");
     sb.append("    currentPage: ").append(toIndentedString(currentPage)).append("\n");
@@ -359,20 +359,20 @@ public class ViewAllMmsCampaignsData {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewAllMmsCampaignsData
+   * @throws IOException if the JSON Element is invalid with respect to GetAllDeliveryIssuesData
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewAllMmsCampaignsData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAllMmsCampaignsData is not found in the empty JSON string", ViewAllMmsCampaignsData.openapiRequiredFields.toString()));
+        if (!GetAllDeliveryIssuesData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in GetAllDeliveryIssuesData is not found in the empty JSON string", GetAllDeliveryIssuesData.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewAllMmsCampaignsData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAllMmsCampaignsData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!GetAllDeliveryIssuesData.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GetAllDeliveryIssuesData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -392,7 +392,7 @@ public class ViewAllMmsCampaignsData {
 
           // validate the optional field `data` (array)
           for (int i = 0; i < jsonArraydata.size(); i++) {
-            MmsCampaign.validateJsonElement(jsonArraydata.get(i));
+            DeliveryIssue.validateJsonElement(jsonArraydata.get(i));
           };
         }
       }
@@ -402,22 +402,22 @@ public class ViewAllMmsCampaignsData {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewAllMmsCampaignsData.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewAllMmsCampaignsData' and its subtypes
+       if (!GetAllDeliveryIssuesData.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetAllDeliveryIssuesData' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewAllMmsCampaignsData> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAllMmsCampaignsData.class));
+       final TypeAdapter<GetAllDeliveryIssuesData> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetAllDeliveryIssuesData.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewAllMmsCampaignsData>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetAllDeliveryIssuesData>() {
            @Override
-           public void write(JsonWriter out, ViewAllMmsCampaignsData value) throws IOException {
+           public void write(JsonWriter out, GetAllDeliveryIssuesData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewAllMmsCampaignsData read(JsonReader in) throws IOException {
+           public GetAllDeliveryIssuesData read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -428,18 +428,18 @@ public class ViewAllMmsCampaignsData {
   }
 
   /**
-   * Create an instance of ViewAllMmsCampaignsData given an JSON string
+   * Create an instance of GetAllDeliveryIssuesData given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewAllMmsCampaignsData
-   * @throws IOException if the JSON string is invalid with respect to ViewAllMmsCampaignsData
+   * @return An instance of GetAllDeliveryIssuesData
+   * @throws IOException if the JSON string is invalid with respect to GetAllDeliveryIssuesData
    */
-  public static ViewAllMmsCampaignsData fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewAllMmsCampaignsData.class);
+  public static GetAllDeliveryIssuesData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetAllDeliveryIssuesData.class);
   }
 
   /**
-   * Convert an instance of ViewAllMmsCampaignsData to an JSON string
+   * Convert an instance of GetAllDeliveryIssuesData to an JSON string
    *
    * @return JSON string
    */

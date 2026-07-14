@@ -13,7 +13,7 @@
 
 package ClickSend.Model;
 
-import ClickSend.Model.MmsCampaign;
+import ClickSend.Model.ViewAllowedEmailsDataAllOfDataInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,17 +28,17 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewAllMmsCampaignsData
+ * Model tests for ViewAllowedEmailsData
  */
-public class ViewAllMmsCampaignsDataTest {
-    private final ViewAllMmsCampaignsData model = new ViewAllMmsCampaignsData();
+public class ViewAllowedEmailsDataTest {
+    private final ViewAllowedEmailsData model = new ViewAllowedEmailsData();
 
     /**
-     * Model tests for ViewAllMmsCampaignsData
+     * Model tests for ViewAllowedEmailsData
      */
     @Test
-    public void testViewAllMmsCampaignsData() {
-        // TODO: test ViewAllMmsCampaignsData
+    public void testViewAllowedEmailsData() {
+        // TODO: test ViewAllowedEmailsData
     }
 
     /**

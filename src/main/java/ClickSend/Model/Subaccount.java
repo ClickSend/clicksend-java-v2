@@ -86,6 +86,11 @@ public class Subaccount {
   @javax.annotation.Nullable
   private String apiKey;
 
+  public static final String SERIALIZED_NAME_ACCESS_SMPP = "access_smpp";
+  @SerializedName(SERIALIZED_NAME_ACCESS_SMPP)
+  @javax.annotation.Nullable
+  private Integer accessSmpp;
+
   public static final String SERIALIZED_NAME_ACCESS_USERS = "access_users";
   @SerializedName(SERIALIZED_NAME_ACCESS_USERS)
   @javax.annotation.Nullable
@@ -141,10 +146,20 @@ public class Subaccount {
   @javax.annotation.Nullable
   private Integer accessReseller;
 
+  public static final String SERIALIZED_NAME_ACCESS_GLOBAL_SENDING = "access_global_sending";
+  @SerializedName(SERIALIZED_NAME_ACCESS_GLOBAL_SENDING)
+  @javax.annotation.Nullable
+  private Integer accessGlobalSending;
+
   public static final String SERIALIZED_NAME_ACCESS_MMS = "access_mms";
   @SerializedName(SERIALIZED_NAME_ACCESS_MMS)
   @javax.annotation.Nullable
   private Integer accessMms;
+
+  public static final String SERIALIZED_NAME_HIDE_PRICING = "hide_pricing";
+  @SerializedName(SERIALIZED_NAME_HIDE_PRICING)
+  @javax.annotation.Nullable
+  private Integer hidePricing;
 
   public static final String SERIALIZED_NAME_SHARE_CAMPAIGNS = "share_campaigns";
   @SerializedName(SERIALIZED_NAME_SHARE_CAMPAIGNS)
@@ -155,6 +170,16 @@ public class Subaccount {
   @SerializedName(SERIALIZED_NAME_NOTES)
   @javax.annotation.Nullable
   private String notes;
+
+  public static final String SERIALIZED_NAME_IS_MAIN = "is_main";
+  @SerializedName(SERIALIZED_NAME_IS_MAIN)
+  @javax.annotation.Nullable
+  private Integer isMain;
+
+  public static final String SERIALIZED_NAME_SIGN_UP_TYPE = "sign_up_type";
+  @SerializedName(SERIALIZED_NAME_SIGN_UP_TYPE)
+  @javax.annotation.Nullable
+  private String signUpType;
 
   public Subaccount() {
   }
@@ -289,6 +314,25 @@ public class Subaccount {
 
   public void setApiKey(@javax.annotation.Nullable String apiKey) {
     this.apiKey = apiKey;
+  }
+
+
+  public Subaccount accessSmpp(@javax.annotation.Nullable Integer accessSmpp) {
+    this.accessSmpp = accessSmpp;
+    return this;
+  }
+
+  /**
+   * Flag indicating if the subaccount has access to SMPP.
+   * @return accessSmpp
+   */
+  @javax.annotation.Nullable
+  public Integer getAccessSmpp() {
+    return accessSmpp;
+  }
+
+  public void setAccessSmpp(@javax.annotation.Nullable Integer accessSmpp) {
+    this.accessSmpp = accessSmpp;
   }
 
 
@@ -501,6 +545,25 @@ public class Subaccount {
   }
 
 
+  public Subaccount accessGlobalSending(@javax.annotation.Nullable Integer accessGlobalSending) {
+    this.accessGlobalSending = accessGlobalSending;
+    return this;
+  }
+
+  /**
+   * Flag indicating if the subaccount has access to global sending.
+   * @return accessGlobalSending
+   */
+  @javax.annotation.Nullable
+  public Integer getAccessGlobalSending() {
+    return accessGlobalSending;
+  }
+
+  public void setAccessGlobalSending(@javax.annotation.Nullable Integer accessGlobalSending) {
+    this.accessGlobalSending = accessGlobalSending;
+  }
+
+
   public Subaccount accessMms(@javax.annotation.Nullable Integer accessMms) {
     this.accessMms = accessMms;
     return this;
@@ -517,6 +580,25 @@ public class Subaccount {
 
   public void setAccessMms(@javax.annotation.Nullable Integer accessMms) {
     this.accessMms = accessMms;
+  }
+
+
+  public Subaccount hidePricing(@javax.annotation.Nullable Integer hidePricing) {
+    this.hidePricing = hidePricing;
+    return this;
+  }
+
+  /**
+   * Flag indicating if pricing is hidden for the subaccount.
+   * @return hidePricing
+   */
+  @javax.annotation.Nullable
+  public Integer getHidePricing() {
+    return hidePricing;
+  }
+
+  public void setHidePricing(@javax.annotation.Nullable Integer hidePricing) {
+    this.hidePricing = hidePricing;
   }
 
 
@@ -558,6 +640,44 @@ public class Subaccount {
   }
 
 
+  public Subaccount isMain(@javax.annotation.Nullable Integer isMain) {
+    this.isMain = isMain;
+    return this;
+  }
+
+  /**
+   * Flag indicating if this is the main account rather than a subaccount.
+   * @return isMain
+   */
+  @javax.annotation.Nullable
+  public Integer getIsMain() {
+    return isMain;
+  }
+
+  public void setIsMain(@javax.annotation.Nullable Integer isMain) {
+    this.isMain = isMain;
+  }
+
+
+  public Subaccount signUpType(@javax.annotation.Nullable String signUpType) {
+    this.signUpType = signUpType;
+    return this;
+  }
+
+  /**
+   * The sign-up type used to create the subaccount, if applicable.
+   * @return signUpType
+   */
+  @javax.annotation.Nullable
+  public String getSignUpType() {
+    return signUpType;
+  }
+
+  public void setSignUpType(@javax.annotation.Nullable String signUpType) {
+    this.signUpType = signUpType;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -575,6 +695,7 @@ public class Subaccount {
         Objects.equals(this.firstName, subaccount.firstName) &&
         Objects.equals(this.lastName, subaccount.lastName) &&
         Objects.equals(this.apiKey, subaccount.apiKey) &&
+        Objects.equals(this.accessSmpp, subaccount.accessSmpp) &&
         Objects.equals(this.accessUsers, subaccount.accessUsers) &&
         Objects.equals(this.accessBilling, subaccount.accessBilling) &&
         Objects.equals(this.accessReporting, subaccount.accessReporting) &&
@@ -586,9 +707,13 @@ public class Subaccount {
         Objects.equals(this.accessFax, subaccount.accessFax) &&
         Objects.equals(this.accessPost, subaccount.accessPost) &&
         Objects.equals(this.accessReseller, subaccount.accessReseller) &&
+        Objects.equals(this.accessGlobalSending, subaccount.accessGlobalSending) &&
         Objects.equals(this.accessMms, subaccount.accessMms) &&
+        Objects.equals(this.hidePricing, subaccount.hidePricing) &&
         Objects.equals(this.shareCampaigns, subaccount.shareCampaigns) &&
-        Objects.equals(this.notes, subaccount.notes);
+        Objects.equals(this.notes, subaccount.notes) &&
+        Objects.equals(this.isMain, subaccount.isMain) &&
+        Objects.equals(this.signUpType, subaccount.signUpType);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -597,7 +722,7 @@ public class Subaccount {
 
   @Override
   public int hashCode() {
-    return Objects.hash(subaccountId, apiUsername, email, phoneNumber, firstName, lastName, apiKey, accessUsers, accessBilling, accessReporting, accessContacts, accessSettings, accessSms, accessEmail, accessVoice, accessFax, accessPost, accessReseller, accessMms, shareCampaigns, notes);
+    return Objects.hash(subaccountId, apiUsername, email, phoneNumber, firstName, lastName, apiKey, accessSmpp, accessUsers, accessBilling, accessReporting, accessContacts, accessSettings, accessSms, accessEmail, accessVoice, accessFax, accessPost, accessReseller, accessGlobalSending, accessMms, hidePricing, shareCampaigns, notes, isMain, signUpType);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -618,6 +743,7 @@ public class Subaccount {
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
+    sb.append("    accessSmpp: ").append(toIndentedString(accessSmpp)).append("\n");
     sb.append("    accessUsers: ").append(toIndentedString(accessUsers)).append("\n");
     sb.append("    accessBilling: ").append(toIndentedString(accessBilling)).append("\n");
     sb.append("    accessReporting: ").append(toIndentedString(accessReporting)).append("\n");
@@ -629,9 +755,13 @@ public class Subaccount {
     sb.append("    accessFax: ").append(toIndentedString(accessFax)).append("\n");
     sb.append("    accessPost: ").append(toIndentedString(accessPost)).append("\n");
     sb.append("    accessReseller: ").append(toIndentedString(accessReseller)).append("\n");
+    sb.append("    accessGlobalSending: ").append(toIndentedString(accessGlobalSending)).append("\n");
     sb.append("    accessMms: ").append(toIndentedString(accessMms)).append("\n");
+    sb.append("    hidePricing: ").append(toIndentedString(hidePricing)).append("\n");
     sb.append("    shareCampaigns: ").append(toIndentedString(shareCampaigns)).append("\n");
     sb.append("    notes: ").append(toIndentedString(notes)).append("\n");
+    sb.append("    isMain: ").append(toIndentedString(isMain)).append("\n");
+    sb.append("    signUpType: ").append(toIndentedString(signUpType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -650,7 +780,7 @@ public class Subaccount {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "api_username", "email", "phone_number", "first_name", "last_name", "api_key", "access_users", "access_billing", "access_reporting", "access_contacts", "access_settings", "access_sms", "access_email", "access_voice", "access_fax", "access_post", "access_reseller", "access_mms", "share_campaigns", "notes"));
+    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "api_username", "email", "phone_number", "first_name", "last_name", "api_key", "access_smpp", "access_users", "access_billing", "access_reporting", "access_contacts", "access_settings", "access_sms", "access_email", "access_voice", "access_fax", "access_post", "access_reseller", "access_global_sending", "access_mms", "hide_pricing", "share_campaigns", "notes", "is_main", "sign_up_type"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -697,6 +827,9 @@ public class Subaccount {
       }
       if ((jsonObj.get("notes") != null && !jsonObj.get("notes").isJsonNull()) && !jsonObj.get("notes").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notes").toString()));
+      }
+      if ((jsonObj.get("sign_up_type") != null && !jsonObj.get("sign_up_type").isJsonNull()) && !jsonObj.get("sign_up_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sign_up_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sign_up_type").toString()));
       }
   }
 

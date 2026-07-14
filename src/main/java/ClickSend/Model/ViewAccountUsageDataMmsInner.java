@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,10 +47,10 @@ import java.util.Set;
 import ClickSend.JSON;
 
 /**
- * ViewAccountUsageDataVoiceInner
+ * ViewAccountUsageDataMmsInner
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
-public class ViewAccountUsageDataVoiceInner {
+public class ViewAccountUsageDataMmsInner {
   public static final String SERIALIZED_NAME_SUBACCOUNT_ID = "subaccount_id";
   @SerializedName(SERIALIZED_NAME_SUBACCOUNT_ID)
   @javax.annotation.Nullable
@@ -70,10 +71,15 @@ public class ViewAccountUsageDataVoiceInner {
   @javax.annotation.Nullable
   private String totalPrice;
 
-  public ViewAccountUsageDataVoiceInner() {
+  public static final String SERIALIZED_NAME_NOTES = "notes";
+  @SerializedName(SERIALIZED_NAME_NOTES)
+  @javax.annotation.Nullable
+  private String notes;
+
+  public ViewAccountUsageDataMmsInner() {
   }
 
-  public ViewAccountUsageDataVoiceInner subaccountId(@javax.annotation.Nullable Integer subaccountId) {
+  public ViewAccountUsageDataMmsInner subaccountId(@javax.annotation.Nullable Integer subaccountId) {
     this.subaccountId = subaccountId;
     return this;
   }
@@ -92,7 +98,7 @@ public class ViewAccountUsageDataVoiceInner {
   }
 
 
-  public ViewAccountUsageDataVoiceInner username(@javax.annotation.Nullable String username) {
+  public ViewAccountUsageDataMmsInner username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
@@ -111,13 +117,13 @@ public class ViewAccountUsageDataVoiceInner {
   }
 
 
-  public ViewAccountUsageDataVoiceInner totalCount(@javax.annotation.Nullable String totalCount) {
+  public ViewAccountUsageDataMmsInner totalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
   /**
-   * The total count of voice calls.
+   * The total count of MMS.
    * @return totalCount
    */
   @javax.annotation.Nullable
@@ -130,13 +136,13 @@ public class ViewAccountUsageDataVoiceInner {
   }
 
 
-  public ViewAccountUsageDataVoiceInner totalPrice(@javax.annotation.Nullable String totalPrice) {
+  public ViewAccountUsageDataMmsInner totalPrice(@javax.annotation.Nullable String totalPrice) {
     this.totalPrice = totalPrice;
     return this;
   }
 
   /**
-   * The total price of voice calls.
+   * The total price of MMS.
    * @return totalPrice
    */
   @javax.annotation.Nullable
@@ -149,6 +155,25 @@ public class ViewAccountUsageDataVoiceInner {
   }
 
 
+  public ViewAccountUsageDataMmsInner notes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+    return this;
+  }
+
+  /**
+   * Optional notes.
+   * @return notes
+   */
+  @javax.annotation.Nullable
+  public String getNotes() {
+    return notes;
+  }
+
+  public void setNotes(@javax.annotation.Nullable String notes) {
+    this.notes = notes;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,26 +183,39 @@ public class ViewAccountUsageDataVoiceInner {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ViewAccountUsageDataVoiceInner viewAccountUsageDataVoiceInner = (ViewAccountUsageDataVoiceInner) o;
-    return Objects.equals(this.subaccountId, viewAccountUsageDataVoiceInner.subaccountId) &&
-        Objects.equals(this.username, viewAccountUsageDataVoiceInner.username) &&
-        Objects.equals(this.totalCount, viewAccountUsageDataVoiceInner.totalCount) &&
-        Objects.equals(this.totalPrice, viewAccountUsageDataVoiceInner.totalPrice);
+    ViewAccountUsageDataMmsInner viewAccountUsageDataMmsInner = (ViewAccountUsageDataMmsInner) o;
+    return Objects.equals(this.subaccountId, viewAccountUsageDataMmsInner.subaccountId) &&
+        Objects.equals(this.username, viewAccountUsageDataMmsInner.username) &&
+        Objects.equals(this.totalCount, viewAccountUsageDataMmsInner.totalCount) &&
+        Objects.equals(this.totalPrice, viewAccountUsageDataMmsInner.totalPrice) &&
+        Objects.equals(this.notes, viewAccountUsageDataMmsInner.notes);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subaccountId, username, totalCount, totalPrice);
+    return Objects.hash(subaccountId, username, totalCount, totalPrice, notes);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ViewAccountUsageDataVoiceInner {\n");
+    sb.append("class ViewAccountUsageDataMmsInner {\n");
     sb.append("    subaccountId: ").append(toIndentedString(subaccountId)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
     sb.append("    totalPrice: ").append(toIndentedString(totalPrice)).append("\n");
+    sb.append("    notes: ").append(toIndentedString(notes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -196,7 +234,7 @@ public class ViewAccountUsageDataVoiceInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price"));
+    openapiFields = new HashSet<String>(Arrays.asList("subaccount_id", "username", "total_count", "total_price", "notes"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -206,20 +244,20 @@ public class ViewAccountUsageDataVoiceInner {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ViewAccountUsageDataVoiceInner
+   * @throws IOException if the JSON Element is invalid with respect to ViewAccountUsageDataMmsInner
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ViewAccountUsageDataVoiceInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAccountUsageDataVoiceInner is not found in the empty JSON string", ViewAccountUsageDataVoiceInner.openapiRequiredFields.toString()));
+        if (!ViewAccountUsageDataMmsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ViewAccountUsageDataMmsInner is not found in the empty JSON string", ViewAccountUsageDataMmsInner.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ViewAccountUsageDataVoiceInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAccountUsageDataVoiceInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ViewAccountUsageDataMmsInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ViewAccountUsageDataMmsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -232,28 +270,31 @@ public class ViewAccountUsageDataVoiceInner {
       if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
       }
+      if ((jsonObj.get("notes") != null && !jsonObj.get("notes").isJsonNull()) && !jsonObj.get("notes").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notes").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ViewAccountUsageDataVoiceInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ViewAccountUsageDataVoiceInner' and its subtypes
+       if (!ViewAccountUsageDataMmsInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ViewAccountUsageDataMmsInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ViewAccountUsageDataVoiceInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAccountUsageDataVoiceInner.class));
+       final TypeAdapter<ViewAccountUsageDataMmsInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ViewAccountUsageDataMmsInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ViewAccountUsageDataVoiceInner>() {
+       return (TypeAdapter<T>) new TypeAdapter<ViewAccountUsageDataMmsInner>() {
            @Override
-           public void write(JsonWriter out, ViewAccountUsageDataVoiceInner value) throws IOException {
+           public void write(JsonWriter out, ViewAccountUsageDataMmsInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ViewAccountUsageDataVoiceInner read(JsonReader in) throws IOException {
+           public ViewAccountUsageDataMmsInner read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -264,18 +305,18 @@ public class ViewAccountUsageDataVoiceInner {
   }
 
   /**
-   * Create an instance of ViewAccountUsageDataVoiceInner given an JSON string
+   * Create an instance of ViewAccountUsageDataMmsInner given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ViewAccountUsageDataVoiceInner
-   * @throws IOException if the JSON string is invalid with respect to ViewAccountUsageDataVoiceInner
+   * @return An instance of ViewAccountUsageDataMmsInner
+   * @throws IOException if the JSON string is invalid with respect to ViewAccountUsageDataMmsInner
    */
-  public static ViewAccountUsageDataVoiceInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ViewAccountUsageDataVoiceInner.class);
+  public static ViewAccountUsageDataMmsInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ViewAccountUsageDataMmsInner.class);
   }
 
   /**
-   * Convert an instance of ViewAccountUsageDataVoiceInner to an JSON string
+   * Convert an instance of ViewAccountUsageDataMmsInner to an JSON string
    *
    * @return JSON string
    */

@@ -13,6 +13,7 @@
 
 package ClickSend.Model;
 
+import ClickSend.Model.AccountReferrerChosen;
 import ClickSend.Model.GlobalSendingRegistrationStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

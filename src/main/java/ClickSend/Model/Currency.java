@@ -70,6 +70,16 @@ public class Currency {
   @javax.annotation.Nullable
   private String currencyNameLong;
 
+  public static final String SERIALIZED_NAME_MIN_RECHARGE_AMOUNT = "min_recharge_amount";
+  @SerializedName(SERIALIZED_NAME_MIN_RECHARGE_AMOUNT)
+  @javax.annotation.Nullable
+  private String minRechargeAmount;
+
+  public static final String SERIALIZED_NAME_MAX_RECHARGE_AMOUNT = "max_recharge_amount";
+  @SerializedName(SERIALIZED_NAME_MAX_RECHARGE_AMOUNT)
+  @javax.annotation.Nullable
+  private String maxRechargeAmount;
+
   public Currency() {
   }
 
@@ -149,6 +159,44 @@ public class Currency {
   }
 
 
+  public Currency minRechargeAmount(@javax.annotation.Nullable String minRechargeAmount) {
+    this.minRechargeAmount = minRechargeAmount;
+    return this;
+  }
+
+  /**
+   * The minimum amount that can be used to recharge the account, in this currency.
+   * @return minRechargeAmount
+   */
+  @javax.annotation.Nullable
+  public String getMinRechargeAmount() {
+    return minRechargeAmount;
+  }
+
+  public void setMinRechargeAmount(@javax.annotation.Nullable String minRechargeAmount) {
+    this.minRechargeAmount = minRechargeAmount;
+  }
+
+
+  public Currency maxRechargeAmount(@javax.annotation.Nullable String maxRechargeAmount) {
+    this.maxRechargeAmount = maxRechargeAmount;
+    return this;
+  }
+
+  /**
+   * The maximum amount that can be used to recharge the account, in this currency.
+   * @return maxRechargeAmount
+   */
+  @javax.annotation.Nullable
+  public String getMaxRechargeAmount() {
+    return maxRechargeAmount;
+  }
+
+  public void setMaxRechargeAmount(@javax.annotation.Nullable String maxRechargeAmount) {
+    this.maxRechargeAmount = maxRechargeAmount;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -162,12 +210,14 @@ public class Currency {
     return Objects.equals(this.currencyNameShort, currency.currencyNameShort) &&
         Objects.equals(this.currencyPrefixD, currency.currencyPrefixD) &&
         Objects.equals(this.currencyPrefixC, currency.currencyPrefixC) &&
-        Objects.equals(this.currencyNameLong, currency.currencyNameLong);
+        Objects.equals(this.currencyNameLong, currency.currencyNameLong) &&
+        Objects.equals(this.minRechargeAmount, currency.minRechargeAmount) &&
+        Objects.equals(this.maxRechargeAmount, currency.maxRechargeAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(currencyNameShort, currencyPrefixD, currencyPrefixC, currencyNameLong);
+    return Objects.hash(currencyNameShort, currencyPrefixD, currencyPrefixC, currencyNameLong, minRechargeAmount, maxRechargeAmount);
   }
 
   @Override
@@ -178,6 +228,8 @@ public class Currency {
     sb.append("    currencyPrefixD: ").append(toIndentedString(currencyPrefixD)).append("\n");
     sb.append("    currencyPrefixC: ").append(toIndentedString(currencyPrefixC)).append("\n");
     sb.append("    currencyNameLong: ").append(toIndentedString(currencyNameLong)).append("\n");
+    sb.append("    minRechargeAmount: ").append(toIndentedString(minRechargeAmount)).append("\n");
+    sb.append("    maxRechargeAmount: ").append(toIndentedString(maxRechargeAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -196,7 +248,7 @@ public class Currency {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("currency_name_short", "currency_prefix_d", "currency_prefix_c", "currency_name_long"));
+    openapiFields = new HashSet<String>(Arrays.asList("currency_name_short", "currency_prefix_d", "currency_prefix_c", "currency_name_long", "min_recharge_amount", "max_recharge_amount"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -234,6 +286,12 @@ public class Currency {
       }
       if ((jsonObj.get("currency_name_long") != null && !jsonObj.get("currency_name_long").isJsonNull()) && !jsonObj.get("currency_name_long").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `currency_name_long` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_name_long").toString()));
+      }
+      if ((jsonObj.get("min_recharge_amount") != null && !jsonObj.get("min_recharge_amount").isJsonNull()) && !jsonObj.get("min_recharge_amount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `min_recharge_amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("min_recharge_amount").toString()));
+      }
+      if ((jsonObj.get("max_recharge_amount") != null && !jsonObj.get("max_recharge_amount").isJsonNull()) && !jsonObj.get("max_recharge_amount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `max_recharge_amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("max_recharge_amount").toString()));
       }
   }
 

@@ -14,14 +14,17 @@
 package ClickSend.Model;
 
 import java.util.Objects;
-import ClickSend.Model.ViewAllMmsCampaignsData;
+import ClickSend.Model.MmsCampaign;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,88 +54,216 @@ import ClickSend.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.23.0")
 public class ViewAllMmsCampaigns {
-  public static final String SERIALIZED_NAME_HTTP_CODE = "http_code";
-  @SerializedName(SERIALIZED_NAME_HTTP_CODE)
+  public static final String SERIALIZED_NAME_TOTAL = "total";
+  @SerializedName(SERIALIZED_NAME_TOTAL)
   @javax.annotation.Nullable
-  private Integer httpCode;
+  private Integer total;
 
-  public static final String SERIALIZED_NAME_RESPONSE_CODE = "response_code";
-  @SerializedName(SERIALIZED_NAME_RESPONSE_CODE)
+  public static final String SERIALIZED_NAME_PER_PAGE = "per_page";
+  @SerializedName(SERIALIZED_NAME_PER_PAGE)
   @javax.annotation.Nullable
-  private String responseCode;
+  private Integer perPage;
 
-  public static final String SERIALIZED_NAME_RESPONSE_MSG = "response_msg";
-  @SerializedName(SERIALIZED_NAME_RESPONSE_MSG)
+  public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
+  @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
   @javax.annotation.Nullable
-  private String responseMsg;
+  private Integer currentPage;
+
+  public static final String SERIALIZED_NAME_LAST_PAGE = "last_page";
+  @SerializedName(SERIALIZED_NAME_LAST_PAGE)
+  @javax.annotation.Nullable
+  private Integer lastPage;
+
+  public static final String SERIALIZED_NAME_NEXT_PAGE_URL = "next_page_url";
+  @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URL)
+  @javax.annotation.Nullable
+  private String nextPageUrl;
+
+  public static final String SERIALIZED_NAME_PREV_PAGE_URL = "prev_page_url";
+  @SerializedName(SERIALIZED_NAME_PREV_PAGE_URL)
+  @javax.annotation.Nullable
+  private String prevPageUrl;
+
+  public static final String SERIALIZED_NAME_FROM = "from";
+  @SerializedName(SERIALIZED_NAME_FROM)
+  @javax.annotation.Nullable
+  private Integer from;
+
+  public static final String SERIALIZED_NAME_TO = "to";
+  @SerializedName(SERIALIZED_NAME_TO)
+  @javax.annotation.Nullable
+  private Integer to;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private ViewAllMmsCampaignsData data;
+  private List<MmsCampaign> data = new ArrayList<>();
 
   public ViewAllMmsCampaigns() {
   }
 
-  public ViewAllMmsCampaigns httpCode(@javax.annotation.Nullable Integer httpCode) {
-    this.httpCode = httpCode;
+  public ViewAllMmsCampaigns total(@javax.annotation.Nullable Integer total) {
+    this.total = total;
     return this;
   }
 
   /**
-   * The HTTP status code of the response.
-   * @return httpCode
+   * The total number of items available for viewing.
+   * @return total
    */
   @javax.annotation.Nullable
-  public Integer getHttpCode() {
-    return httpCode;
+  public Integer getTotal() {
+    return total;
   }
 
-  public void setHttpCode(@javax.annotation.Nullable Integer httpCode) {
-    this.httpCode = httpCode;
+  public void setTotal(@javax.annotation.Nullable Integer total) {
+    this.total = total;
   }
 
 
-  public ViewAllMmsCampaigns responseCode(@javax.annotation.Nullable String responseCode) {
-    this.responseCode = responseCode;
+  public ViewAllMmsCampaigns perPage(@javax.annotation.Nullable Integer perPage) {
+    this.perPage = perPage;
     return this;
   }
 
   /**
-   * The response code indicating the status of the operation.
-   * @return responseCode
+   * The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
+   * @return perPage
    */
   @javax.annotation.Nullable
-  public String getResponseCode() {
-    return responseCode;
+  public Integer getPerPage() {
+    return perPage;
   }
 
-  public void setResponseCode(@javax.annotation.Nullable String responseCode) {
-    this.responseCode = responseCode;
+  public void setPerPage(@javax.annotation.Nullable Integer perPage) {
+    this.perPage = perPage;
   }
 
 
-  public ViewAllMmsCampaigns responseMsg(@javax.annotation.Nullable String responseMsg) {
-    this.responseMsg = responseMsg;
+  public ViewAllMmsCampaigns currentPage(@javax.annotation.Nullable Integer currentPage) {
+    this.currentPage = currentPage;
     return this;
   }
 
   /**
-   * A message describing the outcome of the operation.
-   * @return responseMsg
+   * The current page number.
+   * @return currentPage
    */
   @javax.annotation.Nullable
-  public String getResponseMsg() {
-    return responseMsg;
+  public Integer getCurrentPage() {
+    return currentPage;
   }
 
-  public void setResponseMsg(@javax.annotation.Nullable String responseMsg) {
-    this.responseMsg = responseMsg;
+  public void setCurrentPage(@javax.annotation.Nullable Integer currentPage) {
+    this.currentPage = currentPage;
   }
 
 
-  public ViewAllMmsCampaigns data(@javax.annotation.Nullable ViewAllMmsCampaignsData data) {
+  public ViewAllMmsCampaigns lastPage(@javax.annotation.Nullable Integer lastPage) {
+    this.lastPage = lastPage;
+    return this;
+  }
+
+  /**
+   * The last page number.
+   * @return lastPage
+   */
+  @javax.annotation.Nullable
+  public Integer getLastPage() {
+    return lastPage;
+  }
+
+  public void setLastPage(@javax.annotation.Nullable Integer lastPage) {
+    this.lastPage = lastPage;
+  }
+
+
+  public ViewAllMmsCampaigns nextPageUrl(@javax.annotation.Nullable String nextPageUrl) {
+    this.nextPageUrl = nextPageUrl;
+    return this;
+  }
+
+  /**
+   * A URL of the next page. It will return **null** if there’s no next page.
+   * @return nextPageUrl
+   */
+  @javax.annotation.Nullable
+  public String getNextPageUrl() {
+    return nextPageUrl;
+  }
+
+  public void setNextPageUrl(@javax.annotation.Nullable String nextPageUrl) {
+    this.nextPageUrl = nextPageUrl;
+  }
+
+
+  public ViewAllMmsCampaigns prevPageUrl(@javax.annotation.Nullable String prevPageUrl) {
+    this.prevPageUrl = prevPageUrl;
+    return this;
+  }
+
+  /**
+   * A URL of the previous page. It will return **null** if there’s no previous page.
+   * @return prevPageUrl
+   */
+  @javax.annotation.Nullable
+  public String getPrevPageUrl() {
+    return prevPageUrl;
+  }
+
+  public void setPrevPageUrl(@javax.annotation.Nullable String prevPageUrl) {
+    this.prevPageUrl = prevPageUrl;
+  }
+
+
+  public ViewAllMmsCampaigns from(@javax.annotation.Nullable Integer from) {
+    this.from = from;
+    return this;
+  }
+
+  /**
+   * The number of the first result in the current page.
+   * @return from
+   */
+  @javax.annotation.Nullable
+  public Integer getFrom() {
+    return from;
+  }
+
+  public void setFrom(@javax.annotation.Nullable Integer from) {
+    this.from = from;
+  }
+
+
+  public ViewAllMmsCampaigns to(@javax.annotation.Nullable Integer to) {
+    this.to = to;
+    return this;
+  }
+
+  /**
+   * The number of the last result in the current page.
+   * @return to
+   */
+  @javax.annotation.Nullable
+  public Integer getTo() {
+    return to;
+  }
+
+  public void setTo(@javax.annotation.Nullable Integer to) {
+    this.to = to;
+  }
+
+
+  public ViewAllMmsCampaigns data(@javax.annotation.Nullable List<MmsCampaign> data) {
     this.data = data;
+    return this;
+  }
+
+  public ViewAllMmsCampaigns addDataItem(MmsCampaign dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -141,11 +272,11 @@ public class ViewAllMmsCampaigns {
    * @return data
    */
   @javax.annotation.Nullable
-  public ViewAllMmsCampaignsData getData() {
+  public List<MmsCampaign> getData() {
     return data;
   }
 
-  public void setData(@javax.annotation.Nullable ViewAllMmsCampaignsData data) {
+  public void setData(@javax.annotation.Nullable List<MmsCampaign> data) {
     this.data = data;
   }
 
@@ -160,24 +291,45 @@ public class ViewAllMmsCampaigns {
       return false;
     }
     ViewAllMmsCampaigns viewAllMmsCampaigns = (ViewAllMmsCampaigns) o;
-    return Objects.equals(this.httpCode, viewAllMmsCampaigns.httpCode) &&
-        Objects.equals(this.responseCode, viewAllMmsCampaigns.responseCode) &&
-        Objects.equals(this.responseMsg, viewAllMmsCampaigns.responseMsg) &&
+    return Objects.equals(this.total, viewAllMmsCampaigns.total) &&
+        Objects.equals(this.perPage, viewAllMmsCampaigns.perPage) &&
+        Objects.equals(this.currentPage, viewAllMmsCampaigns.currentPage) &&
+        Objects.equals(this.lastPage, viewAllMmsCampaigns.lastPage) &&
+        Objects.equals(this.nextPageUrl, viewAllMmsCampaigns.nextPageUrl) &&
+        Objects.equals(this.prevPageUrl, viewAllMmsCampaigns.prevPageUrl) &&
+        Objects.equals(this.from, viewAllMmsCampaigns.from) &&
+        Objects.equals(this.to, viewAllMmsCampaigns.to) &&
         Objects.equals(this.data, viewAllMmsCampaigns.data);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(httpCode, responseCode, responseMsg, data);
+    return Objects.hash(total, perPage, currentPage, lastPage, nextPageUrl, prevPageUrl, from, to, data);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewAllMmsCampaigns {\n");
-    sb.append("    httpCode: ").append(toIndentedString(httpCode)).append("\n");
-    sb.append("    responseCode: ").append(toIndentedString(responseCode)).append("\n");
-    sb.append("    responseMsg: ").append(toIndentedString(responseMsg)).append("\n");
+    sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    sb.append("    perPage: ").append(toIndentedString(perPage)).append("\n");
+    sb.append("    currentPage: ").append(toIndentedString(currentPage)).append("\n");
+    sb.append("    lastPage: ").append(toIndentedString(lastPage)).append("\n");
+    sb.append("    nextPageUrl: ").append(toIndentedString(nextPageUrl)).append("\n");
+    sb.append("    prevPageUrl: ").append(toIndentedString(prevPageUrl)).append("\n");
+    sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -197,7 +349,7 @@ public class ViewAllMmsCampaigns {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("http_code", "response_code", "response_msg", "data"));
+    openapiFields = new HashSet<String>(Arrays.asList("total", "per_page", "current_page", "last_page", "next_page_url", "prev_page_url", "from", "to", "data"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -224,15 +376,25 @@ public class ViewAllMmsCampaigns {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("response_code") != null && !jsonObj.get("response_code").isJsonNull()) && !jsonObj.get("response_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `response_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_code").toString()));
+      if ((jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonNull()) && !jsonObj.get("next_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `next_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_page_url").toString()));
       }
-      if ((jsonObj.get("response_msg") != null && !jsonObj.get("response_msg").isJsonNull()) && !jsonObj.get("response_msg").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `response_msg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_msg").toString()));
+      if ((jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonNull()) && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
       }
-      // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ViewAllMmsCampaignsData.validateJsonElement(jsonObj.get("data"));
+        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+        if (jsonArraydata != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("data").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+          }
+
+          // validate the optional field `data` (array)
+          for (int i = 0; i < jsonArraydata.size(); i++) {
+            MmsCampaign.validateJsonElement(jsonArraydata.get(i));
+          };
+        }
       }
   }
 

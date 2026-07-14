@@ -13,11 +13,13 @@
 
 package ClickSend.Model;
 
+import ClickSend.Model.Currency;
 import ClickSend.Model.ViewAccountUsageDataEmailInner;
 import ClickSend.Model.ViewAccountUsageDataEmailTotal;
+import ClickSend.Model.ViewAccountUsageDataMmsInner;
 import ClickSend.Model.ViewAccountUsageDataSmsInner;
 import ClickSend.Model.ViewAccountUsageDataSmsTotal;
-import ClickSend.Model.ViewAccountUsageDataVoiceInner;
+import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,6 +55,14 @@ public class ViewAccountUsageDataTest {
     }
 
     /**
+     * Test the property 'mms'
+     */
+    @Test
+    public void mmsTest() {
+        // TODO: test mms
+    }
+
+    /**
      * Test the property 'voice'
      */
     @Test
@@ -82,6 +92,22 @@ public class ViewAccountUsageDataTest {
     @Test
     public void emailTest() {
         // TODO: test email
+    }
+
+    /**
+     * Test the property 'emailTransactional'
+     */
+    @Test
+    public void emailTransactionalTest() {
+        // TODO: test emailTransactional
+    }
+
+    /**
+     * Test the property 'postcards'
+     */
+    @Test
+    public void postcardsTest() {
+        // TODO: test postcards
     }
 
     /**
@@ -122,6 +148,38 @@ public class ViewAccountUsageDataTest {
     @Test
     public void emailTotalTest() {
         // TODO: test emailTotal
+    }
+
+    /**
+     * Test the property 'mmsTotal'
+     */
+    @Test
+    public void mmsTotalTest() {
+        // TODO: test mmsTotal
+    }
+
+    /**
+     * Test the property 'emailTransactionalTotal'
+     */
+    @Test
+    public void emailTransactionalTotalTest() {
+        // TODO: test emailTransactionalTotal
+    }
+
+    /**
+     * Test the property 'postcardsTotal'
+     */
+    @Test
+    public void postcardsTotalTest() {
+        // TODO: test postcardsTotal
+    }
+
+    /**
+     * Test the property 'currency'
+     */
+    @Test
+    public void currencyTest() {
+        // TODO: test currency
     }
 
 }

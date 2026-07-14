@@ -10,7 +10,7 @@
 |**httpCode** | **Integer** | The HTTP status code of the response. |  [optional] |
 |**responseCode** | **String** | The response code indicating the status of the operation. |  [optional] |
 |**responseMsg** | **String** | A message describing the outcome of the operation. |  [optional] |
-|**data** | [**ViewAllowedEmailsDataInner**](ViewAllowedEmailsDataInner.md) |  |  [optional] |
+|**data** | [**AddAllowedEmailData**](AddAllowedEmailData.md) |  |  [optional] |
 
 
 

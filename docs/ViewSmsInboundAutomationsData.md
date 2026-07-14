@@ -15,6 +15,10 @@
 |**prevPageUrl** | **String** | A URL of the previous page. It will return **null** if there’s no previous page. |  [optional] |
 |**from** | **Integer** | The number of the first result in the current page. |  [optional] |
 |**to** | **Integer** | The number of the last result in the current page. |  [optional] |
+|**firstPageUrl** | **String** | The URL of the first page of records. |  [optional] |
+|**lastPageUrl** | **String** | The URL of the last page of records. |  [optional] |
+|**path** | **String** | The base URL path used to build pagination links. |  [optional] |
+|**links** | [**List&lt;ViewSmsInboundAutomationsDataAllOfLinksInner&gt;**](ViewSmsInboundAutomationsDataAllOfLinksInner.md) | The list of pagination links. |  [optional] |
 |**data** | [**List&lt;SmsInboundRule&gt;**](SmsInboundRule.md) |  |  [optional] |
 
 

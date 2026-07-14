@@ -16,6 +16,7 @@
 |**label** | **String** | A label for the phone number. |  [optional] |
 |**status** | **String** | The status of the phone number. |  [optional] |
 |**verifiedTimestamp** | **OffsetDateTime** | The timestamp when the phone number was verified. |  [optional] |
+|**notifiedTimestamp** | **String** | The timestamp when the user was last notified about this number, if applicable. |  [optional] |
 |**isNearingExpiration** | **Boolean** | Indicates whether the phone number verification is nearing its expiration date: - **true:** The verification was completed more than 11 months ago and will expire soon. You should re-verify your phone number to maintain uninterrupted service. - **false:** The verification is still valid and not approaching expiration. |  [optional] |
 |**createdTimestamp** | **OffsetDateTime** | The timestamp when the record was created. |  [optional] |
 |**updatedTimestamp** | **OffsetDateTime** | The timestamp when the record was last updated. |  [optional] |

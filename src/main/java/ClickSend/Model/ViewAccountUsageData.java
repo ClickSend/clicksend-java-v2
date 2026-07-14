@@ -14,11 +14,13 @@
 package ClickSend.Model;
 
 import java.util.Objects;
+import ClickSend.Model.Currency;
 import ClickSend.Model.ViewAccountUsageDataEmailInner;
 import ClickSend.Model.ViewAccountUsageDataEmailTotal;
+import ClickSend.Model.ViewAccountUsageDataMmsInner;
 import ClickSend.Model.ViewAccountUsageDataSmsInner;
 import ClickSend.Model.ViewAccountUsageDataSmsTotal;
-import ClickSend.Model.ViewAccountUsageDataVoiceInner;
+import ClickSend.Model.ViewVoiceStatisticsDataTotalOutbound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -62,25 +64,40 @@ public class ViewAccountUsageData {
   @javax.annotation.Nullable
   private List<ViewAccountUsageDataSmsInner> sms = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_MMS = "mms";
+  @SerializedName(SERIALIZED_NAME_MMS)
+  @javax.annotation.Nullable
+  private List<ViewAccountUsageDataMmsInner> mms = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_VOICE = "voice";
   @SerializedName(SERIALIZED_NAME_VOICE)
   @javax.annotation.Nullable
-  private List<ViewAccountUsageDataVoiceInner> voice = new ArrayList<>();
+  private List<ViewAccountUsageDataMmsInner> voice = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FAX = "fax";
   @SerializedName(SERIALIZED_NAME_FAX)
   @javax.annotation.Nullable
-  private List<ViewAccountUsageDataVoiceInner> fax = new ArrayList<>();
+  private List<ViewAccountUsageDataMmsInner> fax = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_POST = "post";
   @SerializedName(SERIALIZED_NAME_POST)
   @javax.annotation.Nullable
-  private List<ViewAccountUsageDataVoiceInner> post = new ArrayList<>();
+  private List<ViewAccountUsageDataMmsInner> post = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   @javax.annotation.Nullable
   private List<ViewAccountUsageDataEmailInner> email = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_EMAIL_TRANSACTIONAL = "email_transactional";
+  @SerializedName(SERIALIZED_NAME_EMAIL_TRANSACTIONAL)
+  @javax.annotation.Nullable
+  private List<ViewAccountUsageDataEmailInner> emailTransactional = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_POSTCARDS = "postcards";
+  @SerializedName(SERIALIZED_NAME_POSTCARDS)
+  @javax.annotation.Nullable
+  private List<ViewAccountUsageDataMmsInner> postcards = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SMS_TOTAL = "sms_total";
   @SerializedName(SERIALIZED_NAME_SMS_TOTAL)
@@ -106,6 +123,26 @@ public class ViewAccountUsageData {
   @SerializedName(SERIALIZED_NAME_EMAIL_TOTAL)
   @javax.annotation.Nullable
   private ViewAccountUsageDataEmailTotal emailTotal;
+
+  public static final String SERIALIZED_NAME_MMS_TOTAL = "mms_total";
+  @SerializedName(SERIALIZED_NAME_MMS_TOTAL)
+  @javax.annotation.Nullable
+  private ViewVoiceStatisticsDataTotalOutbound mmsTotal;
+
+  public static final String SERIALIZED_NAME_EMAIL_TRANSACTIONAL_TOTAL = "email_transactional_total";
+  @SerializedName(SERIALIZED_NAME_EMAIL_TRANSACTIONAL_TOTAL)
+  @javax.annotation.Nullable
+  private ViewVoiceStatisticsDataTotalOutbound emailTransactionalTotal;
+
+  public static final String SERIALIZED_NAME_POSTCARDS_TOTAL = "postcards_total";
+  @SerializedName(SERIALIZED_NAME_POSTCARDS_TOTAL)
+  @javax.annotation.Nullable
+  private ViewVoiceStatisticsDataTotalOutbound postcardsTotal;
+
+  public static final String SERIALIZED_NAME_CURRENCY = "_currency";
+  @SerializedName(SERIALIZED_NAME_CURRENCY)
+  @javax.annotation.Nullable
+  private Currency currency;
 
   public ViewAccountUsageData() {
   }
@@ -137,12 +174,39 @@ public class ViewAccountUsageData {
   }
 
 
-  public ViewAccountUsageData voice(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> voice) {
+  public ViewAccountUsageData mms(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> mms) {
+    this.mms = mms;
+    return this;
+  }
+
+  public ViewAccountUsageData addMmsItem(ViewAccountUsageDataMmsInner mmsItem) {
+    if (this.mms == null) {
+      this.mms = new ArrayList<>();
+    }
+    this.mms.add(mmsItem);
+    return this;
+  }
+
+  /**
+   * Get mms
+   * @return mms
+   */
+  @javax.annotation.Nullable
+  public List<ViewAccountUsageDataMmsInner> getMms() {
+    return mms;
+  }
+
+  public void setMms(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> mms) {
+    this.mms = mms;
+  }
+
+
+  public ViewAccountUsageData voice(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> voice) {
     this.voice = voice;
     return this;
   }
 
-  public ViewAccountUsageData addVoiceItem(ViewAccountUsageDataVoiceInner voiceItem) {
+  public ViewAccountUsageData addVoiceItem(ViewAccountUsageDataMmsInner voiceItem) {
     if (this.voice == null) {
       this.voice = new ArrayList<>();
     }
@@ -155,21 +219,21 @@ public class ViewAccountUsageData {
    * @return voice
    */
   @javax.annotation.Nullable
-  public List<ViewAccountUsageDataVoiceInner> getVoice() {
+  public List<ViewAccountUsageDataMmsInner> getVoice() {
     return voice;
   }
 
-  public void setVoice(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> voice) {
+  public void setVoice(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> voice) {
     this.voice = voice;
   }
 
 
-  public ViewAccountUsageData fax(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> fax) {
+  public ViewAccountUsageData fax(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> fax) {
     this.fax = fax;
     return this;
   }
 
-  public ViewAccountUsageData addFaxItem(ViewAccountUsageDataVoiceInner faxItem) {
+  public ViewAccountUsageData addFaxItem(ViewAccountUsageDataMmsInner faxItem) {
     if (this.fax == null) {
       this.fax = new ArrayList<>();
     }
@@ -182,21 +246,21 @@ public class ViewAccountUsageData {
    * @return fax
    */
   @javax.annotation.Nullable
-  public List<ViewAccountUsageDataVoiceInner> getFax() {
+  public List<ViewAccountUsageDataMmsInner> getFax() {
     return fax;
   }
 
-  public void setFax(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> fax) {
+  public void setFax(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> fax) {
     this.fax = fax;
   }
 
 
-  public ViewAccountUsageData post(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> post) {
+  public ViewAccountUsageData post(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> post) {
     this.post = post;
     return this;
   }
 
-  public ViewAccountUsageData addPostItem(ViewAccountUsageDataVoiceInner postItem) {
+  public ViewAccountUsageData addPostItem(ViewAccountUsageDataMmsInner postItem) {
     if (this.post == null) {
       this.post = new ArrayList<>();
     }
@@ -209,11 +273,11 @@ public class ViewAccountUsageData {
    * @return post
    */
   @javax.annotation.Nullable
-  public List<ViewAccountUsageDataVoiceInner> getPost() {
+  public List<ViewAccountUsageDataMmsInner> getPost() {
     return post;
   }
 
-  public void setPost(@javax.annotation.Nullable List<ViewAccountUsageDataVoiceInner> post) {
+  public void setPost(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> post) {
     this.post = post;
   }
 
@@ -242,6 +306,60 @@ public class ViewAccountUsageData {
 
   public void setEmail(@javax.annotation.Nullable List<ViewAccountUsageDataEmailInner> email) {
     this.email = email;
+  }
+
+
+  public ViewAccountUsageData emailTransactional(@javax.annotation.Nullable List<ViewAccountUsageDataEmailInner> emailTransactional) {
+    this.emailTransactional = emailTransactional;
+    return this;
+  }
+
+  public ViewAccountUsageData addEmailTransactionalItem(ViewAccountUsageDataEmailInner emailTransactionalItem) {
+    if (this.emailTransactional == null) {
+      this.emailTransactional = new ArrayList<>();
+    }
+    this.emailTransactional.add(emailTransactionalItem);
+    return this;
+  }
+
+  /**
+   * Get emailTransactional
+   * @return emailTransactional
+   */
+  @javax.annotation.Nullable
+  public List<ViewAccountUsageDataEmailInner> getEmailTransactional() {
+    return emailTransactional;
+  }
+
+  public void setEmailTransactional(@javax.annotation.Nullable List<ViewAccountUsageDataEmailInner> emailTransactional) {
+    this.emailTransactional = emailTransactional;
+  }
+
+
+  public ViewAccountUsageData postcards(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> postcards) {
+    this.postcards = postcards;
+    return this;
+  }
+
+  public ViewAccountUsageData addPostcardsItem(ViewAccountUsageDataMmsInner postcardsItem) {
+    if (this.postcards == null) {
+      this.postcards = new ArrayList<>();
+    }
+    this.postcards.add(postcardsItem);
+    return this;
+  }
+
+  /**
+   * Get postcards
+   * @return postcards
+   */
+  @javax.annotation.Nullable
+  public List<ViewAccountUsageDataMmsInner> getPostcards() {
+    return postcards;
+  }
+
+  public void setPostcards(@javax.annotation.Nullable List<ViewAccountUsageDataMmsInner> postcards) {
+    this.postcards = postcards;
   }
 
 
@@ -340,6 +458,82 @@ public class ViewAccountUsageData {
   }
 
 
+  public ViewAccountUsageData mmsTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound mmsTotal) {
+    this.mmsTotal = mmsTotal;
+    return this;
+  }
+
+  /**
+   * Get mmsTotal
+   * @return mmsTotal
+   */
+  @javax.annotation.Nullable
+  public ViewVoiceStatisticsDataTotalOutbound getMmsTotal() {
+    return mmsTotal;
+  }
+
+  public void setMmsTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound mmsTotal) {
+    this.mmsTotal = mmsTotal;
+  }
+
+
+  public ViewAccountUsageData emailTransactionalTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound emailTransactionalTotal) {
+    this.emailTransactionalTotal = emailTransactionalTotal;
+    return this;
+  }
+
+  /**
+   * Get emailTransactionalTotal
+   * @return emailTransactionalTotal
+   */
+  @javax.annotation.Nullable
+  public ViewVoiceStatisticsDataTotalOutbound getEmailTransactionalTotal() {
+    return emailTransactionalTotal;
+  }
+
+  public void setEmailTransactionalTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound emailTransactionalTotal) {
+    this.emailTransactionalTotal = emailTransactionalTotal;
+  }
+
+
+  public ViewAccountUsageData postcardsTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound postcardsTotal) {
+    this.postcardsTotal = postcardsTotal;
+    return this;
+  }
+
+  /**
+   * Get postcardsTotal
+   * @return postcardsTotal
+   */
+  @javax.annotation.Nullable
+  public ViewVoiceStatisticsDataTotalOutbound getPostcardsTotal() {
+    return postcardsTotal;
+  }
+
+  public void setPostcardsTotal(@javax.annotation.Nullable ViewVoiceStatisticsDataTotalOutbound postcardsTotal) {
+    this.postcardsTotal = postcardsTotal;
+  }
+
+
+  public ViewAccountUsageData currency(@javax.annotation.Nullable Currency currency) {
+    this.currency = currency;
+    return this;
+  }
+
+  /**
+   * Get currency
+   * @return currency
+   */
+  @javax.annotation.Nullable
+  public Currency getCurrency() {
+    return currency;
+  }
+
+  public void setCurrency(@javax.annotation.Nullable Currency currency) {
+    this.currency = currency;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -351,20 +545,27 @@ public class ViewAccountUsageData {
     }
     ViewAccountUsageData viewAccountUsageData = (ViewAccountUsageData) o;
     return Objects.equals(this.sms, viewAccountUsageData.sms) &&
+        Objects.equals(this.mms, viewAccountUsageData.mms) &&
         Objects.equals(this.voice, viewAccountUsageData.voice) &&
         Objects.equals(this.fax, viewAccountUsageData.fax) &&
         Objects.equals(this.post, viewAccountUsageData.post) &&
         Objects.equals(this.email, viewAccountUsageData.email) &&
+        Objects.equals(this.emailTransactional, viewAccountUsageData.emailTransactional) &&
+        Objects.equals(this.postcards, viewAccountUsageData.postcards) &&
         Objects.equals(this.smsTotal, viewAccountUsageData.smsTotal) &&
         Objects.equals(this.voiceTotal, viewAccountUsageData.voiceTotal) &&
         Objects.equals(this.faxTotal, viewAccountUsageData.faxTotal) &&
         Objects.equals(this.postTotal, viewAccountUsageData.postTotal) &&
-        Objects.equals(this.emailTotal, viewAccountUsageData.emailTotal);
+        Objects.equals(this.emailTotal, viewAccountUsageData.emailTotal) &&
+        Objects.equals(this.mmsTotal, viewAccountUsageData.mmsTotal) &&
+        Objects.equals(this.emailTransactionalTotal, viewAccountUsageData.emailTransactionalTotal) &&
+        Objects.equals(this.postcardsTotal, viewAccountUsageData.postcardsTotal) &&
+        Objects.equals(this.currency, viewAccountUsageData.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sms, voice, fax, post, email, smsTotal, voiceTotal, faxTotal, postTotal, emailTotal);
+    return Objects.hash(sms, mms, voice, fax, post, email, emailTransactional, postcards, smsTotal, voiceTotal, faxTotal, postTotal, emailTotal, mmsTotal, emailTransactionalTotal, postcardsTotal, currency);
   }
 
   @Override
@@ -372,15 +573,22 @@ public class ViewAccountUsageData {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewAccountUsageData {\n");
     sb.append("    sms: ").append(toIndentedString(sms)).append("\n");
+    sb.append("    mms: ").append(toIndentedString(mms)).append("\n");
     sb.append("    voice: ").append(toIndentedString(voice)).append("\n");
     sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
     sb.append("    post: ").append(toIndentedString(post)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailTransactional: ").append(toIndentedString(emailTransactional)).append("\n");
+    sb.append("    postcards: ").append(toIndentedString(postcards)).append("\n");
     sb.append("    smsTotal: ").append(toIndentedString(smsTotal)).append("\n");
     sb.append("    voiceTotal: ").append(toIndentedString(voiceTotal)).append("\n");
     sb.append("    faxTotal: ").append(toIndentedString(faxTotal)).append("\n");
     sb.append("    postTotal: ").append(toIndentedString(postTotal)).append("\n");
     sb.append("    emailTotal: ").append(toIndentedString(emailTotal)).append("\n");
+    sb.append("    mmsTotal: ").append(toIndentedString(mmsTotal)).append("\n");
+    sb.append("    emailTransactionalTotal: ").append(toIndentedString(emailTransactionalTotal)).append("\n");
+    sb.append("    postcardsTotal: ").append(toIndentedString(postcardsTotal)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -399,7 +607,7 @@ public class ViewAccountUsageData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("sms", "voice", "fax", "post", "email", "sms_total", "voice_total", "fax_total", "post_total", "email_total"));
+    openapiFields = new HashSet<String>(Arrays.asList("sms", "mms", "voice", "fax", "post", "email", "email_transactional", "postcards", "sms_total", "voice_total", "fax_total", "post_total", "email_total", "mms_total", "email_transactional_total", "postcards_total", "_currency"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -440,6 +648,20 @@ public class ViewAccountUsageData {
           };
         }
       }
+      if (jsonObj.get("mms") != null && !jsonObj.get("mms").isJsonNull()) {
+        JsonArray jsonArraymms = jsonObj.getAsJsonArray("mms");
+        if (jsonArraymms != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("mms").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `mms` to be an array in the JSON string but got `%s`", jsonObj.get("mms").toString()));
+          }
+
+          // validate the optional field `mms` (array)
+          for (int i = 0; i < jsonArraymms.size(); i++) {
+            ViewAccountUsageDataMmsInner.validateJsonElement(jsonArraymms.get(i));
+          };
+        }
+      }
       if (jsonObj.get("voice") != null && !jsonObj.get("voice").isJsonNull()) {
         JsonArray jsonArrayvoice = jsonObj.getAsJsonArray("voice");
         if (jsonArrayvoice != null) {
@@ -450,7 +672,7 @@ public class ViewAccountUsageData {
 
           // validate the optional field `voice` (array)
           for (int i = 0; i < jsonArrayvoice.size(); i++) {
-            ViewAccountUsageDataVoiceInner.validateJsonElement(jsonArrayvoice.get(i));
+            ViewAccountUsageDataMmsInner.validateJsonElement(jsonArrayvoice.get(i));
           };
         }
       }
@@ -464,7 +686,7 @@ public class ViewAccountUsageData {
 
           // validate the optional field `fax` (array)
           for (int i = 0; i < jsonArrayfax.size(); i++) {
-            ViewAccountUsageDataVoiceInner.validateJsonElement(jsonArrayfax.get(i));
+            ViewAccountUsageDataMmsInner.validateJsonElement(jsonArrayfax.get(i));
           };
         }
       }
@@ -478,7 +700,7 @@ public class ViewAccountUsageData {
 
           // validate the optional field `post` (array)
           for (int i = 0; i < jsonArraypost.size(); i++) {
-            ViewAccountUsageDataVoiceInner.validateJsonElement(jsonArraypost.get(i));
+            ViewAccountUsageDataMmsInner.validateJsonElement(jsonArraypost.get(i));
           };
         }
       }
@@ -493,6 +715,34 @@ public class ViewAccountUsageData {
           // validate the optional field `email` (array)
           for (int i = 0; i < jsonArrayemail.size(); i++) {
             ViewAccountUsageDataEmailInner.validateJsonElement(jsonArrayemail.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("email_transactional") != null && !jsonObj.get("email_transactional").isJsonNull()) {
+        JsonArray jsonArrayemailTransactional = jsonObj.getAsJsonArray("email_transactional");
+        if (jsonArrayemailTransactional != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("email_transactional").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `email_transactional` to be an array in the JSON string but got `%s`", jsonObj.get("email_transactional").toString()));
+          }
+
+          // validate the optional field `email_transactional` (array)
+          for (int i = 0; i < jsonArrayemailTransactional.size(); i++) {
+            ViewAccountUsageDataEmailInner.validateJsonElement(jsonArrayemailTransactional.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("postcards") != null && !jsonObj.get("postcards").isJsonNull()) {
+        JsonArray jsonArraypostcards = jsonObj.getAsJsonArray("postcards");
+        if (jsonArraypostcards != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("postcards").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `postcards` to be an array in the JSON string but got `%s`", jsonObj.get("postcards").toString()));
+          }
+
+          // validate the optional field `postcards` (array)
+          for (int i = 0; i < jsonArraypostcards.size(); i++) {
+            ViewAccountUsageDataMmsInner.validateJsonElement(jsonArraypostcards.get(i));
           };
         }
       }
@@ -515,6 +765,22 @@ public class ViewAccountUsageData {
       // validate the optional field `email_total`
       if (jsonObj.get("email_total") != null && !jsonObj.get("email_total").isJsonNull()) {
         ViewAccountUsageDataEmailTotal.validateJsonElement(jsonObj.get("email_total"));
+      }
+      // validate the optional field `mms_total`
+      if (jsonObj.get("mms_total") != null && !jsonObj.get("mms_total").isJsonNull()) {
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("mms_total"));
+      }
+      // validate the optional field `email_transactional_total`
+      if (jsonObj.get("email_transactional_total") != null && !jsonObj.get("email_transactional_total").isJsonNull()) {
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("email_transactional_total"));
+      }
+      // validate the optional field `postcards_total`
+      if (jsonObj.get("postcards_total") != null && !jsonObj.get("postcards_total").isJsonNull()) {
+        ViewVoiceStatisticsDataTotalOutbound.validateJsonElement(jsonObj.get("postcards_total"));
+      }
+      // validate the optional field `_currency`
+      if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
+        Currency.validateJsonElement(jsonObj.get("_currency"));
       }
   }
 

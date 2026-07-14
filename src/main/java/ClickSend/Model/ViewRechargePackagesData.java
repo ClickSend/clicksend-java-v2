@@ -59,7 +59,7 @@ public class ViewRechargePackagesData {
   @javax.annotation.Nullable
   private List<ViewRechargePackagesDataPackagesInner> packages = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_CURRENCY = "_currency";
+  public static final String SERIALIZED_NAME_CURRENCY = "currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
   @javax.annotation.Nullable
   private Currency currency;
@@ -156,7 +156,7 @@ public class ViewRechargePackagesData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("packages", "_currency"));
+    openapiFields = new HashSet<String>(Arrays.asList("packages", "currency"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
@@ -197,9 +197,9 @@ public class ViewRechargePackagesData {
           };
         }
       }
-      // validate the optional field `_currency`
-      if (jsonObj.get("_currency") != null && !jsonObj.get("_currency").isJsonNull()) {
-        Currency.validateJsonElement(jsonObj.get("_currency"));
+      // validate the optional field `currency`
+      if (jsonObj.get("currency") != null && !jsonObj.get("currency").isJsonNull()) {
+        Currency.validateJsonElement(jsonObj.get("currency"));
       }
   }
 

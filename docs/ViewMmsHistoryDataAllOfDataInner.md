@@ -11,9 +11,13 @@
 |**date** | **String** | The date of the message. |  [optional] |
 |**to** | **String** | The recipient of the message. |  [optional] |
 |**body** | **String** | The body of the message. |  [optional] |
+|**subject** | **String** | The subject of the message. |  [optional] |
+|**priority** | **Integer** | The priority of the message. |  [optional] |
+|**mediaFileUrl** | **String** | A temporary, signed URL to download the message&#39;s media attachment. |  [optional] |
 |**status** | **String** | The status of the message. |  [optional] |
 |**from** | **String** | The sender of the message. |  [optional] |
 |**schedule** | **String** | The schedule time of the message. |  [optional] |
+|**dateAdded** | **Integer** | The Unix timestamp when the message was added. |  [optional] |
 |**statusCode** | **String** | The status code (if applicable). |  [optional] |
 |**statusText** | **String** | The status text (if applicable). |  [optional] |
 |**errorCode** | **String** | The error code (if applicable). |  [optional] |

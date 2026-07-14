@@ -14,6 +14,7 @@
 package ClickSend.Model;
 
 import java.util.Objects;
+import ClickSend.Model.ViewVoiceLanguagesDataInnerGender;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -63,7 +64,7 @@ public class ViewVoiceLanguagesDataInner {
   public static final String SERIALIZED_NAME_GENDER = "gender";
   @SerializedName(SERIALIZED_NAME_GENDER)
   @javax.annotation.Nullable
-  private String gender;
+  private ViewVoiceLanguagesDataInnerGender gender;
 
   public ViewVoiceLanguagesDataInner() {
   }
@@ -106,21 +107,21 @@ public class ViewVoiceLanguagesDataInner {
   }
 
 
-  public ViewVoiceLanguagesDataInner gender(@javax.annotation.Nullable String gender) {
+  public ViewVoiceLanguagesDataInner gender(@javax.annotation.Nullable ViewVoiceLanguagesDataInnerGender gender) {
     this.gender = gender;
     return this;
   }
 
   /**
-   * The gender of the language.
+   * Get gender
    * @return gender
    */
   @javax.annotation.Nullable
-  public String getGender() {
+  public ViewVoiceLanguagesDataInnerGender getGender() {
     return gender;
   }
 
-  public void setGender(@javax.annotation.Nullable String gender) {
+  public void setGender(@javax.annotation.Nullable ViewVoiceLanguagesDataInnerGender gender) {
     this.gender = gender;
   }
 
@@ -203,8 +204,9 @@ public class ViewVoiceLanguagesDataInner {
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
-      if ((jsonObj.get("gender") != null && !jsonObj.get("gender").isJsonNull()) && !jsonObj.get("gender").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `gender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gender").toString()));
+      // validate the optional field `gender`
+      if (jsonObj.get("gender") != null && !jsonObj.get("gender").isJsonNull()) {
+        ViewVoiceLanguagesDataInnerGender.validateJsonElement(jsonObj.get("gender"));
       }
   }
 

@@ -48,6 +48,22 @@ public class VoiceMessageTest {
     }
 
     /**
+     * Test the property 'dateAdded'
+     */
+    @Test
+    public void dateAddedTest() {
+        // TODO: test dateAdded
+    }
+
+    /**
+     * Test the property 'listId'
+     */
+    @Test
+    public void listIdTest() {
+        // TODO: test listId
+    }
+
+    /**
      * Test the property 'to'
      */
     @Test
@@ -176,11 +192,59 @@ public class VoiceMessageTest {
     }
 
     /**
+     * Test the property 'machineDetected'
+     */
+    @Test
+    public void machineDetectedTest() {
+        // TODO: test machineDetected
+    }
+
+    /**
+     * Test the property 'digits'
+     */
+    @Test
+    public void digitsTest() {
+        // TODO: test digits
+    }
+
+    /**
+     * Test the property 'carrier'
+     */
+    @Test
+    public void carrierTest() {
+        // TODO: test carrier
+    }
+
+    /**
+     * Test the property 'statusCode'
+     */
+    @Test
+    public void statusCodeTest() {
+        // TODO: test statusCode
+    }
+
+    /**
+     * Test the property 'statusText'
+     */
+    @Test
+    public void statusTextTest() {
+        // TODO: test statusText
+    }
+
+    /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
         // TODO: test status
+    }
+
+    /**
+     * Test the property 'apiUsername'
+     */
+    @Test
+    public void apiUsernameTest() {
+        // TODO: test apiUsername
     }
 
 }
