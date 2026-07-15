@@ -18,7 +18,7 @@
 |**voice** | **String** | The voice of the message. |  [optional] |
 |**schedule** | [**VoiceMessageSchedule**](VoiceMessageSchedule.md) |  |  [optional] |
 |**messageId** | **String** | The ID of the message. |  [optional] |
-|**messageParts** | **Integer** | The number of parts in the message. |  [optional] |
+|**messageParts** | [**VoiceMessageSchedule**](VoiceMessageSchedule.md) |  |  [optional] |
 |**messagePrice** | **String** | The price of the message. |  [optional] |
 |**customString** | **String** | The custom string of the message. |  [optional] |
 |**userId** | **BigDecimal** | The ID of the user. |  [optional] |

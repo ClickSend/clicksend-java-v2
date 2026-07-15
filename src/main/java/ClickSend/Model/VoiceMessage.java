@@ -111,7 +111,7 @@ public class VoiceMessage {
   public static final String SERIALIZED_NAME_MESSAGE_PARTS = "message_parts";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PARTS)
   @javax.annotation.Nullable
-  private Integer messageParts;
+  private VoiceMessageSchedule messageParts;
 
   public static final String SERIALIZED_NAME_MESSAGE_PRICE = "message_price";
   @SerializedName(SERIALIZED_NAME_MESSAGE_PRICE)
@@ -395,21 +395,21 @@ public class VoiceMessage {
   }
 
 
-  public VoiceMessage messageParts(@javax.annotation.Nullable Integer messageParts) {
+  public VoiceMessage messageParts(@javax.annotation.Nullable VoiceMessageSchedule messageParts) {
     this.messageParts = messageParts;
     return this;
   }
 
   /**
-   * The number of parts in the message.
+   * Get messageParts
    * @return messageParts
    */
   @javax.annotation.Nullable
-  public Integer getMessageParts() {
+  public VoiceMessageSchedule getMessageParts() {
     return messageParts;
   }
 
-  public void setMessageParts(@javax.annotation.Nullable Integer messageParts) {
+  public void setMessageParts(@javax.annotation.Nullable VoiceMessageSchedule messageParts) {
     this.messageParts = messageParts;
   }
 
@@ -839,6 +839,10 @@ public class VoiceMessage {
       }
       if ((jsonObj.get("message_id") != null && !jsonObj.get("message_id").isJsonNull()) && !jsonObj.get("message_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_id").toString()));
+      }
+      // validate the optional field `message_parts`
+      if (jsonObj.get("message_parts") != null && !jsonObj.get("message_parts").isJsonNull()) {
+        VoiceMessageSchedule.validateJsonElement(jsonObj.get("message_parts"));
       }
       if ((jsonObj.get("message_price") != null && !jsonObj.get("message_price").isJsonNull()) && !jsonObj.get("message_price").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `message_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message_price").toString()));

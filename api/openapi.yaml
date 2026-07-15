@@ -46013,7 +46013,7 @@ components:
         voice: female
         schedule: 1436874701
         message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-        message_parts: 1
+        message_parts: 1436874701
         message_price: "0.07"
         custom_string: this is a test
         user_id: 1
@@ -46075,9 +46075,7 @@ components:
           example: BF7AD270-0DE2-418B-B606-71D527D9C1AE
           type: string
         message_parts:
-          description: The number of parts in the message.
-          example: 1
-          type: integer
+          $ref: "#/components/schemas/voice_message_schedule"
         message_price:
           description: The price of the message.
           example: "0.07"
@@ -46161,7 +46159,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -46187,7 +46185,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -46245,7 +46243,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -46271,7 +46269,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -46523,7 +46521,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -46549,7 +46547,7 @@ components:
             voice: female
             schedule: 1436874701
             message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-            message_parts: 1
+            message_parts: 1436874701
             message_price: "0.07"
             custom_string: this is a test
             user_id: 1
@@ -58221,7 +58219,7 @@ components:
           voice: female
           schedule: 1436874701
           message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-          message_parts: 1
+          message_parts: 1436874701
           message_price: "0.07"
           custom_string: this is a test
           user_id: 1
@@ -58247,7 +58245,7 @@ components:
           voice: female
           schedule: 1436874701
           message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-          message_parts: 1
+          message_parts: 1436874701
           message_price: "0.07"
           custom_string: this is a test
           user_id: 1
@@ -58402,7 +58400,7 @@ components:
           voice: female
           schedule: 1436874701
           message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-          message_parts: 1
+          message_parts: 1436874701
           message_price: "0.07"
           custom_string: this is a test
           user_id: 1
@@ -58428,7 +58426,7 @@ components:
           voice: female
           schedule: 1436874701
           message_id: BF7AD270-0DE2-418B-B606-71D527D9C1AE
-          message_parts: 1
+          message_parts: 1436874701
           message_price: "0.07"
           custom_string: this is a test
           user_id: 1
