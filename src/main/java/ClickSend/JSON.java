@@ -409,10 +409,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsage.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataEmailInner.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataEmailTotal.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataMmsInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataSmsInner.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAccountUsageDataSmsTotal.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllEmailCampaigns.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllEmailCampaignsData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewAllMmsCampaigns.CustomTypeAdapterFactory());
@@ -535,6 +532,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.ViewYourReturnAddressesData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.VoiceDeliveryReceiptRule.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.VoiceMessage.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.VoiceMessageSchedule.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ClickSend.Model.VoiceReceipt.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();
     }

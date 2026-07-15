@@ -92,7 +92,7 @@ public class SmsCampaign {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private String schedule;
+  private Integer schedule;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -102,7 +102,7 @@ public class SmsCampaign {
   public static final String SERIALIZED_NAME_DATE_ADDED = "date_added";
   @SerializedName(SERIALIZED_NAME_DATE_ADDED)
   @javax.annotation.Nullable
-  private String dateAdded;
+  private Integer dateAdded;
 
   public static final String SERIALIZED_NAME_CUSTOM_STRING = "custom_string";
   @SerializedName(SERIALIZED_NAME_CUSTOM_STRING)
@@ -275,7 +275,7 @@ public class SmsCampaign {
   }
 
 
-  public SmsCampaign schedule(@javax.annotation.Nullable String schedule) {
+  public SmsCampaign schedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
     return this;
   }
@@ -285,11 +285,11 @@ public class SmsCampaign {
    * @return schedule
    */
   @javax.annotation.Nullable
-  public String getSchedule() {
+  public Integer getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable String schedule) {
+  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
   }
 
@@ -313,7 +313,7 @@ public class SmsCampaign {
   }
 
 
-  public SmsCampaign dateAdded(@javax.annotation.Nullable String dateAdded) {
+  public SmsCampaign dateAdded(@javax.annotation.Nullable Integer dateAdded) {
     this.dateAdded = dateAdded;
     return this;
   }
@@ -323,11 +323,11 @@ public class SmsCampaign {
    * @return dateAdded
    */
   @javax.annotation.Nullable
-  public String getDateAdded() {
+  public Integer getDateAdded() {
     return dateAdded;
   }
 
-  public void setDateAdded(@javax.annotation.Nullable String dateAdded) {
+  public void setDateAdded(@javax.annotation.Nullable Integer dateAdded) {
     this.dateAdded = dateAdded;
   }
 
@@ -593,14 +593,8 @@ public class SmsCampaign {
       if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));
       }
-      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
-      }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("date_added") != null && !jsonObj.get("date_added").isJsonNull()) && !jsonObj.get("date_added").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date_added` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date_added").toString()));
       }
       if ((jsonObj.get("custom_string") != null && !jsonObj.get("custom_string").isJsonNull()) && !jsonObj.get("custom_string").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `custom_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custom_string").toString()));

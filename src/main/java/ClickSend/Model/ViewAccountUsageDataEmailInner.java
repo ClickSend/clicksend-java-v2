@@ -20,6 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -69,7 +70,7 @@ public class ViewAccountUsageDataEmailInner {
   public static final String SERIALIZED_NAME_TOTAL_PRICE = "total_price";
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
   @javax.annotation.Nullable
-  private String totalPrice;
+  private BigDecimal totalPrice;
 
   public static final String SERIALIZED_NAME_NOTES = "notes";
   @SerializedName(SERIALIZED_NAME_NOTES)
@@ -136,7 +137,7 @@ public class ViewAccountUsageDataEmailInner {
   }
 
 
-  public ViewAccountUsageDataEmailInner totalPrice(@javax.annotation.Nullable String totalPrice) {
+  public ViewAccountUsageDataEmailInner totalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
     this.totalPrice = totalPrice;
     return this;
   }
@@ -146,11 +147,11 @@ public class ViewAccountUsageDataEmailInner {
    * @return totalPrice
    */
   @javax.annotation.Nullable
-  public String getTotalPrice() {
+  public BigDecimal getTotalPrice() {
     return totalPrice;
   }
 
-  public void setTotalPrice(@javax.annotation.Nullable String totalPrice) {
+  public void setTotalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
     this.totalPrice = totalPrice;
   }
 
@@ -263,9 +264,6 @@ public class ViewAccountUsageDataEmailInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("username") != null && !jsonObj.get("username").isJsonNull()) && !jsonObj.get("username").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
-      }
-      if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
       }
       if ((jsonObj.get("notes") != null && !jsonObj.get("notes").isJsonNull()) && !jsonObj.get("notes").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notes").toString()));

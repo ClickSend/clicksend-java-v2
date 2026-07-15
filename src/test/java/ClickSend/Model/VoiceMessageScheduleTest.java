@@ -13,44 +13,21 @@
 
 package ClickSend.Model;
 
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ViewAccountUsageDataEmailTotal
+ * Model tests for VoiceMessageSchedule
  */
-public class ViewAccountUsageDataEmailTotalTest {
-    private final ViewAccountUsageDataEmailTotal model = new ViewAccountUsageDataEmailTotal();
+public class VoiceMessageScheduleTest {
+    private final VoiceMessageSchedule model = new VoiceMessageSchedule();
 
     /**
-     * Model tests for ViewAccountUsageDataEmailTotal
+     * Model tests for VoiceMessageSchedule
      */
     @Test
-    public void testViewAccountUsageDataEmailTotal() {
-        // TODO: test ViewAccountUsageDataEmailTotal
-    }
-
-    /**
-     * Test the property 'count'
-     */
-    @Test
-    public void countTest() {
-        // TODO: test count
-    }
-
-    /**
-     * Test the property 'price'
-     */
-    @Test
-    public void priceTest() {
-        // TODO: test price
+    public void testVoiceMessageSchedule() {
+        // TODO: test VoiceMessageSchedule
     }
 
 }

@@ -16,9 +16,9 @@
 |**from** | **String** | The sender&#39;s phone number. |  [optional] |
 |**lang** | **String** | The language of the message. |  [optional] |
 |**voice** | **String** | The voice of the message. |  [optional] |
-|**schedule** | **String** | The timestamp when the message should be sent. Returned as a string since it may be an empty string when no schedule was set. |  [optional] |
+|**schedule** | [**VoiceMessageSchedule**](VoiceMessageSchedule.md) |  |  [optional] |
 |**messageId** | **String** | The ID of the message. |  [optional] |
-|**messageParts** | **String** | The number of parts in the message. |  [optional] |
+|**messageParts** | **Integer** | The number of parts in the message. |  [optional] |
 |**messagePrice** | **String** | The price of the message. |  [optional] |
 |**customString** | **String** | The custom string of the message. |  [optional] |
 |**userId** | **BigDecimal** | The ID of the user. |  [optional] |

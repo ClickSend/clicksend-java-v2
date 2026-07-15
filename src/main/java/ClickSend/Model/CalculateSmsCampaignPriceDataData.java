@@ -63,7 +63,7 @@ public class CalculateSmsCampaignPriceDataData {
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
   @javax.annotation.Nullable
-  private String schedule;
+  private Integer schedule;
 
   public CalculateSmsCampaignPriceDataData() {
   }
@@ -106,7 +106,7 @@ public class CalculateSmsCampaignPriceDataData {
   }
 
 
-  public CalculateSmsCampaignPriceDataData schedule(@javax.annotation.Nullable String schedule) {
+  public CalculateSmsCampaignPriceDataData schedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
     return this;
   }
@@ -116,11 +116,11 @@ public class CalculateSmsCampaignPriceDataData {
    * @return schedule
    */
   @javax.annotation.Nullable
-  public String getSchedule() {
+  public Integer getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(@javax.annotation.Nullable String schedule) {
+  public void setSchedule(@javax.annotation.Nullable Integer schedule) {
     this.schedule = schedule;
   }
 
@@ -202,9 +202,6 @@ public class CalculateSmsCampaignPriceDataData {
       }
       if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));
-      }
-      if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
       }
   }
 

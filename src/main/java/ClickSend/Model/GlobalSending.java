@@ -76,7 +76,7 @@ public class GlobalSending {
   public static final String SERIALIZED_NAME_AGREED_AT = "agreed_at";
   @SerializedName(SERIALIZED_NAME_AGREED_AT)
   @javax.annotation.Nullable
-  private String agreedAt;
+  private Integer agreedAt;
 
   public static final String SERIALIZED_NAME_REGISTRATION_ENTITY = "registration_entity";
   @SerializedName(SERIALIZED_NAME_REGISTRATION_ENTITY)
@@ -222,7 +222,7 @@ public class GlobalSending {
   }
 
 
-  public GlobalSending agreedAt(@javax.annotation.Nullable String agreedAt) {
+  public GlobalSending agreedAt(@javax.annotation.Nullable Integer agreedAt) {
     this.agreedAt = agreedAt;
     return this;
   }
@@ -232,11 +232,11 @@ public class GlobalSending {
    * @return agreedAt
    */
   @javax.annotation.Nullable
-  public String getAgreedAt() {
+  public Integer getAgreedAt() {
     return agreedAt;
   }
 
-  public void setAgreedAt(@javax.annotation.Nullable String agreedAt) {
+  public void setAgreedAt(@javax.annotation.Nullable Integer agreedAt) {
     this.agreedAt = agreedAt;
   }
 
@@ -609,9 +609,6 @@ public class GlobalSending {
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
-      }
-      if ((jsonObj.get("agreed_at") != null && !jsonObj.get("agreed_at").isJsonNull()) && !jsonObj.get("agreed_at").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `agreed_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agreed_at").toString()));
       }
       // validate the optional field `registration_entity`
       if (jsonObj.get("registration_entity") != null && !jsonObj.get("registration_entity").isJsonNull()) {

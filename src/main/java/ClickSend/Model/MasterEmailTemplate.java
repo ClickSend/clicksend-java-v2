@@ -65,7 +65,7 @@ public class MasterEmailTemplate {
   public static final String SERIALIZED_NAME_DATE_ADDED = "date_added";
   @SerializedName(SERIALIZED_NAME_DATE_ADDED)
   @javax.annotation.Nullable
-  private String dateAdded;
+  private Integer dateAdded;
 
   public static final String SERIALIZED_NAME_BODY = "body";
   @SerializedName(SERIALIZED_NAME_BODY)
@@ -118,7 +118,7 @@ public class MasterEmailTemplate {
   }
 
 
-  public MasterEmailTemplate dateAdded(@javax.annotation.Nullable String dateAdded) {
+  public MasterEmailTemplate dateAdded(@javax.annotation.Nullable Integer dateAdded) {
     this.dateAdded = dateAdded;
     return this;
   }
@@ -128,11 +128,11 @@ public class MasterEmailTemplate {
    * @return dateAdded
    */
   @javax.annotation.Nullable
-  public String getDateAdded() {
+  public Integer getDateAdded() {
     return dateAdded;
   }
 
-  public void setDateAdded(@javax.annotation.Nullable String dateAdded) {
+  public void setDateAdded(@javax.annotation.Nullable Integer dateAdded) {
     this.dateAdded = dateAdded;
   }
 
@@ -264,9 +264,6 @@ public class MasterEmailTemplate {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("template_name") != null && !jsonObj.get("template_name").isJsonNull()) && !jsonObj.get("template_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `template_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_name").toString()));
-      }
-      if ((jsonObj.get("date_added") != null && !jsonObj.get("date_added").isJsonNull()) && !jsonObj.get("date_added").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `date_added` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date_added").toString()));
       }
       if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));

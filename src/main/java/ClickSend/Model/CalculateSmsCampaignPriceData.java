@@ -22,7 +22,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -61,7 +60,7 @@ public class CalculateSmsCampaignPriceData {
   public static final String SERIALIZED_NAME_TOTAL_PRICE = "total_price";
   @SerializedName(SERIALIZED_NAME_TOTAL_PRICE)
   @javax.annotation.Nullable
-  private BigDecimal totalPrice;
+  private String totalPrice;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -95,7 +94,7 @@ public class CalculateSmsCampaignPriceData {
   }
 
 
-  public CalculateSmsCampaignPriceData totalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
+  public CalculateSmsCampaignPriceData totalPrice(@javax.annotation.Nullable String totalPrice) {
     this.totalPrice = totalPrice;
     return this;
   }
@@ -105,11 +104,11 @@ public class CalculateSmsCampaignPriceData {
    * @return totalPrice
    */
   @javax.annotation.Nullable
-  public BigDecimal getTotalPrice() {
+  public String getTotalPrice() {
     return totalPrice;
   }
 
-  public void setTotalPrice(@javax.annotation.Nullable BigDecimal totalPrice) {
+  public void setTotalPrice(@javax.annotation.Nullable String totalPrice) {
     this.totalPrice = totalPrice;
   }
 
@@ -226,6 +225,9 @@ public class CalculateSmsCampaignPriceData {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("total_price") != null && !jsonObj.get("total_price").isJsonNull()) && !jsonObj.get("total_price").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `total_price` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_price").toString()));
+      }
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         CalculateSmsCampaignPriceDataData.validateJsonElement(jsonObj.get("data"));
