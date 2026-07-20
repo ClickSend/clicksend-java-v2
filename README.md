@@ -44,15 +44,63 @@ public class Example {
         basicAuth.setPassword(System.getenv("CLICKSEND_API_KEY"));
 
         SmsApi apiInstance = new SmsApi(defaultClient);
-        SmsMessageCollection smsMessageCollection = new SmsMessageCollection();
+        SendSmsRequest sendSmsRequest = new SendSmsRequest()
+            .addMessagesItem(new SendSmsRequestMessagesInner()
+                .body("Hello from ClickSend!")
+                .to("+61411111111")
+                .source("sdk"));
 
         try {
-            SmsMessageResponse result = apiInstance.smsSendPost(smsMessageCollection);
+            SendSms result = apiInstance.sendSms(null, sendSmsRequest);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SmsApi#smsSendPost: " + e.getMessage());
+            System.err.println("Exception when calling SmsApi#sendSms: " + e.getMessage());
         }
     }
+}
+```
+
+## More Examples
+
+### View account details
+
+```java
+import ClickSend.Api.ManagementApi;
+import ClickSend.Model.ViewAccountDetails;
+
+ManagementApi managementApi = new ManagementApi(defaultClient);
+
+try {
+    ViewAccountDetails account = managementApi.viewAccountDetails(null);
+    System.out.println(account);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ManagementApi#viewAccountDetails: " + e.getMessage());
+}
+```
+
+### Send an MMS
+
+```java
+import ClickSend.Api.MmsApi;
+import ClickSend.Model.SendMms;
+import ClickSend.Model.SendMmsRequest;
+import ClickSend.Model.SendMmsRequestMessagesInner;
+
+MmsApi mmsApi = new MmsApi(defaultClient);
+SendMmsRequest sendMmsRequest = new SendMmsRequest()
+    .mediaFile("https://clicksend.com/logo.png")
+    .addMessagesItem(new SendMmsRequestMessagesInner()
+        .to("+61411111111")
+        .from("sdk")
+        .subject("Hello")
+        .body("Hello from ClickSend!")
+        .source("sdk"));
+
+try {
+    SendMms result = mmsApi.sendMms(null, sendMmsRequest);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MmsApi#sendMms: " + e.getMessage());
 }
 ```
 
