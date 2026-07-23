@@ -68,7 +68,7 @@ public class SendSmsRequestMessagesInner {
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
   @javax.annotation.Nullable
-  private String source;
+  private String source = "sdk";
 
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)

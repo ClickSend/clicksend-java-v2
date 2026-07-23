@@ -53,7 +53,7 @@ public class SendMmsRequestMessagesInner {
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
   @javax.annotation.Nullable
-  private String source;
+  private String source = "sdk";
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
