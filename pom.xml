@@ -6,28 +6,28 @@
     <packaging>jar</packaging>
     <name>clicksend-java</name>
     <version>6.0.0</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <url>https://github.com/ClickSend/clicksend-java-v2</url>
+    <description>Official ClickSend SDK for Java</description>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+        <connection>scm:git:git://github.com/ClickSend/clicksend-java-v2.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ClickSend/clicksend-java-v2.git</developerConnection>
+        <url>https://github.com/ClickSend/clicksend-java-v2</url>
     </scm>
 
     <licenses>
         <license>
-            <name>MIT</name>
-            <url>http://unlicense.org</url>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+            <name>ClickSend</name>
+            <email>support@clicksend.com</email>
+            <organization>ClickSend</organization>
+            <organizationUrl>https://clicksend.com</organizationUrl>
         </developer>
     </developers>
 
