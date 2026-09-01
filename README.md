@@ -51,6 +51,8 @@ public class Example {
                 .source("sdk"));
 
         try {
+            // The first argument is the optional `contentType` header — pass `null` to use the default.
+            // The request body is the second argument.
             SendSms result = apiInstance.sendSms(null, sendSmsRequest);
             System.out.println(result);
         } catch (ApiException e) {
@@ -97,6 +99,7 @@ SendMmsRequest sendMmsRequest = new SendMmsRequest()
         .source("sdk"));
 
 try {
+    // As with sendSms, the first argument is the optional `contentType` header — pass `null`.
     SendMms result = mmsApi.sendMms(null, sendMmsRequest);
     System.out.println(result);
 } catch (ApiException e) {
