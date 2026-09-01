@@ -1,29 +1,58 @@
 name: Publish Java Package
-on:
-  push:
-    branches:
-      - main
 
-jobs: 
-  publish:
+on:
+  release:
+    types: [published]      # publish when a GitHub Release is created
+  workflow_dispatch:        # ...or trigger manually
+
+jobs:
+  # Public registry: Maven Central (https://central.sonatype.com)
+  publish-central:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 11
-      uses: actions/setup-java@v4
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-    - name: Update Gradle wrapper and build config
-      run: |
-        sed -i 's|gradle-2.6-bin.zip|gradle-8.6-bin.zip|g' gradle/wrapper/gradle-wrapper.properties
-        sed -i 's|^ *main = |       mainClass = |' build.gradle
-        sed -i "s|compile '|implementation '|g" build.gradle
-        sed -i "s|testCompile '|testImplementation '|g" build.gradle
-        sed -i "s|apply plugin: 'maven'|apply plugin: 'maven-publish'|" build.gradle
-        sed -i '/install {/,/}/c\    publishing {\n        repositories {\n            maven {\n                url = "https://maven.pkg.github.com/clicksend/clicksend-java"\n                credentials {\n                    username = System.getenv("GPR_USER")\n                    password = System.getenv("GPR_API_KEY")\n                }\n            }\n        }\n        publications {\n            maven(MavenPublication) {\n                from components.java\n                artifactId = "clicksend-java-client"\n            }\n        }\n    }' build.gradle
-    - name: Publish to Github registry
-      env: 
-        GPR_USER: ClickSend
-        GPR_API_KEY: ${{ secrets.GPR_TOKEN }}
-      run: chmod +x gradlew && ./gradlew publish
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+          server-id: central                 # matches <publishingServerId> in the central profile
+          server-username: CENTRAL_USERNAME   # name of the env var, not its value
+          server-password: CENTRAL_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
+
+      - name: Publish to Maven Central
+        run: mvn --batch-mode --no-transfer-progress clean deploy -Pcentral,sign-artifacts
+        env:
+          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
+  # GitHub Packages: https://github.com/ClickSend/clicksend-java-v2/packages
+  publish-github:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+          server-id: github                  # id referenced by -DaltDeploymentRepository below
+          server-username: GITHUB_ACTOR
+          server-password: GITHUB_TOKEN
+
+      - name: Publish to GitHub Packages
+        run: >
+          mvn --batch-mode --no-transfer-progress clean deploy -DskipTests
+          -DaltDeploymentRepository=github::https://maven.pkg.github.com/ClickSend/clicksend-java-v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
