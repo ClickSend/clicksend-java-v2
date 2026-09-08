@@ -142,7 +142,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ClickSend-SDK/6.0.0/java");
+        setUserAgent("ClickSend-SDK/6.0.1/java");
 
         authentications = new HashMap<String, Authentication>();
     }
