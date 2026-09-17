@@ -67,10 +67,11 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           server-id: github
+          server-password: GPR_TOKEN
 
       - name: Publish to GitHub Packages
         run: >
           mvn -B -DskipTests deploy
           -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/ClickSend/clicksend-java-v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
