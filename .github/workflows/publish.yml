@@ -1,0 +1,77 @@
+name: Java Package
+
+on:
+  release:
+    types: [published]      # publish when a GitHub Release is created
+  workflow_dispatch:        # ...or trigger manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Test
+        run: mvn -B test
+
+      - name: Build
+        run: mvn -B -DskipTests package
+
+  # Public registry: Maven Central (https://central.sonatype.com/artifact/com.clicksend/clicksend-java)
+  publish-central:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          server-id: central
+          server-username: MAVEN_CENTRAL_USERNAME
+          server-password: MAVEN_CENTRAL_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
+
+      - name: Publish to Maven Central
+        run: mvn -B -DskipTests -Pcentral,sign-artifacts deploy
+        env:
+          MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
+  # GitHub Packages: https://github.com/ClickSend/clicksend-java-v2/packages
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          server-id: github
+          server-password: GPR_TOKEN
+
+      - name: Publish to GitHub Packages
+        run: >
+          mvn -B -DskipTests deploy
+          -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/ClickSend/clicksend-java-v2
+        env:
+          GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
