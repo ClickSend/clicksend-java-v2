@@ -40,14 +40,14 @@ This library is generated from ClickSend's official OpenAPI v3 specification and
 <dependency>
   <groupId>com.clicksend</groupId>
   <artifactId>clicksend-java</artifactId>
-  <version>6.0.2</version>
+  <version>6.0.3</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation "com.clicksend:clicksend-java:6.0.2"
+implementation "com.clicksend:clicksend-java:6.0.3"
 ```
 
 ## Authentication

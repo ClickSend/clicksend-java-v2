@@ -5,7 +5,7 @@
     <artifactId>clicksend-java</artifactId>
     <packaging>jar</packaging>
     <name>clicksend-java</name>
-    <version>6.0.2</version>
+    <version>6.0.3</version>
     <url>https://github.com/ClickSend/clicksend-java-v2</url>
     <description>Official ClickSend SDK for Java</description>
     <scm>
